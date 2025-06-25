@@ -1,0 +1,52 @@
+body {
+  font-family: Georgia, serif;
+  background: white;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  border: 1px solid gray;
+  background-color: #f7f7f7;
+}
+
+.column {
+  flex: 1;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 150px;
+  border: 1px solid #aaa;
+}
+
+.lecture-img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
