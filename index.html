@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Ashmit Gurey</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: white;
+      font-family: Times New Roman, serif;
+      color: black;
+      text-align: center;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 1px solid gray;
+    }
+    td {
+      border: 1px solid gray;
+      vertical-align: top;
+      padding: 10px;
+    }
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+    img {
+      width: 200px;
+    }
+    .link-list a {
+      display: block;
+      margin: 0.5em 0;
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <!-- Left Column -->
-    <section class="column">
-      <img src="ashmit.jpg" alt="Ashmit Gurey" class="profile-pic" />
-      <h2>Ashmit Gurey</h2>
-      <p><a href="#">IPhD Mathematics</a><br>Kerala School of Mathematics</p>
-      <p><a href="Ashmit_CV.pdf" target="_blank">Vita</a></p>
-    </section>
 
-    <!-- Center Column -->
-    <section class="column center">
-      <h3>Fall 2025</h3>
-      <p><a href="#">Advanced Topics in Imaging Mathematics</a></p>
-      <p><a href="#">Seminar: Inverse Problems in Geometry & Physics</a></p>
-      <p><a href="#">Past Courses and Lecture Notes</a></p>
+  <br>
+  <table>
+    <tr>
+      <!-- LEFT COLUMN -->
+      <td>
+        <img src="ashmit.jpg" alt="Ashmit Gurey"><br><br>
+        <div>
+          <strong>Ashmit Gurey</strong><br>
+          Kerala School of Mathematics<br>
+          Kozhikode, India<br><br>
+          <a href="Ashmit_CV.pdf" target="_blank">Vita</a>
+        </div>
+      </td>
 
-      <br><hr><br>
+      <!-- CENTER COLUMN -->
+      <td class="link-list">
+        <div>
+          <b>Fall 2025</b><br>
+          <a href="#">Math 213a: Advanced Complex Analysis</a><br><br>
 
-      <p><a href="#">Publications</a></p>
-      <p><a href="#">Research Projects</a></p>
-      <p><a href="#">Conferences</a></p>
-      <p><a href="#">Workshop Schedule</a></p>
-      <p><a href="#">A Mathematical Tale</a></p>
-    </section>
+          <a href="#">Informal Seminar:<br>Dynamics, Geometry and Moduli Spaces</a><br><br>
 
-    <!-- Right Column -->
-    <section class="column">
-      <img src="talk1.jpg" class="lecture-img" alt="Lecture 1" />
-      <img src="talk2.jpg" class="lecture-img" alt="Lecture 2" />
-    </section>
-  </main>
+          <a href="#">Past and Future Courses</a><br><br>
+        </div>
+
+        <div class="link-list">
+          <a href="#">Publications</a>
+          <a href="#">Expositions</a>
+          <a href="#">Programs</a>
+          <a href="#">Schedule</a>
+          <a href="#">A cautionary tale</a>
+        </div>
+      </td>
+
+      <!-- RIGHT COLUMN -->
+      <td>
+        <img src="talk1.jpg" alt="Talk Photo 1"><br><br>
+        <img src="talk2.jpg" alt="Talk Photo 2">
+      </td>
+    </tr>
+  </table>
+
 </body>
 </html>
