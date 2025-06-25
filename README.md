@@ -2,7 +2,7 @@
 
 This is the source code for my personal academic website, inspired by the minimalist professional layout of university faculty pages.
 
-🔗 **Live site**: [https://Ashmity16102002.github.io](https://yourusername.github.io)  
+🔗 **Live site**: [https://Ashmit16102002.github.io](https://Ashmit16102002.github.io)  
 📄 **CV**: Available via the homepage
 
 ## 📌 Features
