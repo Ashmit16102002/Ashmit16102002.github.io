@@ -26,12 +26,12 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
   border: 1px solid #aaa;
 }
 
 .lecture-img {
- width: 250px;
+ width: 300px;
   max-width: 100%;
   height: auto;
 }
