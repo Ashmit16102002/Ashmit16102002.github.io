@@ -51,9 +51,3 @@ hr {
   margin: 1rem 0;
 }
 
-table {
-  margin: auto;
-  border-collapse: collapse;
-  border: 1px solid gray;
-  background-color: #e0c8a0; /* Slightly deeper brown */
-}
