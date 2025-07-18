@@ -37,12 +37,11 @@ body {
 }
 
 a {
-  color: red;
+  color: blue;
   text-decoration: none;
 }
 
 a:hover {
-  color: red;
   text-decoration: underline;
 }
 
