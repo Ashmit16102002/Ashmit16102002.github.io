@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Past and Future Courses</title>
+  <style>
+    body {
+      background-color: #f5e6cc; /* Same light brown */
+      font-family: Times New Roman, serif;
+      color: black;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #e0e0e0;
+      display: inline-block;
+      padding: 15px;
+      border: 1px solid gray;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .column {
+      border: 1px solid gray;
+      padding: 10px;
+      background: white;
+      margin: 0 10px;
+      text-align: left;
+    }
+
+    .column h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .year {
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .year + p {
+      margin-top: 4px;
+    }
+
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Past and Future Courses</h1>
+
+    <div class="columns">
+      <!-- Harvard Courses -->
+      <div class="column">
+        <h2>Harvard Courses</h2>
+
+        <div class="year">2025</div>
+        <p><a href="#">Informal Seminar</a></p>
+        <p>Math 213a. <a href="#">Advanced Complex Analysis</a></p>
+
+        <div class="year">2024</div>
+        <p>Math 275. <a href="#">Riemann Surfaces, Dynamics and Geometry</a></p>
+
+        <div class="year">2023</div>
+        <p>Math 213a. <a href="#">Advanced Complex Analysis</a></p>
+        <p>Math 123. <a href="#">Algebra II: Rings and Fields</a></p>
+
+        <!-- Continue for 2022–2007 as in screenshot... -->
+      </div>
+
+      <!-- Berkeley Courses -->
+      <div class="column">
+        <h2>Berkeley Courses</h2>
+
+        <div class="year">2006</div>
+        <p>Math 213a. <a href="#">Complex Analysis</a></p>
+        <p>Math 275. <a href="#">Rigidity and Flexibility in Dynamics</a></p>
+        <p>Math 212b. <a href="#">Advanced Real Analysis</a></p>
+
+        <div class="year">2005</div>
+        <p>Math 101. <a href="#">Sets, Groups and Knots</a></p>
+        <p>Math 275. <a href="#">Teichmüller Theory</a></p>
+
+        <div class="year">2003</div>
+        <p>Math 275. <a href="#">Algebra and Dynamics</a></p>
+        <p>Math 212a. <a href="#">Real Analysis</a></p>
+        <p>Math 99r. <a href="#">Geometric Topology</a></p>
+
+        <!-- Continue for 2002–1997... -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>
