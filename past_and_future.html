@@ -5,19 +5,25 @@
   <title>UnderGrad and Master Courses Learnt</title>
   <style>
     body {
-      background-color: #f5e6cc; /* Same light brown */
-      font-family: Times New Roman, serif;
+      background-color: #f5e6cc;
+      font-family: "Times New Roman", serif;
       color: black;
       text-align: center;
       margin: 0;
       padding: 20px;
+      background-image: url('website.gif'); /* Optional background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     .container {
-      background-color: #e0e0e0;
-      display: inline-block;
-      padding: 15px;
+      background-color: white; /* fully opaque */
+      padding: 20px;
       border: 1px solid gray;
+      margin: auto;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
@@ -29,13 +35,15 @@
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
 
     .column {
       border: 1px solid gray;
-      padding: 10px;
-      background: white;
-      margin: 0 10px;
+      padding: 15px;
+      background-color: white;
+      margin: 10px;
+      width: 45%;
       text-align: left;
     }
 
@@ -54,7 +62,7 @@
     }
 
     a {
-      color: blue;
+      color: red; /* Red hyperlinks */
       text-decoration: underline;
     }
 
@@ -70,10 +78,9 @@
     <h1>UnderGrad and Master Courses Learnt</h1>
 
     <div class="columns">
-      <!-- Harvard Courses -->
+      <!-- KSoM Column -->
       <div class="column">
         <h2>KSoM Courses</h2>
-
         <div class="year">2025</div>
         <p>KSM2C01 :<a href="#">Algebra - II (Rings and Modules)</a></p>
         <p>KSM2C02 :<a href="#">Analysis - II (Measure Theory)</a></p>
@@ -85,11 +92,9 @@
         <p>KSM1C02 :<a href="#">Analysis - I</a></p>
         <p>KSM1C03 :<a href="#">Topology (Point - Set)</a></p>
         <p>KSM1C04 :<a href="#">Probability</a></p>
-
-        <!-- Continue for 2022–2007 as in screenshot... -->
       </div>
 
-      <!-- Berkeley Courses -->
+      <!-- IMA Column -->
       <div class="column">
         <h2>IMA Courses</h2>
         <div class="year">2024</div>
@@ -97,8 +102,7 @@
         <p>DSE3 :<a href="#">Probability - II</a></p>
         <p>DSE4 :<a href="#">Bachelor Thesis</a></p>
         <p>GE7 :<a href="#">Quantum Mechanics</a></p>
-        
-        
+
         <div class="year">2023</div>
         <p>C6 :<a href="#">Calculus - III</a></p>
         <p>C7 :<a href="#">Algebra - III (Rings and Fields)</a></p>
