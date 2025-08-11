@@ -4,38 +4,18 @@
   <meta charset="UTF-8">
   <title>Ashmit Gurey</title>
   <style>
-body {
-  font-family: 'Times New Roman', serif;
-  color: black;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
-
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-
-table {
-  margin: 30px auto;
-  border-collapse: collapse;
-  border: 1px solid gray;
-  background-color: white; /* Fully opaque background */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional subtle shadow for depth */
-}
-
+    body {
+      background-color: #f5e6cc; /* Light brown */
+      font-family: Times New Roman, serif;
+      color: black;
+      text-align: center;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 1px solid gray;
+      background-color: white;
+    }
     td {
       border: 1px solid gray;
       vertical-align: top;
@@ -55,7 +35,6 @@ table {
   </style>
 </head>
 <body>
-<div id="background"></div>
 
   <br>
   <table>
@@ -112,11 +91,6 @@ table {
 </td>
     </tr>
   </table>
-<script>
-  const gifs = ["website.gif", "website4.gif", "website5.gif", "website6.gif", "website7.gif", "website8.gif", "website9.gif"];
-  const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-  document.getElementById("background").style.backgroundImage = `url('${randomGif}')`;
-</script>
 
 </body>
 </html>
