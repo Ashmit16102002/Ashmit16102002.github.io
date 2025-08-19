@@ -51,10 +51,10 @@
     }
 
     table {
-      margin: auto;
+      margin: 30px auto;
       border-collapse: collapse;
       border: 1px solid gray;
-      background-color: white;
+      background-color: white; /* fully opaque */
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
@@ -145,11 +145,13 @@
     </table>
   </div>
 
-  <!-- Script to hide loader -->
+  <!-- Script to hide loader after 3 seconds -->
   <script>
     window.addEventListener("load", function(){
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("content").style.display = "block";
+      setTimeout(function(){
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 3000); // 3000ms = 3 seconds
     });
   </script>
 
