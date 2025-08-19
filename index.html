@@ -18,33 +18,16 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: #f5e6cc; /* Keep background unchanged */
+      background: #f5e6cc;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 9999;
     }
 
-    .dots {
-      display: flex;
-      gap: 35px;
-    }
-
-    .dot {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      animation: bounce 1.2s infinite ease-in-out;
-    }
-
-    .dot:nth-child(1) { background: #4285F4; animation-delay: 0s; }   /* Blue */
-    .dot:nth-child(2) { background: #34A853; animation-delay: 0.2s; } /* Green */
-    .dot:nth-child(3) { background: #FBBC05; animation-delay: 0.4s; } /* Yellow */
-    .dot:nth-child(4) { background: #EA4335; animation-delay: 0.6s; } /* Red */
-
-    @keyframes bounce {
-      0%, 80%, 100% { transform: scale(0.8); opacity: 0.7; }
-      40% { transform: scale(1.2); opacity: 1; }
+    #loader img {
+      width: 120px; /* Adjust size of GIF */
+      height: auto;
     }
 
     /* Hide content until loaded */
@@ -56,7 +39,7 @@
       margin: 30px auto;
       border-collapse: collapse;
       border: 1px solid gray;
-      background-color: white;
+      background-color: white; /* fully opaque */
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
@@ -85,18 +68,13 @@
 
   <!-- Loader -->
   <div id="loader">
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
+    <img src="original-b1a77e60db00dfc1a7ec5c26789c2783.gif" alt="Loading...">
   </div>
 
   <!-- Main Content -->
   <div id="content">
     <br>
-    <table align="center">
+    <table>
       <tr>
         <!-- LEFT COLUMN -->
         <td>
@@ -110,7 +88,7 @@
             IPhD<br>
             <a href="https://ksom.res.in">Kerala School of Mathematics<br>
             Kozhikode, India<br><br></a>
-            <a href="vita.html"><b>Vita</b></a>
+            <a href="vita.html">Vita</a>
           </div>
         </td>
 
@@ -158,7 +136,7 @@
       setTimeout(function(){
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-      }, 4000); // 4 seconds
+      }, 2000); // 2000ms = 2 seconds
     });
   </script>
 
