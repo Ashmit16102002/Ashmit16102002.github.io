@@ -5,7 +5,7 @@
   <title>Ashmit Gurey</title>
   <style>
     body {
-      background-color: #f5e6cc; /* Light brown */
+      background-color: #f5e6cc; /* Homepage background */
       font-family: 'Open Sans', Arial, sans-serif;
       color: black;
       text-align: center;
@@ -18,33 +18,50 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: #f5e6cc; /* Keep background unchanged */
+      background: inherit; /* SAME as homepage */
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 9999;
+      transition: opacity 0.6s ease;
     }
 
-    .dots {
+    .bar-loader {
       display: flex;
-      gap: 35px;
+      align-items: flex-end;
+      gap: 10px;
     }
 
-    .dot {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      animation: bounce 1.2s infinite ease-in-out;
+    .bar {
+      width: 20px;
+      border-radius: 10px;
+      animation: bounce 1s infinite ease-in-out;
     }
 
-    .dot:nth-child(1) { background: #4285F4; animation-delay: 0s; }   /* Blue */
-    .dot:nth-child(2) { background: #34A853; animation-delay: 0.2s; } /* Green */
-    .dot:nth-child(3) { background: #FBBC05; animation-delay: 0.4s; } /* Yellow */
-    .dot:nth-child(4) { background: #EA4335; animation-delay: 0.6s; } /* Red */
+    .bar:nth-child(1) {
+      background: #4285F4; /* Blue */
+      height: 50px;
+      animation-delay: 0s;
+    }
+    .bar:nth-child(2) {
+      background: #EA4335; /* Red */
+      height: 70px;
+      animation-delay: 0.2s;
+    }
+    .bar:nth-child(3) {
+      background: #FBBC05; /* Yellow */
+      height: 40px;
+      animation-delay: 0.4s;
+    }
+    .bar:nth-child(4) {
+      background: #34A853; /* Green */
+      height: 80px;
+      animation-delay: 0.6s;
+    }
 
     @keyframes bounce {
-      0%, 80%, 100% { transform: scale(0.8); opacity: 0.7; }
-      40% { transform: scale(1.2); opacity: 1; }
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
     }
 
     /* Hide content until loaded */
@@ -85,18 +102,18 @@
 
   <!-- Loader -->
   <div id="loader">
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+    <div class="bar-loader">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
   </div>
 
   <!-- Main Content -->
   <div id="content">
     <br>
-    <table align="center">
+    <table>
       <tr>
         <!-- LEFT COLUMN -->
         <td>
@@ -110,7 +127,7 @@
             IPhD<br>
             <a href="https://ksom.res.in">Kerala School of Mathematics<br>
             Kozhikode, India<br><br></a>
-            <a href="vita.html"><b>Vita</b></a>
+            <a href="vita.html">Vita</a>
           </div>
         </td>
 
@@ -156,8 +173,11 @@
   <script>
     window.addEventListener("load", function(){
       setTimeout(function(){
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("content").style.display = "block";
+        document.getElementById("loader").style.opacity = "0"; 
+        setTimeout(function(){
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 600); 
       }, 4000); // 4 seconds
     });
   </script>
