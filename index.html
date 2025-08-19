@@ -13,7 +13,7 @@
       padding: 0;
     }
 
-    /* Sexy Loader */
+    /* SEXY Loader */
     #loader {
       position: fixed;
       width: 100%;
@@ -25,16 +25,23 @@
       z-index: 9999;
     }
 
-    .spinner {
-      width: 80px;
-      height: 80px;
+    .orb {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 8px solid transparent;
-      border-top: 8px solid #ff4e50;
-      border-right: 8px solid #fc913a;
-      border-bottom: 8px solid #f9d423;
-      border-left: 8px solid #eae374;
-      animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
+      background: conic-gradient(
+        from 0deg,
+        #ff4e50,
+        #fc913a,
+        #f9d423,
+        #24c6dc,
+        #5433ff,
+        #ff4e50
+      );
+      animation: spin 2s linear infinite, morph 3s ease-in-out infinite;
+      filter: blur(2px) brightness(1.2);
+      box-shadow: 0 0 25px rgba(255, 78, 80, 0.6),
+                  0 0 50px rgba(36, 198, 220, 0.4);
     }
 
     @keyframes spin {
@@ -42,9 +49,9 @@
       100% { transform: rotate(360deg); }
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+    @keyframes morph {
+      0%, 100% { border-radius: 50%; transform: scale(1); }
+      50% { border-radius: 30%; transform: scale(1.2); }
     }
 
     /* Hide content until loaded */
@@ -85,9 +92,9 @@
 </head>
 <body>
 
-  <!-- Sexy Loader -->
+  <!-- SEXY Loader -->
   <div id="loader">
-    <div class="spinner"></div>
+    <div class="orb"></div>
   </div>
 
   <!-- Main Content -->
