@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <title>Ashmit Gurey</title>
   <style>
-    /* --- Sexy Loader Styles --- */
+    /* --- Elegant Sexy Loader --- */
     #loader {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #0f0f0f;
+      background-color: #0d0d0d;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,31 +25,30 @@
       border-radius: 50%;
       background: conic-gradient(
         from 0deg,
-        #ff0080,
-        #ff8c00,
-        #40e0d0,
-        #7b2ff7,
-        #ff0080
+        #8b0000, /* deep red */
+        #ff4500, /* orange-red */
+        #ffd700, /* gold */
+        #8b0000
       );
       animation: spin 2s linear infinite, morph 3s ease-in-out infinite, glow 1.5s ease-in-out infinite;
-      filter: blur(2px) brightness(1.3);
-      box-shadow: 0 0 25px rgba(255, 0, 128, 0.8),
-                  0 0 60px rgba(64, 224, 208, 0.6),
-                  0 0 100px rgba(123, 47, 247, 0.7);
+      filter: blur(2px) brightness(1.2);
+      box-shadow: 0 0 25px rgba(139, 0, 0, 0.9),
+                  0 0 60px rgba(255, 215, 0, 0.7),
+                  0 0 100px rgba(255, 69, 0, 0.6);
     }
 
     @keyframes glow {
       0%, 100% {
         box-shadow: 
-          0 0 25px rgba(255, 0, 128, 0.9),
-          0 0 60px rgba(64, 224, 208, 0.6),
-          0 0 120px rgba(123, 47, 247, 0.8);
+          0 0 30px rgba(139, 0, 0, 0.9),
+          0 0 70px rgba(255, 69, 0, 0.7),
+          0 0 120px rgba(255, 215, 0, 0.8);
       }
       50% {
         box-shadow: 
-          0 0 50px rgba(255, 140, 0, 0.9),
-          0 0 90px rgba(0, 255, 255, 0.8),
-          0 0 150px rgba(255, 0, 128, 1);
+          0 0 40px rgba(255, 140, 0, 0.9),
+          0 0 90px rgba(255, 215, 0, 0.9),
+          0 0 160px rgba(139, 0, 0, 1);
       }
     }
 
@@ -60,7 +59,7 @@
 
     @keyframes morph {
       0%, 100% { border-radius: 50%; transform: scale(1); }
-      50% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: scale(1.3); }
+      50% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; transform: scale(1.2); }
     }
 
     .text {
@@ -69,20 +68,14 @@
       font-size: 22px;
       font-weight: bold;
       text-transform: uppercase;
-      background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #7b2ff7, #ff0080);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: hue 3s linear infinite, pulse 1.5s ease-in-out infinite;
-    }
-
-    @keyframes hue {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
+      color: #ffd700;
+      letter-spacing: 2px;
+      animation: pulse 1.5s ease-in-out infinite;
     }
 
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 0.7; }
     }
 
     /* --- Homepage Styles --- */
@@ -130,10 +123,10 @@
 </head>
 <body>
 
-  <!-- Sexy Loader -->
+  <!-- Sexy Elegant Loader -->
   <div id="loader">
     <div class="orb"></div>
-    <div class="text">Loading Passion…</div>
+    <div class="text">Loading...</div>
   </div>
 
   <!-- Homepage Content -->
