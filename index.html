@@ -4,83 +4,8 @@
   <meta charset="UTF-8">
   <title>Ashmit Gurey</title>
   <style>
-    /* --- Elegant Sexy Loader --- */
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #0d0d0d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 9999;
-    }
-
-    .orb {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: conic-gradient(
-        from 0deg,
-        #8b0000, /* deep red */
-        #ff4500, /* orange-red */
-        #ffd700, /* gold */
-        #8b0000
-      );
-      animation: spin 2s linear infinite, morph 3s ease-in-out infinite, glow 1.5s ease-in-out infinite;
-      filter: blur(2px) brightness(1.2);
-      box-shadow: 0 0 25px rgba(139, 0, 0, 0.9),
-                  0 0 60px rgba(255, 215, 0, 0.7),
-                  0 0 100px rgba(255, 69, 0, 0.6);
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        box-shadow: 
-          0 0 30px rgba(139, 0, 0, 0.9),
-          0 0 70px rgba(255, 69, 0, 0.7),
-          0 0 120px rgba(255, 215, 0, 0.8);
-      }
-      50% {
-        box-shadow: 
-          0 0 40px rgba(255, 140, 0, 0.9),
-          0 0 90px rgba(255, 215, 0, 0.9),
-          0 0 160px rgba(139, 0, 0, 1);
-      }
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes morph {
-      0%, 100% { border-radius: 50%; transform: scale(1); }
-      50% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; transform: scale(1.2); }
-    }
-
-    .text {
-      margin-top: 20px;
-      font-family: 'Arial Black', sans-serif;
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #ffd700;
-      letter-spacing: 2px;
-      animation: pulse 1.5s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.7; }
-    }
-
-    /* --- Homepage Styles --- */
     body {
-      background-color: #f5e6cc;
+      background-color: #f5e6cc; /* Light brown */
       font-family: 'Open Sans', Arial, sans-serif;
       color: black;
       text-align: center;
@@ -88,16 +13,49 @@
       padding: 0;
     }
 
+    /* Loader styling */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #f5e6cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .dots span {
+      animation: blink 1.5s infinite;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes blink {
+      0%, 20% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Hide content until loaded */
     #content {
-      display: none; /* hidden until loader finishes */
+      display: none;
     }
 
     table {
       margin: 30px auto;
       border-collapse: collapse;
       border: 1px solid gray;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: white; /* fully opaque */
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     td {
@@ -123,13 +81,12 @@
 </head>
 <body>
 
-  <!-- Sexy Elegant Loader -->
+  <!-- Loader -->
   <div id="loader">
-    <div class="orb"></div>
-    <div class="text">Loading...</div>
+    Loading<span class="dots"><span>.</span><span>.</span><span>.</span></span>
   </div>
 
-  <!-- Homepage Content -->
+  <!-- Main Content -->
   <div id="content">
     <br>
     <table>
@@ -137,7 +94,9 @@
         <!-- LEFT COLUMN -->
         <td>
           <div style="font-size: 22px;">
-            <strong><a href="mailto:gureyashmit@ksom.res.in">Ashmit Gurey</a></strong>
+            <strong>
+              <a href="mailto:gureyashmit@ksom.res.in">Ashmit Gurey</a>
+            </strong>
           </div><br>
           <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
           <div>
@@ -186,13 +145,13 @@
     </table>
   </div>
 
-  <!-- Loader Script -->
+  <!-- Script to hide loader after 3 seconds -->
   <script>
-    window.addEventListener("load", function() {
-      setTimeout(() => {
+    window.addEventListener("load", function(){
+      setTimeout(function(){
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-      }, 2000); // 2 seconds
+      }, 3000); // 3000ms = 3 seconds
     });
   </script>
 
