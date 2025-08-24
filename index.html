@@ -89,12 +89,21 @@
 
     /* Announcement + Research Boxes */
     .announcement, .research {
-      flex: 1;
       background: #fff8e7; /* soft yellow */
       border: 2px solid #d4af37; /* gold border */
       padding: 20px;
       text-align: left;
       box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+
+    .announcement {
+      margin: 30px auto;
+      width: 70%;
+      text-align: left;
+    }
+
+    .research {
+      flex: 1;
       max-width: 300px;
     }
 
@@ -192,7 +201,7 @@
       </table>
     </div>
 
-    <!-- Announcement Box -->
+    <!-- Announcement Box (Below Everything) -->
     <div class="announcement">
       <h2>📢 Announcements</h2>
       <p><b>August 2025:</b> Schedule for Fall Semester 2025 is now available <a href="schedule.html">here</a>.</p>
