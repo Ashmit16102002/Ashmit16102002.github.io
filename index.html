@@ -32,7 +32,6 @@
     .dots span {
       animation: blink 1.5s infinite;
     }
-
     .dots span:nth-child(2) { animation-delay: 0.3s; }
     .dots span:nth-child(3) { animation-delay: 0.6s; }
     .dots span:nth-child(4) { animation-delay: 0.9s; }
@@ -49,14 +48,22 @@
       display: none;
     }
 
-    table {
-      margin: 30px auto;
-      border-collapse: collapse;
-      border: 1px solid gray;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    /* Container for left + main block */
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 30px;
     }
 
+    /* Main block (your table) */
+    table {
+      border-collapse: collapse;
+      border: 1px solid gray;
+      background-color: #fff8e7; /* match announcement block */
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
     td {
       border: 1px solid gray;
       vertical-align: top;
@@ -67,38 +74,52 @@
       color: blue;
       text-decoration: underline;
     }
-
     img {
       width: 200px;
     }
-
     .link-list a {
       display: block;
       margin: 0.5em 0;
+    }
+
+    /* Research Box */
+    .research-box {
+      width: 220px;
+      background: #fff8e7;
+      border: 2px solid #b8860b;
+      padding: 15px;
+      text-align: left;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+    .research-box h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #b8860b;
+      border-bottom: 1px solid #b8860b;
+      padding-bottom: 5px;
+    }
+    .research-box ul {
+      list-style: square;
+      padding-left: 20px;
+      margin: 10px 0;
     }
 
     /* Announcement box */
     .announcement {
       margin: 30px auto;
       width: 70%;
-      background: #fff8e7; /* soft yellow background */
-      border: 2px solid #d4af37; /* gold border */
+      background: #fff8e7;
+      border: 2px solid #d4af37;
       padding: 20px;
       text-align: left;
       box-shadow: 0 0 8px rgba(0,0,0,0.15);
     }
-
     .announcement h2 {
       margin-top: 0;
-      color: #b8860b; /* dark goldenrod */
+      color: #b8860b;
       font-size: 20px;
       border-bottom: 1px solid #d4af37;
       padding-bottom: 5px;
-    }
-
-    .announcement p {
-      margin: 10px 0;
-      line-height: 1.5em;
     }
   </style>
 </head>
@@ -111,61 +132,78 @@
 
   <!-- Main Content -->
   <div id="content">
-    <br>
-    <table align="center">
-      <tr>
-        <!-- LEFT COLUMN -->
-        <td>
-          <div style="font-size: 22px;">
-            <strong>
-              <a href="mailto:gureyashmit@ksom.res.in">Ashmit Gurey</a>
-            </strong>
-          </div><br>
-          <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
-          <div>
-            IPhD<br>
-            <a href="https://ksom.res.in">Kerala School of Mathematics<br>
-            Kozhikode, India<br><br></a>
-            <a href="vita.html"><b>Vita</b></a>
-          </div>
-        </td>
 
-        <!-- CENTER COLUMN -->
-        <td class="link-list">
-          <div>
-            <b>Fall 2025</b><br>
-            <b>Courses Undertaken </b><br>
-            <a href="#">KSM3E01: Functional Analysis</a>
-            <a href="#">KSM3E03: Field and Galois Theory</a>
-            <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
-            <a href="#">KSM3E07: Number Theory</a><br>
-            <a href="#"><b>Radon Transform (A Specific Inverse Problem):<br>Application in Medical Imaging (Fan Beam CT)</b></a><br>
-            <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
-          </div>
+    <!-- Flex container: research + main block -->
+    <div class="main-container">
 
-          <div class="link-list">
-            <a href="#">Publications</a>
-            <a href="#">Expositions</a>
-            <a href="#">Programs</a>
-            <a href="schedule.html"><b>Schedule</b></a>
-            <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
-          </div>
-        </td>
+      <!-- Research Box -->
+      <div class="research-box">
+        <h2>🔬 Research Interests</h2>
+        <ul>
+          <li>Inverse Problems & Radon Transform</li>
+          <li>Medical Imaging (CT, MRI)</li>
+          <li>Functional Analysis</li>
+          <li>Number Theory & Galois Theory</li>
+        </ul>
+      </div>
 
-        <!-- RIGHT COLUMN -->
-        <td>
-          <div>
-            <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 250px;"><br>
-            <small><b>Shepp-Logan Phantom</b></small>
-          </div>
-          <br>
-          <div>
-            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 250px;"><br>
-            <small><b>Fan Beam CT VS  Cone Beam CT</b></small>
-          </div>
-        </td>
-      </tr>
-    </table>
+      <!-- Main Block (table) -->
+      <table>
+        <tr>
+          <!-- LEFT COLUMN -->
+          <td>
+            <div style="font-size: 22px;">
+              <strong>
+                <a href="mailto:gureyashmit@ksom.res.in">Ashmit Gurey</a>
+              </strong>
+            </div><br>
+            <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
+            <div>
+              IPhD<br>
+              <a href="https://ksom.res.in">Kerala School of Mathematics<br>
+              Kozhikode, India<br><br></a>
+              <a href="vita.html"><b>Vita</b></a>
+            </div>
+          </td>
+
+          <!-- CENTER COLUMN -->
+          <td class="link-list">
+            <div>
+              <b>Fall 2025</b><br>
+              <b>Courses Undertaken </b><br>
+              <a href="#">KSM3E01: Functional Analysis</a>
+              <a href="#">KSM3E03: Field and Galois Theory</a>
+              <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
+              <a href="#">KSM3E07: Number Theory</a><br>
+              <a href="#"><b>Radon Transform (A Specific Inverse Problem):<br>Application in Medical Imaging (Fan Beam CT)</b></a><br>
+              <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
+            </div>
+
+            <div class="link-list">
+              <a href="#">Publications</a>
+              <a href="#">Expositions</a>
+              <a href="#">Programs</a>
+              <a href="schedule.html"><b>Schedule</b></a>
+              <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
+            </div>
+          </td>
+
+          <!-- RIGHT COLUMN -->
+          <td>
+            <div>
+              <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 250px;"><br>
+              <small><b>Shepp-Logan Phantom</b></small>
+            </div>
+            <br>
+            <div>
+              <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 250px;"><br>
+              <small><b>Fan Beam CT VS  Cone Beam CT</b></small>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div> <!-- end main-container -->
 
     <!-- Announcement Box -->
     <div class="announcement">
@@ -175,16 +213,13 @@
     </div>
   </div>
 
-
-
-
   <!-- Script to hide loader after 3 seconds -->
   <script>
     window.addEventListener("load", function(){
       setTimeout(function(){
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-      }, 3000); // Loader stays for 3 seconds
+      }, 3000);
     });
   </script>
 
