@@ -14,26 +14,26 @@
     color: #222;
     margin: 0;
     padding: 0;
-    line-height: 1.5em; /* slightly tighter */
+    line-height: 1.5em;
   }
 
   /* Header */
   header {
     background: #5a1a1a;
     color: white;
-    padding: 15px 10px; /* reduced padding */
+    padding: 15px 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
   header h1 {
     margin: 0;
-    font-size: 24px; /* smaller */
+    font-size: 24px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-weight: 600;
   }
   header h2 {
     margin: 4px 0 0;
-    font-size: 14px; /* smaller */
+    font-size: 14px;
     font-weight: normal;
     color: #f3d9d9;
   }
@@ -47,43 +47,44 @@
   .content {
     width: 95%;
     max-width: 1100px;
-    margin: 20px auto; /* reduced spacing */
+    margin: 20px auto;
   }
 
   h1.page-title {
     text-align: center;
-    font-size: 28px; /* slightly smaller */
+    font-size: 28px;
     color: #5a1a1a;
     margin-bottom: 10px;
   }
 
   h2.section-title {
     color: #004d4d;
-    border-left: 4px solid #5a1a1a; /* thinner */
+    border-left: 4px solid #5a1a1a;
     padding-left: 10px;
-    margin: 30px 0 15px;
+    margin-bottom: 15px;
   }
 
-  /* Section with alternating layouts */
-  .section {
+  /* Boxes for each section */
+  .section-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
-    align-items: flex-start; /* tighter */
-    gap: 20px; /* smaller gap */
-    margin-bottom: 30px; /* reduced spacing */
-    flex-wrap: wrap; /* allow wrapping on smaller screens */
-  }
-  .section:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
-  .section img {
+  .section-box img {
     width: 45%;
     max-width: 400px;
     border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   }
-  .section .text {
+
+  .section-box .text {
     flex: 1;
     font-size: 0.95em;
   }
@@ -91,8 +92,8 @@
   .toc {
     background-color: #fff2d9;
     border-left: 4px solid #5a1a1a;
-    padding: 10px 15px; /* reduced padding */
-    margin: 20px auto; /* tighter spacing */
+    padding: 10px 15px;
+    margin: 20px auto;
     border-radius: 4px;
     width: 80%;
     font-size: 0.95em;
@@ -114,7 +115,7 @@
   .quote {
     font-style: italic;
     background-color: #fdf5e6;
-    padding: 8px 12px; /* tighter */
+    padding: 8px 12px;
     border-left: 4px solid #c7a27c;
     margin: 15px 0;
     border-radius: 4px;
@@ -142,31 +143,30 @@
 
   /* Responsive */
   @media (max-width: 768px) {
-    .section {
+    .section-box {
       flex-direction: column;
       gap: 15px;
     }
-    .section img {
+    .section-box img {
       width: 100%;
       max-width: 100%;
     }
   }
 </style>
+
 </head>
 <body>
 
-    <!-- Header -->
   <header>
     <h1>Ashmit Gurey</h1>
     <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
     <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
   </header>
 
-<div class="content">
+  <div class="content">
     <h1 class="page-title">Bringing Inverse Problems to Life</h1>
     <p style="text-align:center;"><strong>Source : Chris Budd & Cathryn Mitchell</strong></p>
 
-    <!-- Table of contents -->
     <div class="toc">
       <strong>Table of Contents:</strong>
       <a href="#intro">1. Introduction</a>
@@ -175,70 +175,78 @@
       <a href="#conclusion">4. Maths Saves the Day</a>
     </div>
 
-      <!-- Introduction -->
+    <!-- Introduction -->
     <h2 id="intro" class="section-title">1. Introduction</h2>
-        <div class="section">
+    <div class="section-box">
       <img src="temp-header-image-1.jpg" alt="Inverse problems can solve crimes">
       <div class="text">
-    <p><em>Inverse problems</em> are like mathematical mysteries—where you work backward from the outcome to figure out the cause, such as figuring out the shape of an object just by looking at its shadow.</p>
-    <p>To solve this, we create a <em>mathematical model</em> — to trace back from observed effects to uncover their underlying causes. One need to understand what causes lead to what effects. Then, given the known effects, we can use maths to give the possible causes, such as deciding what shaped objects cast the shadows in this photo. This approach lies at the heart of many methods, such as medical imaging and diagnostic analysis</p>
-    <p>Maths also helps us understand the limits of a model and how accurate our solutions can be. For instance, in the case of shadows cast by objects, different shapes might produce nearly identical shadows—making it difficult to pinpoint the exact cause from the effect alone.</p>
-        </div>
-    </div>
-    <div class="section">
-      <img src="IMG_0461.JPG" alt="Object and shadow illustration">
-      <div class="text">
-    <p>Inverse problems also appear in areas like remote sensing—where satellite images help study the land or ocean—diagnosing tumors through medical scans, and analyzing seismographs to search for oil. One more example, which might not immediately seem mathematical, is solving crimes.</p><br>
+        <p><em>Inverse problems</em> are like mathematical mysteries—where you work backward from the outcome to figure out the cause, such as figuring out the shape of an object just by looking at its shadow.</p>
+        <p>To solve this, we create a <em>mathematical model</em> — to trace back from observed effects to uncover their underlying causes. One need to understand what causes lead to what effects. Then, given the known effects, we can use maths to give the possible causes, such as deciding what shaped objects cast the shadows in this photo. This approach lies at the heart of many methods, such as medical imaging and diagnostic analysis.</p>
+        <p>Maths also helps us understand the limits of a model and how accurate our solutions can be. For instance, in the case of shadows cast by objects, different shapes might produce nearly identical shadows—making it difficult to pinpoint the exact cause from the effect alone.</p>
       </div>
     </div>
-    
+
+    <div class="section-box">
+      <img src="IMG_0461.JPG" alt="Object and shadow illustration">
+      <div class="text">
+        <p>Inverse problems also appear in areas like remote sensing—where satellite images help study the land or ocean—diagnosing tumors through medical scans, and analyzing seismographs to search for oil. One more example, which might not immediately seem mathematical, is solving crimes.</p>
+      </div>
+    </div>
+
     <!-- Crime -->
     <h2 id="crime" class="section-title">2. Fighting Crime with Inverse Problems</h2>
-     <div class="section">
+    <div class="section-box">
       <img src="istockphoto-1319035920-612x612.jpg" alt="Skid marks on road">
       <div class="text">
-    <p>Police apply inverse problem techniques by examining crime scene evidence—such as skid marks—to estimate factors like a vehicle’s speed.</p>
-    <p>When a crime occurs, the police must examine all the evidence at the scene and reason backward to figure out what took place and who was involved. Much of this evidence results from physical processes that are well understood—for example, a speeding car leaving skid marks. To uncover the exact cause—such as the car’s speed—they use the mathematical models of physics in reverse. Thus solving an inverse problem.</p>
-    
-    <p>Let's step into an ordinary day in the life of a police unit and see how mathematics can help fight crime. We are investigating a car accident and need to answer the question: was the car speeding?</p>
-    <p>The available evidence includes vehicle collision damage, witness statements, and tire skid marks. By analyzing these skid marks, investigators can piece together how the accident occurred. The marks themselves result from several factors, including the car’s speed, the braking force applied, the friction between the tires and the road, and any collisions with other vehicles.</p>
-    <p>Mathematically we can use mechanics to model this event in terms of <em>s</em>, the length of the skid, <em>u</em> , the speed of the vehicle, <em>g</em> , the acceleration due to gravity and <em>μ</em>, the coefficient of friction times braking efficiency. The model links the cause (the speed of the car) to the effect (the distance of the skid):</p>
-<div class="quote">
+        <p>Police apply inverse problem techniques by examining crime scene evidence—such as skid marks—to estimate factors like a vehicle’s speed.</p>
+        <p>When a crime occurs, the police must examine all the evidence at the scene and reason backward to figure out what took place and who was involved. Much of this evidence results from physical processes that are well understood—for example, a speeding car leaving skid marks. To uncover the exact cause—such as the car’s speed—they use the mathematical models of physics in reverse. Thus solving an inverse problem.</p>
+        <p>Let's step into an ordinary day in the life of a police unit and see how mathematics can help fight crime. We are investigating a car accident and need to answer the question: was the car speeding?</p>
+        <p>The available evidence includes vehicle collision damage, witness statements, and tire skid marks. By analyzing these skid marks, investigators can piece together how the accident occurred. The marks themselves result from several factors, including the car’s speed, the braking force applied, the friction between the tires and the road, and any collisions with other vehicles.</p>
+        <p>Mathematically we can use mechanics to model this event in terms of <em>s</em>, the length of the skid, <em>u</em> , the speed of the vehicle, <em>g</em> , the acceleration due to gravity and <em>μ</em>, the coefficient of friction times braking efficiency. The model links the cause (the speed of the car) to the effect (the distance of the skid):</p>
+        <div class="quote">
           <strong>Equations:</strong><br>
           <code>s = u² / (2μg)</code> &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; <code>u = √(2μgs)</code>
         </div>
+        <p>By measuring the skid and estimating friction, one can work backwards to estimate the speed.</p>
       </div>
     </div>
-    <p>By measuring the skid and estimating friction, one can work backwards to estimate the speed.</p>  
-  
- <!-- Saving Lives -->
+
+    <!-- Saving Lives -->
     <h2 id="saving" class="section-title">3. Saving Lives with Inverse Problems</h2>
-    <div class="section">
+    <div class="section-box">
       <img src="428405.jpg" alt="CT scan machine">
       <div class="text">
-    <p>CT scans are a well-known example of inverse problems. They use X-rays that pass through the body, and the resulting data is processed to safely reconstruct images of the internal structures.</p>
-    <p>Not long ago, diagnosing internal health issues often required surgery just to see what was wrong. This was especially risky when dealing with the brain. Today, however, that’s changed—doctors can now safely look inside the body using a range of non-invasive scanning techniques.</p>
-    <p>A CAT scan works by measuring how X-rays are affected as they pass through the body. During the scan, the patient lies on a bed that moves through the circular opening of the machine. Inside this opening is a rotating X-ray source that moves around the patient. As the X-rays travel through the body, detectors on the opposite side capture how much of the radiation gets through. These intensity measurements are then processed to create detailed internal images.</p>
-    <p>When an X-ray passes through the body, its intensity decreases. How much it’s reduced depends on the type of tissue it travels through—bone absorbs more X-rays, causing a greater reduction in intensity, while muscle, organs, or tumours absorb less, allowing more of the X-ray to pass through.</p>
-          <div class="quote">
+        <p>CT scans are a well-known example of inverse problems. They use X-rays that pass through the body, and the resulting data is processed to safely reconstruct images of the internal structures.</p>
+        <p>Not long ago, diagnosing internal health issues often required surgery just to see what was wrong. This was especially risky when dealing with the brain. Today, however, that’s changed—doctors can now safely look inside the body using a range of non-invasive scanning techniques.</p>
+        <p>A CAT scan works by measuring how X-rays are affected as they pass through the body. During the scan, the patient lies on a bed that moves through the circular opening of the machine. Inside this opening is a rotating X-ray source that moves around the patient. As the X-rays travel through the body, detectors on the opposite side capture how much of the radiation gets through. These intensity measurements are then processed to create detailed internal images.</p>
+        <p>When an X-ray passes through the body, its intensity decreases. How much it’s reduced depends on the type of tissue it travels through—bone absorbs more X-rays, causing a greater reduction in intensity, while muscle, organs, or tumours absorb less, allowing more of the X-ray to pass through.</p>
+        <div class="quote">
           <code>More absorption = less X-ray detected = higher density tissue. This inverse reasoning saves lives.</code>
         </div>
       </div>
     </div>
 
-    <p>In the image below, an object is exposed to multiple X-rays, and their intensities are recorded by a detector. Some X-rays travel through the entire object and are heavily absorbed, resulting in lower intensity readings at the center of the detector. Others pass through less of the object and are absorbed less, so they appear stronger. In essence, the object creates an X-ray shadow, and by analyzing this shadow, we can estimate its basic shape and size.</p>
-     <div class="section">
+    <div class="section-box">
       <img src="CAT_diagram2.gif" alt="X-ray projection and detector">
       <div class="text">
-    <p>The intensity of an X-ray when it reaches the detector depends on how wide the object is and how far the X-ray travels through both the object and the surrounding air. By precisely measuring the intensity of numerous X-rays coming from different directions, we can reconstruct the object’s size and shape. Mathematicians continue to refine these methods to improve their speed and accuracy, making scans more comfortable for patients and more effective for doctors—ultimately helping to save more lives.</p></p>
+        <p>In the image below, an object is exposed to multiple X-rays, and their intensities are recorded by a detector. Some X-rays travel through the entire object and are heavily absorbed, resulting in lower intensity readings at the center of the detector. Others pass through less of the object and are absorbed less, so they appear stronger. In essence, the object creates an X-ray shadow, and by analyzing this shadow, we can estimate its basic shape and size.</p>
+        <p>The intensity of an X-ray when it reaches the detector depends on how wide the object is and how far the X-ray travels through both the object and the surrounding air. By precisely measuring the intensity of numerous X-rays coming from different directions, we can reconstruct the object’s size and shape. Mathematicians continue to refine these methods to improve their speed and accuracy, making scans more comfortable for patients and more effective for doctors—ultimately helping to save more lives.</p>
+      </div>
+    </div>
 
-     <!-- Conclusion -->
+    <!-- Conclusion -->
     <h2 id="conclusion" class="section-title">4. Maths Saves the Day</h2>
-    <p>From crime scenes to hospital rooms, inverse problems let us work backwards to understand the world. Maths uncovers the invisible and saves lives every day.</p>
+    <div class="section-box">
+      <div class="text">
+        <p>From crime scenes to hospital rooms, inverse problems let us work backwards to understand the world. Maths uncovers the invisible and saves lives every day.</p>
+      </div>
+    </div>
 
     <a href="index.html" class="back-link">← Back to Homepage</a>
   </div>
-      
 
+  <footer>
+    © 2025 Ashmit Gurey · Kerala School of Mathematics
+  </footer>
 </body>
 </html>
