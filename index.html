@@ -60,7 +60,7 @@
       width: 100%;
       border-radius: 6px;
       overflow: hidden;
-      table-layout: fixed; /* ensures equal column distribution */
+      table-layout: fixed;
     }
 
     td {
@@ -68,6 +68,8 @@
       vertical-align: top;
       padding: 18px;
       text-align: center;
+      color: #2c3e50; /* deep navy text */
+      font-size: 15px;
     }
 
     /* Profile Image (Circular Portrait) */
@@ -75,16 +77,16 @@
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 50%; /* makes it circular */
-      border: 3px solid #5a1a1a; /* maroon frame */
+      border-radius: 50%;
+      border: 3px solid #5a1a1a;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       margin: 10px auto;
       display: block;
     }
 
-    /* Talk Photos (Fit to Column with Rounded Corners) */
+    /* Talk Photos */
     .talk-photo {
-      width: 100%; /* fits column */
+      width: 100%;
       height: auto;
       border-radius: 8px;
       border: 2px solid #ddd;
@@ -93,7 +95,6 @@
       display: block;
     }
 
-    /* Captions under images */
     .caption {
       font-size: 13px;
       color: #555;
@@ -102,8 +103,14 @@
       margin-top: 6px;
     }
 
+    /* Highlighted text inside table */
+    .highlight {
+      color: #7b1e1e; /* maroon for emphasis */
+      font-weight: bold;
+    }
+
     a {
-      color: #004d4d; /* dark teal */
+      color: #006666; /* dark teal */
       text-decoration: none;
       font-family: 'Source Sans Pro', Arial, sans-serif;
     }
@@ -118,7 +125,7 @@
     .announcement {
       margin: 40px auto;
       background: #fff2d9; /* sand */
-      border-left: 5px solid #5a1a1a; /* maroon border */
+      border-left: 5px solid #5a1a1a;
       padding: 20px;
       text-align: left;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -166,7 +173,7 @@
         <!-- CENTER COLUMN -->
         <td class="link-list">
           <div>
-            <b>Fall 2025</b><br>
+            <span class="highlight">Fall 2025</span><br>
             <b>Courses Undertaken </b><br>
             <a href="#">KSM3E01: Functional Analysis</a>
             <a href="#">KSM3E03: Field and Galois Theory</a>
