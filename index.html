@@ -66,9 +66,15 @@
       border: 1px solid #ddd;
       vertical-align: top;
       padding: 18px;
+      text-align: center;
     }
 
-    img { width: 200px; border-radius: 6px; }
+    /* Make images auto-fit table column */
+    img {
+      max-width: 100%;  /* fits the column width */
+      height: auto;     /* keeps aspect ratio */
+      border-radius: 6px;
+    }
 
     a {
       color: #004d4d; /* dark teal */
@@ -140,7 +146,7 @@
             <a href="#">KSM3E03: Field and Galois Theory</a>
             <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
             <a href="#">KSM3E07: Number Theory</a><br>
-            <a href="#"><b>Radon Transform (Inverse Problem):Application in<br> Medical Imaging</b></a><br>
+            <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
             <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
           </div>
 
@@ -156,12 +162,12 @@
         <!-- RIGHT COLUMN -->
         <td>
           <div>
-            <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 230px;"><br>
+            <img src="IMG_0451.jpg" alt="Talk Photo 1"><br>
             <small><b>Shepp-Logan Phantom</b></small>
           </div>
           <br>
           <div>
-            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 230px;"><br>
+            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2"><br>
             <small><b>Fan Beam CT VS Cone Beam CT</b></small>
           </div>
         </td>
