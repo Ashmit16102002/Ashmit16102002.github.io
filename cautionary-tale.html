@@ -7,140 +7,151 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      background-color: #f8f4ef; /* warm beige */
-      font-family: 'Merriweather', Georgia, serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7em;
-    }
+<style>
+  body {
+    background-color: #f8f4ef;
+    font-family: 'Merriweather', Georgia, serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em; /* slightly tighter */
+  }
 
-    /* Header */
-    header {
-      background: #5a1a1a; /* deep maroon */
-      color: white;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 30px;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-weight: 600;
-    }
-    header h2 {
-      margin: 8px 0 0;
-      font-size: 16px;
-      font-weight: normal;
-      color: #f3d9d9;
-      font-family: 'Merriweather', Georgia, serif;
-    }
-    header a {
-      color: #ffe082;
-      text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
-    header a:hover { text-decoration: underline; }
+  /* Header */
+  header {
+    background: #5a1a1a;
+    color: white;
+    padding: 15px 10px; /* reduced padding */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 24px; /* smaller */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 600;
+  }
+  header h2 {
+    margin: 4px 0 0;
+    font-size: 14px; /* smaller */
+    font-weight: normal;
+    color: #f3d9d9;
+  }
+  header a {
+    color: #ffe082;
+    text-decoration: none;
+  }
+  header a:hover { text-decoration: underline; }
 
-    /* Content wrapper */
-    .content {
-      width: 90%;
-      max-width: 1200px;
-      margin: 40px auto;
-    }
+  /* Content wrapper */
+  .content {
+    width: 95%;
+    max-width: 1100px;
+    margin: 20px auto; /* reduced spacing */
+  }
 
-    h1.page-title {
-      text-align: center;
-      font-size: 34px;
-      color: #5a1a1a;
-      margin-bottom: 10px;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
+  h1.page-title {
+    text-align: center;
+    font-size: 28px; /* slightly smaller */
+    color: #5a1a1a;
+    margin-bottom: 10px;
+  }
 
-    h2.section-title {
-      color: #004d4d; /* dark teal */
-      border-left: 6px solid #5a1a1a;
-      padding-left: 12px;
-      margin: 40px 0 20px;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
+  h2.section-title {
+    color: #004d4d;
+    border-left: 4px solid #5a1a1a; /* thinner */
+    padding-left: 10px;
+    margin: 30px 0 15px;
+  }
 
-    /* Section with alternating layouts */
+  /* Section with alternating layouts */
+  .section {
+    display: flex;
+    align-items: flex-start; /* tighter */
+    gap: 20px; /* smaller gap */
+    margin-bottom: 30px; /* reduced spacing */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+  }
+  .section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .section img {
+    width: 45%;
+    max-width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+  }
+  .section .text {
+    flex: 1;
+    font-size: 0.95em;
+  }
+
+  .toc {
+    background-color: #fff2d9;
+    border-left: 4px solid #5a1a1a;
+    padding: 10px 15px; /* reduced padding */
+    margin: 20px auto; /* tighter spacing */
+    border-radius: 4px;
+    width: 80%;
+    font-size: 0.95em;
+  }
+  .toc strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+  .toc a {
+    display: block;
+    margin: 2px 0;
+    color: #5a1a1a;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .toc a:hover { text-decoration: underline; }
+
+  .quote {
+    font-style: italic;
+    background-color: #fdf5e6;
+    padding: 8px 12px; /* tighter */
+    border-left: 4px solid #c7a27c;
+    margin: 15px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    font-size: 0.95em;
+  }
+
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #5a1a1a;
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  footer {
+    margin: 30px 0 10px;
+    font-size: 13px;
+    color: #444;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
     .section {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 50px;
+      flex-direction: column;
+      gap: 15px;
     }
-    .section:nth-child(even) {
-      flex-direction: row-reverse; /* alternate sides */
-    }
-
     .section img {
-      width: 45%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 100%;
     }
-    .section .text {
-      flex: 1;
-    }
-
-    .toc {
-      background-color: #fff2d9;
-      border-left: 5px solid #5a1a1a;
-      padding: 15px 20px;
-      margin: 30px auto;
-      border-radius: 6px;
-      width: 70%;
-    }
-    .toc strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-    .toc a {
-      display: block;
-      margin: 4px 0;
-      color: #5a1a1a;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .toc a:hover { text-decoration: underline; }
-
-    .quote {
-      font-style: italic;
-      background-color: #fdf5e6;
-      padding: 12px 18px;
-      border-left: 5px solid #c7a27c;
-      margin: 20px 0;
-      border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin-top: 40px;
-      font-weight: bold;
-      font-size: 16px;
-      color: #5a1a1a;
-      text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
-    .back-link:hover { text-decoration: underline; }
-
-    footer {
-      margin: 50px 0 20px;
-      font-size: 14px;
-      color: #444;
-      text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
