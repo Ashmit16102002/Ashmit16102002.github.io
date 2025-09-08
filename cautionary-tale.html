@@ -17,7 +17,6 @@
     line-height: 1.5em;
   }
 
-  /* Header */
   header {
     background: #5a1a1a;
     color: white;
@@ -43,7 +42,6 @@
   }
   header a:hover { text-decoration: underline; }
 
-  /* Content wrapper */
   .content {
     width: 95%;
     max-width: 1100px;
@@ -64,29 +62,36 @@
     margin-bottom: 15px;
   }
 
-  /* Boxes for each section */
+  /* Redesigned section boxes */
   .section-box {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #fdf6f0);
+    border-left: 6px solid #5a1a1a;
+    border-radius: 12px;
+    padding: 25px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .section-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
   }
 
   .section-box img {
     width: 45%;
-    max-width: 400px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 450px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   }
 
   .section-box .text {
     flex: 1;
-    font-size: 0.95em;
+    font-size: 0.96em;
   }
 
   .toc {
@@ -94,7 +99,7 @@
     border-left: 4px solid #5a1a1a;
     padding: 10px 15px;
     margin: 20px auto;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 80%;
     font-size: 0.95em;
   }
@@ -114,19 +119,19 @@
 
   .quote {
     font-style: italic;
-    background-color: #fdf5e6;
-    padding: 8px 12px;
-    border-left: 4px solid #c7a27c;
+    background-color: #fff8e6;
+    padding: 10px 14px;
+    border-left: 5px solid #c7a27c;
     margin: 15px 0;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     font-size: 0.95em;
   }
 
   .back-link {
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: bold;
     font-size: 14px;
     color: #5a1a1a;
@@ -141,7 +146,6 @@
     text-align: center;
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
     .section-box {
       flex-direction: column;
