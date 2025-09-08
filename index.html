@@ -68,7 +68,36 @@
       padding: 18px;
     }
 
-    img { width: 200px; border-radius: 6px; }
+    /* Profile Image (Circular Portrait) */
+    .profile-photo {
+      max-width: 220px;
+      height: auto;
+      border-radius: 50%; /* makes it circular */
+      border: 3px solid #5a1a1a; /* maroon frame */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Talk Photos (Rectangular with rounded edges) */
+    .talk-photo {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Captions under images */
+    .caption {
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+      display: block;
+      margin-top: 6px;
+    }
 
     a {
       color: #004d4d; /* dark teal */
@@ -127,7 +156,7 @@
       <tr>
         <!-- LEFT COLUMN -->
         <td>
-          <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
+          <img src="IMG_0447.JPG" alt="Ashmit Gurey" class="profile-photo"><br>
           <a href="vita.html"><b>Vita</b></a>
         </td>
 
@@ -156,13 +185,12 @@
         <!-- RIGHT COLUMN -->
         <td>
           <div>
-            <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 230px;"><br>
-            <small><b>Shepp-Logan Phantom</b></small>
+            <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
+            <span class="caption"><b>Shepp-Logan Phantom</b></span>
           </div>
-          <br>
           <div>
-            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 230px;"><br>
-            <small><b>Fan Beam CT VS Cone Beam CT</b></small>
+            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
+            <span class="caption"><b>Fan Beam CT VS Cone Beam CT</b></span>
           </div>
         </td>
       </tr>
