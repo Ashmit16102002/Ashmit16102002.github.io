@@ -13,34 +13,6 @@
       line-height: 1.6em;
     }
 
-    /* Loader styling */
-    #loader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #f5e6cc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .dots span { animation: blink 1.5s infinite; }
-    .dots span:nth-child(2){animation-delay:0.3s;}
-    .dots span:nth-child(3){animation-delay:0.6s;}
-    .dots span:nth-child(4){animation-delay:0.9s;}
-    .dots span:nth-child(5){animation-delay:1.2s;}
-    @keyframes blink {
-      0%,20% {opacity:0;}
-      50% {opacity:1;}
-      100% {opacity:0;}
-    }
-
-    /* Hide content until loaded */
-    #content { display: none; }
-
     /* Header */
     header {
       background: #fff;
@@ -119,88 +91,71 @@
 </head>
 <body>
 
-  <!-- Loader -->
-  <div id="loader">
-    Loading<span class="dots"><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span></span>
-  </div>
+  <!-- Header -->
+  <header>
+    <h1>Ashmit Gurey</h1>
+    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+    <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+  </header>
 
   <!-- Main Content -->
-  <div id="content">
+  <main>
+    <table>
+      <tr>
+        <!-- LEFT COLUMN -->
+        <td>
+          <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
+          <a href="vita.html"><b>Vita</b></a>
+        </td>
 
-    <header>
-      <h1>Ashmit Gurey</h1>
-      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-    </header>
+        <!-- CENTER COLUMN -->
+        <td class="link-list">
+          <div>
+            <b>Fall 2025</b><br>
+            <b>Courses Undertaken </b><br>
+            <a href="#">KSM3E01: Functional Analysis</a>
+            <a href="#">KSM3E03: Field and Galois Theory</a>
+            <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
+            <a href="#">KSM3E07: Number Theory</a><br>
+            <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
+            <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
+          </div>
 
-    <main>
-      <table>
-        <tr>
-          <!-- LEFT COLUMN -->
-          <td>
-            <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
-            <a href="vita.html"><b>Vita</b></a>
-          </td>
+          <div class="link-list">
+            <a href="#">Publications</a>
+            <a href="#">Expositions</a>
+            <a href="#">Programs</a>
+            <a href="schedule.html"><b>Schedule</b></a>
+            <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
+          </div>
+        </td>
 
-          <!-- CENTER COLUMN -->
-          <td class="link-list">
-            <div>
-              <b>Fall 2025</b><br>
-              <b>Courses Undertaken </b><br>
-              <a href="#">KSM3E01: Functional Analysis</a>
-              <a href="#">KSM3E03: Field and Galois Theory</a>
-              <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
-              <a href="#">KSM3E07: Number Theory</a><br>
-              <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
-              <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
-            </div>
+        <!-- RIGHT COLUMN -->
+        <td>
+          <div>
+            <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 230px;"><br>
+            <small><b>Shepp-Logan Phantom</b></small>
+          </div>
+          <br>
+          <div>
+            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 230px;"><br>
+            <small><b>Fan Beam CT VS Cone Beam CT</b></small>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </main>
 
-            <div class="link-list">
-              <a href="#">Publications</a>
-              <a href="#">Expositions</a>
-              <a href="#">Programs</a>
-              <a href="schedule.html"><b>Schedule</b></a>
-              <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
-            </div>
-          </td>
-
-          <!-- RIGHT COLUMN -->
-          <td>
-            <div>
-              <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 230px;"><br>
-              <small><b>Shepp-Logan Phantom</b></small>
-            </div>
-            <br>
-            <div>
-              <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 230px;"><br>
-              <small><b>Fan Beam CT VS Cone Beam CT</b></small>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </main>
-
-    <!-- Announcement Box -->
-    <div class="announcement">
-      <h2>📢 Announcements</h2>
-      <p><b>August 2025:</b> Schedule for Fall Semester is now available <a href="schedule.html">here</a>.</p>
-      <p><b>June 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
-    </div>
-
-    <footer>
-      © 2025 Ashmit Gurey · Kerala School of Mathematics
-    </footer>
+  <!-- Announcement Box -->
+  <div class="announcement">
+    <h2>📢 Announcements</h2>
+    <p><b>August 2025:</b> Schedule for Fall Semester is now available <a href="schedule.html">here</a>.</p>
+    <p><b>June 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
   </div>
 
-  <!-- Script to hide loader after 3 seconds -->
-  <script>
-    window.addEventListener("load", function(){
-      setTimeout(function(){
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      }, 3000);
-    });
-  </script>
+  <footer>
+    © 2025 Ashmit Gurey · Kerala School of Mathematics
+  </footer>
 
 </body>
 </html>
