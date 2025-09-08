@@ -2,49 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UnderGrad and Master Courses Learnt</title>
+  <title>UnderGrad and Master Courses Learnt – Ashmit Gurey</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #f5e6cc; /* Light brown */
-      font-family: 'Open Sans', Arial, sans-serif;
-      color: black;
+      background-color: #f8f4ef; /* warm beige */
+      font-family: 'Merriweather', Georgia, serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6em;
+    }
+
+    /* Header */
+    header {
+      background: #5a1a1a; /* deep maroon */
+      color: white;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
+    }
+    header h2 {
+      margin: 8px 0 0;
+      font-size: 16px;
+      font-weight: normal;
+      color: #f3d9d9;
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    header a {
+      color: #ffe082; /* soft gold */
+      text-decoration: none;
+    }
+    header a:hover { text-decoration: underline; }
+
+    /* Main container */
+    .container {
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 25px;
+      width: 85%;
+      max-width: 1100px;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(90,26,26,0.2); /* maroon shadow */
       text-align: center;
     }
 
-    .container {
-      background-color: #e0e0e0;
-      display: inline-block;
-      padding: 15px;
-      border: 1px solid gray;
-    }
-
     h1 {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 26px;
+      color: #5a1a1a;
       margin-top: 0;
       margin-bottom: 20px;
     }
 
     .columns {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: flex-start;
+      gap: 20px;
     }
 
     .column {
-      border: 1px solid gray;
-      padding: 10px;
-      background: white;
-      margin: 0 10px;
-      text-align: left;
+      flex: 1;
+      border: 1px solid #ddd;
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
     .column h2 {
       text-align: center;
       margin-top: 0;
+      color: #004d4d; /* dark teal */
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
 
     .year {
       font-weight: bold;
-      margin-top: 12px;
+      margin-top: 15px;
+      color: #5a1a1a; /* maroon */
     }
 
     .year + p {
@@ -52,91 +98,107 @@
     }
 
     a {
-      color: blue;
-      text-decoration: underline;
+      color: #004d4d;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
+    a:hover { text-decoration: underline; }
 
     .footer {
-      margin-top: 20px;
+      margin-top: 25px;
       text-align: center;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
+
+    .footer a {
+      color: #5a1a1a;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <h1>Ashmit Gurey</h1>
+    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+    <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+  </header>
+
+  <!-- Main Content -->
   <div class="container">
     <h1>UnderGrad and Master Courses Learnt</h1>
 
     <div class="columns">
-      <!-- Harvard Courses -->
+      <!-- KSoM Courses -->
       <div class="column">
         <h2>KSoM Courses</h2>
 
         <div class="year">2025</div>
-        <p>KSM2C01 :<a href="#">Algebra - II (Rings and Modules)</a></p>
-        <p>KSM2C02 :<a href="#">Analysis - II (Measure Theory)</a></p>
-        <p>KSM2C03 :<a href="#">Complex Analysis</a></p>
-        <p>KSM2C04 :<a href="#">ODE</a></p>
+        <p>KSM2C01 : <a href="#">Algebra - II (Rings and Modules)</a></p>
+        <p>KSM2C02 : <a href="#">Analysis - II (Measure Theory)</a></p>
+        <p>KSM2C03 : <a href="#">Complex Analysis</a></p>
+        <p>KSM2C04 : <a href="#">ODE</a></p>
 
         <div class="year">2024</div>
-        <p>KSM1C01 :<a href="#">Algebra - I</a></p>
-        <p>KSM1C02 :<a href="#">Analysis - I</a></p>
-        <p>KSM1C03 :<a href="#">Topology (Point - Set)</a></p>
-        <p>KSM1C04 :<a href="#">Probability</a></p>
-
-        <!-- Continue for 2022–2007 as in screenshot... -->
+        <p>KSM1C01 : <a href="#">Algebra - I</a></p>
+        <p>KSM1C02 : <a href="#">Analysis - I</a></p>
+        <p>KSM1C03 : <a href="#">Topology (Point - Set)</a></p>
+        <p>KSM1C04 : <a href="#">Probability</a></p>
       </div>
 
-      <!-- Berkeley Courses -->
+      <!-- IMA Courses -->
       <div class="column">
         <h2>IMA Courses</h2>
+
         <div class="year">2024</div>
-        <p>C14 :<a href="#">Differential Geometry</a></p>
-        <p>DSE3 :<a href="#">Probability - II</a></p>
-        <p>DSE4 :<a href="#">Bachelor Thesis</a></p>
-        <p>GE7 :<a href="#">Quantum Mechanics</a></p>
-        
-        
+        <p>C14 : <a href="#">Differential Geometry</a></p>
+        <p>DSE3 : <a href="#">Probability - II</a></p>
+        <p>DSE4 : <a href="#">Bachelor Thesis</a></p>
+        <p>GE7 : <a href="#">Quantum Mechanics</a></p>
+
         <div class="year">2023</div>
-        <p>C6 :<a href="#">Calculus - III</a></p>
-        <p>C7 :<a href="#">Algebra - III (Rings and Fields)</a></p>
-        <p>C8 :<a href="#">ODE</a></p>
-        <p>GE4 :<a href="#">Statistics - I</a></p>
-        <p>SE1 :<a href="#">Transportation and Game Theory</a></p>
-        <p>C9 :<a href="#">PDE</a></p>
-        <p>C10 :<a href="#">Algebra - IV (Linear Algebra)</a></p>
-        <p>C11 :<a href="#">Complex Analysis</a></p>
-        <p>GE5 :<a href="#">Point - Set Topology</a></p>
-        <p>SE2 :<a href="#">Logic and Set Theory</a></p>
-        <p>C12 :<a href="#">Number Theory - I</a></p>
-        <p>C13 :<a href="#">Numerical Analysis + Lab</a></p>
-        <p>DSE1 :<a href="#">Theory of Equations</a></p>
-        <p>DSE2 :<a href="#">Optimization and LPP</a></p>
-        <p>GE6 :<a href="#">CS - V (Theory of Computation) </a></p>        
+        <p>C6 : <a href="#">Calculus - III</a></p>
+        <p>C7 : <a href="#">Algebra - III (Rings and Fields)</a></p>
+        <p>C8 : <a href="#">ODE</a></p>
+        <p>GE4 : <a href="#">Statistics - I</a></p>
+        <p>SE1 : <a href="#">Transportation and Game Theory</a></p>
+        <p>C9 : <a href="#">PDE</a></p>
+        <p>C10 : <a href="#">Algebra - IV (Linear Algebra)</a></p>
+        <p>C11 : <a href="#">Complex Analysis</a></p>
+        <p>GE5 : <a href="#">Point - Set Topology</a></p>
+        <p>SE2 : <a href="#">Logic and Set Theory</a></p>
+        <p>C12 : <a href="#">Number Theory - I</a></p>
+        <p>C13 : <a href="#">Numerical Analysis + Lab</a></p>
+        <p>DSE1 : <a href="#">Theory of Equations</a></p>
+        <p>DSE2 : <a href="#">Optimization and LPP</a></p>
+        <p>GE6 : <a href="#">CS - V (Theory of Computation)</a></p>
 
         <div class="year">2022</div>
-        <p>C4 :<a href="#">Calculus - II</a></p>
-        <p>C5 :<a href="#">Algebra - II (Group Theory)</a></p>
-        <p>GE2 :<a href="#">CS - II (Design and Analysis of Algorithms)</a></p>
-        <p>GE3 :<a href="#">Probability - I</a></p>
-        <p>AECC2 :<a href="#">Environmental Science and Disaster Management</a></p>
+        <p>C4 : <a href="#">Calculus - II</a></p>
+        <p>C5 : <a href="#">Algebra - II (Group Theory)</a></p>
+        <p>GE2 : <a href="#">CS - II (Design and Analysis of Algorithms)</a></p>
+        <p>GE3 : <a href="#">Probability - I</a></p>
+        <p>AECC2 : <a href="#">Environmental Science and Disaster Management</a></p>
 
         <div class="year">2021</div>
-        <p>C1 :<a href="#">Calculus - I</a></p>
-        <p>C2 :<a href="#">Algebra - I (Matrix Theory)</a></p>
-        <p>C3 :<a href="#">CS - I (Introduction to Programming and Data Structures)</a></p>
-        <p>GE1 :<a href="#">Combinatorics and Discrete Mathematics</a></p>
-        <p>AECC1 :<a href="#">English Communicative</a></p>
-        <!-- Continue for 2002–1997... -->
+        <p>C1 : <a href="#">Calculus - I</a></p>
+        <p>C2 : <a href="#">Algebra - I (Matrix Theory)</a></p>
+        <p>C3 : <a href="#">CS - I (Introduction to Programming and Data Structures)</a></p>
+        <p>GE1 : <a href="#">Combinatorics and Discrete Mathematics</a></p>
+        <p>AECC1 : <a href="#">English Communicative</a></p>
       </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-      <a href="index.html">Back to Home</a>
+      <a href="index.html">← Back to Home</a>
     </div>
   </div>
-
 </body>
 </html>
+
 
 
