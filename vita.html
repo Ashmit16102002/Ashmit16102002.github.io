@@ -1,41 +1,173 @@
-<!DOCTYPE html> 
-<html> 
-  <head> 
-    <meta charset="UTF-8"> 
-    <title>Vita - Ashmit Gurey</title> 
-    <style> 
-      body { background-color: #f5e6cc; /* Light brown */ font-family: 'Open Sans', Arial, sans-serif; color: black; text-align: center; } 
-      .box { background-color: #d2b48c; /* Deeper brown for box */ border: 1px solid gray; margin: auto; width: 80%; padding: 20px; } 
-      .title { font-size: 22px; font-weight: bold; margin-bottom: 10px; } 
-      table { width: 100%; border-spacing: 20px; text-align: left; } 
-      td { vertical-align: top; } a { color: darkblue; text-decoration: underline; } 
-      .red-link { color: red; font-weight: bold; } 
-      .footer { position: absolute; bottom: 20px; left: 20px; font-style: italic; } 
-    </style> 
-  </head> 
-  <body> 
-    <div class="box"> 
-      <div class="title">Vita</div> 
-      <table> 
-        <tr> 
-        <td> <strong>Academic \ Research Positions</strong><br><br>
-          Master Thesis - IIT Tirupati 2024-2026<br> 
-          <a href="tifrcam-summer2025.html">Visiting Student - TIFR Centre for Applicable Mathematics - 2025</a><br>
-          Undergraduate Project - NISER Bhubaneswar - 2023-2024<br> 
-          MTTS - IIT Madras - 2023<br> 
-          SRF - IASc-INSA-NASI - Summer - 2023<br> 
-        </td> 
-          <td> 
-            <strong>Education</strong><br><br> 
-            Kerala School of Mathematics - IPhD - Present
-            <br> Institute of Mathematics & Applications - B.Sc. - 2024<br> 
-          </td> 
-        </tr> 
-      </table> <br>
-      <a href="Ashmit_CV.pdf" class="red-link" align="center">→ Detailed CV (PDF) ←</a> 
-    </div> 
-    <div class="footer"> 
-      <a href="index.html">Ashmit Gurey</a> 
-    </div> 
-  </body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vita – Ashmit Gurey</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f4ef;
+      font-family: 'Merriweather', Georgia, serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+    header {
+      background: #5a1a1a;
+      color: white;
+      padding: 15px 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
+    }
+    header h2 {
+      margin: 4px 0 0;
+      font-size: 14px;
+      font-weight: normal;
+      color: #f3d9d9;
+    }
+    header a {
+      color: #ffe082;
+      text-decoration: none;
+    }
+    header a:hover { text-decoration: underline; }
+
+    .content {
+      width: 95%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    h1.page-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 28px;
+      color: #5a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffffff, #fdf6f0);
+      border-left: 6px solid #5a1a1a;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px;
+    }
+
+    td {
+      vertical-align: top;
+      font-size: 0.95em;
+    }
+
+    a {
+      color: #5a1a1a;
+      text-decoration: underline;
+    }
+    a:hover { text-decoration: none; }
+
+    .section-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 20px;
+      color: #004d4d;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .cv-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: red;
+      text-decoration: underline;
+      font-size: 1em;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      table, td {
+        display: block;
+        width: 100%;
+      }
+      td {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ashmit Gurey</h1>
+  <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+  <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+</header>
+
+<div class="content">
+  <h1 class="page-title">Vita</h1>
+
+  <div class="card">
+    <div class="section-title">Academic & Research Positions</div>
+    <table>
+      <tr>
+        <td>
+          Master Thesis – IIT Tirupati 2024–2026<br>
+          <a href="tifrcam-summer2025.html">Visiting Student – TIFR Centre for Applicable Mathematics – 2025</a><br>
+          Undergraduate Project – NISER Bhubaneswar 2023–2024<br>
+          MTTS – IIT Madras 2023<br>
+          SRF – IASc-INSA-NASI – Summer 2023
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Education</div>
+    <table>
+      <tr>
+        <td>
+          Kerala School of Mathematics – IPhD – Present<br>
+          Institute of Mathematics & Applications – B.Sc. – 2024
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <a href="Ashmit_CV.pdf" class="cv-link">→ Detailed CV (PDF) ←</a>
+</div>
+
+<footer>
+  <a href="index.html">Ashmit Gurey</a>
+</footer>
+
+</body>
 </html>
