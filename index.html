@@ -7,10 +7,10 @@
     body {
       background-color: #f5e6cc; /* Light brown */
       font-family: 'Open Sans', Arial, sans-serif;
-      color: black;
-      text-align: center;
+      color: #222;
       margin: 0;
       padding: 0;
+      line-height: 1.6em;
     }
 
     /* Loader styling */
@@ -27,78 +27,93 @@
       font-weight: bold;
       letter-spacing: 2px;
     }
-
-    /* Blinking dots animation */
-    .dots span {
-      animation: blink 1.5s infinite;
-    }
-
-    .dots span:nth-child(2) { animation-delay: 0.3s; }
-    .dots span:nth-child(3) { animation-delay: 0.6s; }
-    .dots span:nth-child(4) { animation-delay: 0.9s; }
-    .dots span:nth-child(5) { animation-delay: 1.2s; }
-
+    .dots span { animation: blink 1.5s infinite; }
+    .dots span:nth-child(2){animation-delay:0.3s;}
+    .dots span:nth-child(3){animation-delay:0.6s;}
+    .dots span:nth-child(4){animation-delay:0.9s;}
+    .dots span:nth-child(5){animation-delay:1.2s;}
     @keyframes blink {
-      0%, 20% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
+      0%,20% {opacity:0;}
+      50% {opacity:1;}
+      100% {opacity:0;}
     }
 
     /* Hide content until loaded */
-    #content {
-      display: none;
+    #content { display: none; }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-family: Georgia, serif;
+    }
+    header h2 {
+      margin: 5px 0 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #444;
+    }
+
+    /* Main content */
+    main {
+      margin: 30px auto;
+      width: 85%;
+      max-width: 1100px;
     }
 
     table {
-      margin: 30px auto;
+      margin: auto;
       border-collapse: collapse;
-      border: 1px solid gray;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      width: 100%;
     }
 
     td {
-      border: 1px solid gray;
+      border: 1px solid #ccc;
       vertical-align: top;
-      padding: 10px;
+      padding: 15px;
     }
 
-    a {
-      color: blue;
-      text-decoration: underline;
-    }
+    img { width: 200px; border-radius: 6px; }
 
-    img {
-      width: 200px;
-    }
+    a { color: #003399; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .link-list a {
       display: block;
-      margin: 0.5em 0;
+      margin: 0.4em 0;
     }
 
     /* Announcement box */
     .announcement {
       margin: 30px auto;
-      width: 70%;
-      background: #fff8e7; /* soft yellow background */
-      border: 2px solid #d4af37; /* gold border */
+      background: #fff;
+      border-left: 5px solid #b8860b;
       padding: 20px;
       text-align: left;
-      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 85%;
+      max-width: 900px;
     }
 
     .announcement h2 {
       margin-top: 0;
-      color: #b8860b; /* dark goldenrod */
+      color: #b8860b;
       font-size: 20px;
-      border-bottom: 1px solid #d4af37;
-      padding-bottom: 5px;
+      font-family: Georgia, serif;
     }
 
-    .announcement p {
-      margin: 10px 0;
-      line-height: 1.5em;
+    footer {
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
@@ -111,61 +126,59 @@
 
   <!-- Main Content -->
   <div id="content">
-    <br>
-    <table align="center">
-      <tr>
-        <!-- LEFT COLUMN -->
-        <td>
-          <div style="font-size: 22px;">
-            <strong>
-              <a href="mailto:gureyashmit@ksom.res.in">Ashmit Gurey</a>
-            </strong>
-          </div><br>
-          <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
-          <div>
-            IPhD<br>
-            <a href="https://ksom.res.in">Kerala School of Mathematics<br>
-            Kozhikode, India<br><br></a>
+
+    <header>
+      <h1>Ashmit Gurey</h1>
+      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+    </header>
+
+    <main>
+      <table>
+        <tr>
+          <!-- LEFT COLUMN -->
+          <td>
+            <img src="IMG_0447.JPG" alt="Ashmit Gurey"><br><br>
             <a href="vita.html"><b>Vita</b></a>
-          </div>
-        </td>
+          </td>
 
-        <!-- CENTER COLUMN -->
-        <td class="link-list">
-          <div>
-            <b>Fall 2025</b><br>
-            <b>Courses Undertaken </b><br>
-            <a href="#">KSM3E01: Functional Analysis</a>
-            <a href="#">KSM3E03: Field and Galois Theory</a>
-            <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
-            <a href="#">KSM3E07: Number Theory</a><br>
-            <a href="#"><b>Radon Transform (A Specific Inverse Problem):<br>Application in Medical Imaging (Fan Beam CT)</b></a><br>
-            <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
-          </div>
+          <!-- CENTER COLUMN -->
+          <td class="link-list">
+            <div>
+              <b>Fall 2025</b><br>
+              <b>Courses Undertaken </b><br>
+              <a href="#">KSM3E01: Functional Analysis</a>
+              <a href="#">KSM3E03: Field and Galois Theory</a>
+              <a href="https://pranav.ksom.res.in/teaching/analysis-on-manifolds-2025/">KSM3E05: Analysis on Manifolds</a>
+              <a href="#">KSM3E07: Number Theory</a><br>
+              <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
+              <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
+            </div>
 
-          <div class="link-list">
-            <a href="#">Publications</a>
-            <a href="#">Expositions</a>
-            <a href="#">Programs</a>
-            <a href="schedule.html"><b>Schedule</b></a>
-            <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
-          </div>
-        </td>
+            <div class="link-list">
+              <a href="#">Publications</a>
+              <a href="#">Expositions</a>
+              <a href="#">Programs</a>
+              <a href="schedule.html"><b>Schedule</b></a>
+              <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
+            </div>
+          </td>
 
-        <!-- RIGHT COLUMN -->
-        <td>
-          <div>
-            <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 250px;"><br>
-            <small><b>Shepp-Logan Phantom</b></small>
-          </div>
-          <br>
-          <div>
-            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 250px;"><br>
-            <small><b>Fan Beam CT VS  Cone Beam CT</b></small>
-          </div>
-        </td>
-      </tr>
-    </table>
+          <!-- RIGHT COLUMN -->
+          <td>
+            <div>
+              <img src="IMG_0451.jpg" alt="Talk Photo 1" style="width: 230px;"><br>
+              <small><b>Shepp-Logan Phantom</b></small>
+            </div>
+            <br>
+            <div>
+              <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" style="width: 230px;"><br>
+              <small><b>Fan Beam CT VS Cone Beam CT</b></small>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </main>
 
     <!-- Announcement Box -->
     <div class="announcement">
@@ -173,6 +186,10 @@
       <p><b>August 2025:</b> Schedule for Fall Semester is now available <a href="schedule.html">here</a>.</p>
       <p><b>June 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
     </div>
+
+    <footer>
+      © 2025 Ashmit Gurey · Kerala School of Mathematics
+    </footer>
   </div>
 
   <!-- Script to hide loader after 3 seconds -->
@@ -181,7 +198,7 @@
       setTimeout(function(){
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-      }, 3000); // Loader stays for 3 seconds
+      }, 3000);
     });
   </script>
 
