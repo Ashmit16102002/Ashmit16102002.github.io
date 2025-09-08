@@ -3,87 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <title>Summer Programme 2025 – Ashmit Gurey</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #f5e6cc;
-      font-family: 'Open Sans', Arial, sans-serif;
-      color: black;
-      margin: 30px;
+      background-color: #f8f4ef;
+      font-family: 'Merriweather', Georgia, serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background-color: #ffffff;
-      padding: 20px 30px;
-      border: 1px solid gray;
-    }
-    h1 {
+
+    header {
+      background: #5a1a1a;
+      color: white;
+      padding: 20px 10px;
       text-align: center;
-      color: darkred;
-      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
+    }
+    header h2 {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #f3d9d9;
+    }
+    header a {
+      color: #ffe082;
+      text-decoration: none;
+    }
+    header a:hover { text-decoration: underline; }
+
+    .content {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+
+    h1.page-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 28px;
+      color: #5a1a1a;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
     .subhead {
       text-align: center;
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
+
     .toc {
-      background-color: #eee9dc;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #bbb;
+      background: #fff2d9;
+      border-left: 6px solid #5a1a1a;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+    }
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
     .toc a {
       display: block;
-      margin: 4px 0;
-      color: darkred;
+      margin: 5px 0;
+      color: #5a1a1a;
+      font-weight: bold;
       text-decoration: none;
     }
-    .toc a:hover {
+    .toc a:hover { text-decoration: underline; }
+
+    .card {
+      background: linear-gradient(145deg, #ffffff, #fdf6f0);
+      border-left: 6px solid #5a1a1a;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    h2.section-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 20px;
+      color: #004d4d;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 18px;
+      color: #5a1a1a;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p, li {
+      font-size: 0.95em;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .photo-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .photo-row img {
+      width: 32%;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    a {
+      color: #5a1a1a;
       text-decoration: underline;
     }
-    h2 {
-      color: darkred;
-      margin-top: 2em;
-    }
-    h3 {
-      margin-top: 1.5em;
-      font-weight: bold;
-    }
-    ul {
-      margin: 10px 0 20px 20px;
-    }
+    a:hover { text-decoration: none; }
+
     hr {
-      margin: 2em 0;
       border: none;
       border-top: 1px solid #ccc;
+      margin: 25px 0;
     }
-    a {
-      color: darkred;
-    }
-    .photo-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  gap: 10px;
-}
 
-.photo-row img {
-  width: 32%;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  object-fit: cover;
-}
+    .back-link {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      margin: 40px 0;
+      color: #5a1a1a;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .photo-row img {
+        width: 48%;
+      }
+    }
+    @media (max-width: 500px) {
+      .photo-row img {
+        width: 100%;
+      }
+    }
 
   </style>
 </head>
 <body>
+<header>
+  <h1>Ashmit Gurey</h1>
+  <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+  <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+</header>
 
-<div class="container">
-  <h1>Summer Programme 2025</h1>
+<div class="content">
+  <h1 class="page-title">Summer Programme 2025</h1>
   <div class="subhead">June 16 – July 11, 2025</div>
-
+  
   <div class="toc">
     <strong>Contents:</strong>
     <a href="#topics">1. Topics</a>
@@ -91,29 +198,34 @@
     <a href="#special">5. Special Lectures</a>
   </div>
 
-  <p>TIFR Centre for Applicable Mathematics is organized a Summer Programme mainly targeted toward Master’s and entry‑level PhD students focusing on Analysis and related topics during June 16 – July 11, 2025. The programme will consist of ten 90‑minute lectures.</p>
-   <div class="photo-row">
-  <img src="TIFR_CAM.png" alt="Photo 1">
-  <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-2.jpeg" alt="Photo 2">
-  <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM.jpeg" alt="Photo 3">
-  </div>
+  <div class="card">
+    <p>TIFR Centre for Applicable Mathematics organized a Summer Programme mainly targeted toward Master’s and entry‑level PhD students focusing on Analysis and related topics during June 16 – July 11, 2025. The programme consists of ten 90‑minute lectures.</p>
 
     <div class="photo-row">
-  <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-3.jpeg" alt="Photo 4">
-  <img src="WhatsApp Image 2025-07-18 at 8.05.11 PM.jpeg" alt="Photo 6">
-  <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-4.jpeg" alt="Photo 5">
+      <img src="TIFR_CAM.png" alt="Photo 1">
+      <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-2.jpeg" alt="Photo 2">
+      <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM.jpeg" alt="Photo 3">
+    </div>
+    <div class="photo-row">
+      <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-3.jpeg" alt="Photo 4">
+      <img src="WhatsApp Image 2025-07-18 at 8.05.11 PM.jpeg" alt="Photo 5">
+      <img src="WhatsApp Image 2025-07-17 at 9.20.23 PM-4.jpeg" alt="Photo 6">
+    </div>
   </div>
-  <h2 id="topics">1. Topics</h2>
-  <ul>
-    <li>Patterns, Entropy and Gibbs measures – Nishant Chandgotia</li>
-    <li>Geometric Measure Theory – Debabrata Karmakar</li>
-    <li>Microlocal Analysis and Inverse Problems – Venky Krishnan</li>
-    <li>Introduction to Harmonic Measure & Geometric Function Theory – Atul Shekhar</li>
-    <li>Reproducing kernel Hilbert space (RKHS): from theory to applications – Sreekar Vadlamani</li>
-    <li>Multiscale Problems in PDEs – M Vanninathan</li>
-  </ul>
-  <p>The detailed lecture descriptions follow below.</p>
-
+  
+<div id="topics" class="card">
+    <div class="section-title">1. Topics</div>
+    <ul>
+      <li>Patterns, Entropy and Gibbs measures – Nishant Chandgotia</li>
+      <li>Geometric Measure Theory – Debabrata Karmakar</li>
+      <li>Microlocal Analysis and Inverse Problems – Venky Krishnan</li>
+      <li>Introduction to Harmonic Measure & Geometric Function Theory – Atul Shekhar</li>
+      <li>Reproducing kernel Hilbert space (RKHS): from theory to applications – Sreekar Vadlamani</li>
+      <li>Multiscale Problems in PDEs – M Vanninathan</li>
+    </ul>
+  </div>
+   <div id="lectures" class="card">
+    <div class="section-title">4. Lectures (Detailed Descriptions)</div>
   <h2 id="lectures">4. Lectures (Detailed Descriptions)</h2>
 
   <h3>Topic: Patterns, Entropy and Gibbs measures</h3>
@@ -181,8 +293,9 @@ The coarea formula: The proof of co-area formula, Applications: Polar coordinate
     <li>L Tartar – The General Theory of Homogenization (2009)</li>
     <li>G Allaire – Shape Optimization by the Homogenization Method (2002)</li>
   </ol>
-
-  <h2 id="special">5. Special Lectures</h2>
+ </div>
+<div id="special" class="card">
+    <div class="section-title">5. Special Lectures</div>
   <h3>Gram matrices: connecting GPS triangulation, Euclidean metric embeddings, and Heron’s formula</h3>
   <strong>Speaker:</strong> Apoorva Khare, IISc Bangalore<br>
   <p>Gram matrices are ubiquitous in the literature, from theoretical to applied settings. This talk will showcase some of these appearances: they are covariance/correlation matrices, they are useful in understanding GPS trilateration, and they classically arose in understanding metric embeddings into Euclidean space. We will also see the entrywise transforms that send the class of Gram matrices into itself, and will end with the n-dimensional version of the well-known (and 2000-year old) Heron's formula.</p>
@@ -232,13 +345,17 @@ In this talk, we discuss a more refined version of the polytope membership probl
 
   <h3>Inequivalence of the Ball and Polydisc in ℂ²</h3>
   <p>Studying the Bergman kernel to show the unit ball isn’t biholomorphic to a product disc.</p>
-
+</div>
 
 
   <p style="margin-top: 2em; text-align: center;">
-    <a href="index.html">← Back to Homepage</a>
+    <a href="index.html" class="back-link">← Back to Homepage</a>
   </p>
 </div>
+<footer>
+  © 2025 Ashmit Gurey · Kerala School of Mathematics
+</footer>
+
 
 </body>
 </html>
