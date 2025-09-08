@@ -73,28 +73,39 @@
 
     .column {
       flex: 1;
-      border: 1px solid #ddd;
-      padding: 20px;
-      background: #fafafa;
-      border-radius: 5px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: left;
     }
 
     .column h2 {
       text-align: center;
       margin-top: 0;
+      margin-bottom: 20px;
       color: #004d4d; /* dark teal */
       font-family: 'Source Sans Pro', Arial, sans-serif;
     }
 
-    .year {
-      font-weight: bold;
-      margin-top: 15px;
-      color: #5a1a1a; /* maroon */
+    /* Year cards */
+    .year-card {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-left: 5px solid #5a1a1a; /* maroon accent */
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .year + p {
-      margin-top: 4px;
+    .year-card .year {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #5a1a1a;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+
+    .year-card p {
+      margin: 5px 0;
     }
 
     a {
@@ -136,59 +147,71 @@
       <div class="column">
         <h2>KSoM Courses</h2>
 
-        <div class="year">2025</div>
-        <p>KSM2C01 : <a href="#">Algebra - II (Rings and Modules)</a></p>
-        <p>KSM2C02 : <a href="#">Analysis - II (Measure Theory)</a></p>
-        <p>KSM2C03 : <a href="#">Complex Analysis</a></p>
-        <p>KSM2C04 : <a href="#">ODE</a></p>
+        <div class="year-card">
+          <div class="year">2025</div>
+          <p>KSM2C01 : <a href="#">Algebra - II (Rings and Modules)</a></p>
+          <p>KSM2C02 : <a href="#">Analysis - II (Measure Theory)</a></p>
+          <p>KSM2C03 : <a href="#">Complex Analysis</a></p>
+          <p>KSM2C04 : <a href="#">ODE</a></p>
+        </div>
 
-        <div class="year">2024</div>
-        <p>KSM1C01 : <a href="#">Algebra - I</a></p>
-        <p>KSM1C02 : <a href="#">Analysis - I</a></p>
-        <p>KSM1C03 : <a href="#">Topology (Point - Set)</a></p>
-        <p>KSM1C04 : <a href="#">Probability</a></p>
+        <div class="year-card">
+          <div class="year">2024</div>
+          <p>KSM1C01 : <a href="#">Algebra - I</a></p>
+          <p>KSM1C02 : <a href="#">Analysis - I</a></p>
+          <p>KSM1C03 : <a href="#">Topology (Point - Set)</a></p>
+          <p>KSM1C04 : <a href="#">Probability</a></p>
+        </div>
       </div>
 
       <!-- IMA Courses -->
       <div class="column">
         <h2>IMA Courses</h2>
 
-        <div class="year">2024</div>
-        <p>C14 : <a href="#">Differential Geometry</a></p>
-        <p>DSE3 : <a href="#">Probability - II</a></p>
-        <p>DSE4 : <a href="#">Bachelor Thesis</a></p>
-        <p>GE7 : <a href="#">Quantum Mechanics</a></p>
+        <div class="year-card">
+          <div class="year">2024</div>
+          <p>C14 : <a href="#">Differential Geometry</a></p>
+          <p>DSE3 : <a href="#">Probability - II</a></p>
+          <p>DSE4 : <a href="#">Bachelor Thesis</a></p>
+          <p>GE7 : <a href="#">Quantum Mechanics</a></p>
+        </div>
 
-        <div class="year">2023</div>
-        <p>C6 : <a href="#">Calculus - III</a></p>
-        <p>C7 : <a href="#">Algebra - III (Rings and Fields)</a></p>
-        <p>C8 : <a href="#">ODE</a></p>
-        <p>GE4 : <a href="#">Statistics - I</a></p>
-        <p>SE1 : <a href="#">Transportation and Game Theory</a></p>
-        <p>C9 : <a href="#">PDE</a></p>
-        <p>C10 : <a href="#">Algebra - IV (Linear Algebra)</a></p>
-        <p>C11 : <a href="#">Complex Analysis</a></p>
-        <p>GE5 : <a href="#">Point - Set Topology</a></p>
-        <p>SE2 : <a href="#">Logic and Set Theory</a></p>
-        <p>C12 : <a href="#">Number Theory - I</a></p>
-        <p>C13 : <a href="#">Numerical Analysis + Lab</a></p>
-        <p>DSE1 : <a href="#">Theory of Equations</a></p>
-        <p>DSE2 : <a href="#">Optimization and LPP</a></p>
-        <p>GE6 : <a href="#">CS - V (Theory of Computation)</a></p>
+        <div class="year-card">
+          <div class="year">2023</div>
+          <p>C6 : <a href="#">Calculus - III</a></p>
+          <p>C7 : <a href="#">Algebra - III (Rings and Fields)</a></p>
+          <p>C8 : <a href="#">ODE</a></p>
+          <p>GE4 : <a href="#">Statistics - I</a></p>
+          <p>SE1 : <a href="#">Transportation and Game Theory</a></p>
+          <p>C9 : <a href="#">PDE</a></p>
+          <p>C10 : <a href="#">Algebra - IV (Linear Algebra)</a></p>
+          <p>C11 : <a href="#">Complex Analysis</a></p>
+          <p>GE5 : <a href="#">Point - Set Topology</a></p>
+          <p>SE2 : <a href="#">Logic and Set Theory</a></p>
+          <p>C12 : <a href="#">Number Theory - I</a></p>
+          <p>C13 : <a href="#">Numerical Analysis + Lab</a></p>
+          <p>DSE1 : <a href="#">Theory of Equations</a></p>
+          <p>DSE2 : <a href="#">Optimization and LPP</a></p>
+          <p>GE6 : <a href="#">CS - V (Theory of Computation)</a></p>
+        </div>
 
-        <div class="year">2022</div>
-        <p>C4 : <a href="#">Calculus - II</a></p>
-        <p>C5 : <a href="#">Algebra - II (Group Theory)</a></p>
-        <p>GE2 : <a href="#">CS - II (Design and Analysis of Algorithms)</a></p>
-        <p>GE3 : <a href="#">Probability - I</a></p>
-        <p>AECC2 : <a href="#">Environmental Science and Disaster Management</a></p>
+        <div class="year-card">
+          <div class="year">2022</div>
+          <p>C4 : <a href="#">Calculus - II</a></p>
+          <p>C5 : <a href="#">Algebra - II (Group Theory)</a></p>
+          <p>GE2 : <a href="#">CS - II (Design and Analysis of Algorithms)</a></p>
+          <p>GE3 : <a href="#">Probability - I</a></p>
+          <p>AECC2 : <a href="#">Environmental Science and Disaster Management</a></p>
+        </div>
 
-        <div class="year">2021</div>
-        <p>C1 : <a href="#">Calculus - I</a></p>
-        <p>C2 : <a href="#">Algebra - I (Matrix Theory)</a></p>
-        <p>C3 : <a href="#">CS - I (Introduction to Programming and Data Structures)</a></p>
-        <p>GE1 : <a href="#">Combinatorics and Discrete Mathematics</a></p>
-        <p>AECC1 : <a href="#">English Communicative</a></p>
+        <div class="year-card">
+          <div class="year">2021</div>
+          <p>C1 : <a href="#">Calculus - I</a></p>
+          <p>C2 : <a href="#">Algebra - I (Matrix Theory)</a></p>
+          <p>C3 : <a href="#">CS - I (Introduction to Programming and Data Structures)</a></p>
+          <p>GE1 : <a href="#">Combinatorics and Discrete Mathematics</a></p>
+          <p>AECC1 : <a href="#">English Communicative</a></p>
+        </div>
       </div>
     </div>
 
@@ -199,6 +222,3 @@
   </div>
 </body>
 </html>
-
-
-
