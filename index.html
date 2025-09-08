@@ -60,18 +60,21 @@
       width: 100%;
       border-radius: 6px;
       overflow: hidden;
+      table-layout: fixed; /* ensures equal column distribution */
     }
 
     td {
       border: 1px solid #ddd;
       vertical-align: top;
       padding: 18px;
+      text-align: center;
     }
 
     /* Profile Image (Circular Portrait) */
     .profile-photo {
-      max-width: 220px;
-      height: auto;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
       border-radius: 50%; /* makes it circular */
       border: 3px solid #5a1a1a; /* maroon frame */
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -79,9 +82,9 @@
       display: block;
     }
 
-    /* Talk Photos (Rectangular with rounded edges) */
+    /* Talk Photos (Fit to Column with Rounded Corners) */
     .talk-photo {
-      max-width: 200px;
+      width: 100%; /* fits column */
       height: auto;
       border-radius: 8px;
       border: 2px solid #ddd;
