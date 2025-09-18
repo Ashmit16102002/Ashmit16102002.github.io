@@ -13,21 +13,19 @@
       margin: 0;
       padding: 0;
       line-height: 1.6em;
-    }
 
-    /* ====== Default Theme Variables ====== */
-    body {
-      --header-bg: linear-gradient(135deg, #5a1a1a, #7b2e2e);
+      /* ===== Teal Theme Variables ===== */
+      --header-bg: linear-gradient(135deg, #00695c, #009688);
       --header-text: #fff;
-      --header-subtext: #f3d9d9;
-      --link-color: #006666;
-      --link-hover: #7b1e1e;
-      --card-bg: #fff;
-      --announcement-bg: #fff8e6;
-      --announcement-border: #e6b800;
-      --announcement-title: #996600;
-      --footer-bg: #f2ebe6;
-      --footer-text: #444;
+      --header-subtext: #cceeee;
+      --link-color: #004d40;
+      --link-hover: #002d26;
+      --card-bg: #f0fafa;
+      --announcement-bg: #e6f7f5;
+      --announcement-border: #009688;
+      --announcement-title: #00695c;
+      --footer-bg: #e0f2f1;
+      --footer-text: #004d40;
     }
 
     /* ====== Layout ====== */
@@ -77,7 +75,7 @@
       width: 100%;
       max-width: 220px;
       border-radius: 10px;
-      border: 3px solid #5a1a1a;
+      border: 3px solid #00695c;
       display: block;
       margin: 0 auto 15px;
     }
@@ -105,7 +103,7 @@
     .link-list a:hover { color: var(--link-hover); }
 
     .highlight {
-      color: #7b1e1e;
+      color: #00695c;
       font-weight: bold;
       font-size: 18px;
       margin-bottom: 8px;
@@ -127,15 +125,6 @@
       color: var(--announcement-title);
     }
 
-    .theme-selector {
-      display: block;
-      margin: 15px auto 0;
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
     footer {
       padding: 15px;
       font-size: 14px;
@@ -148,49 +137,9 @@
     @media (max-width: 900px) {
       main { grid-template-columns: 1fr; }
     }
-
-    /* ====== Theme Variations ====== */
-    body.gold {
-      --header-bg: linear-gradient(135deg, #b8860b, #daa520);
-      --header-subtext: #fff5cc;
-      --link-color: #8b6c00;
-      --link-hover: #5c4300;
-      --card-bg: #fffdf7;
-      --announcement-bg: #fff8e6;
-      --announcement-border: #e6b800;
-      --announcement-title: #996600;
-      --footer-bg: #fffaf0;
-      --footer-text: #5c4300;
-    }
-
-    body.teal {
-      --header-bg: linear-gradient(135deg, #00695c, #009688);
-      --header-subtext: #cceeee;
-      --link-color: #004d40;
-      --link-hover: #002d26;
-      --card-bg: #f0fafa;
-      --announcement-bg: #e6f7f5;
-      --announcement-border: #009688;
-      --announcement-title: #00695c;
-      --footer-bg: #e0f2f1;
-      --footer-text: #004d40;
-    }
-
-    body.maroon {
-      --header-bg: linear-gradient(135deg, #5a1a1a, #7b2e2e);
-      --header-subtext: #f3d9d9;
-      --link-color: #7b2e2e;
-      --link-hover: #3d0f0f;
-      --card-bg: #fff9f9;
-      --announcement-bg: #fcebea;
-      --announcement-border: #7b2e2e;
-      --announcement-title: #7b2e2e;
-      --footer-bg: #f8eaea;
-      --footer-text: #3d0f0f;
-    }
   </style>
 </head>
-<body class="maroon">
+<body>
   <!-- Header -->
   <header>
     <h1>Ashmit Gurey</h1>
@@ -238,25 +187,11 @@
     <h2>📢 Announcements</h2>
     <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
     <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
-
-    <!-- Professional Theme Selector -->
-    <select class="theme-selector" onchange="setTheme(this.value)">
-      <option value="maroon">Maroon</option>
-      <option value="teal">Teal</option>
-      <option value="gold">Gold</option>
-    </select>
   </div>
 
   <!-- Footer -->
   <footer>
     © 2025 Ashmit Gurey · Kerala School of Mathematics
   </footer>
-
-  <!-- Script -->
-  <script>
-    function setTheme(theme) {
-      document.body.className = theme;
-    }
-  </script>
 </body>
 </html>
