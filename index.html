@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Ashmit Gurey</title>
@@ -10,7 +10,7 @@
   <style>
     body {
       background-color: #f8f4ef; /* warm beige */
-      font-family: 'Merriweather', Georgia, serif;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
       color: #222;
       margin: 0;
       padding: 0;
@@ -21,133 +21,138 @@
     header {
       background: #5a1a1a; /* deep maroon */
       color: white;
-      padding: 25px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
     header h1 {
       margin: 0;
-      font-size: 32px;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 34px;
       font-weight: 600;
     }
     header h2 {
       margin: 8px 0 0;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: normal;
       color: #f3d9d9;
       font-family: 'Merriweather', Georgia, serif;
     }
     header a {
+      display: inline-block;
+      margin-top: 10px;
       color: #ffe082; /* soft gold */
       text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
     }
     header a:hover { text-decoration: underline; }
 
-    /* Main content */
+    /* Main container */
     main {
-      margin: 40px auto;
-      width: 85%;
-      max-width: 1100px;
-    }
-
-    table {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
       margin: auto;
-      border-collapse: collapse;
-      background-color: #ffffff; /* white */
-      box-shadow: 0 0 15px rgba(90,26,26,0.2); /* maroon shadow */
-      width: 100%;
-      border-radius: 6px;
-      overflow: hidden;
-      table-layout: fixed;
     }
 
-    td {
-      border: 1px solid #ddd;
-      vertical-align: top;
+    /* Card style */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 20px;
-      text-align: center;
-      color: #2c3e50; /* deep navy text */
-      font-size: 17px; /* ⬅️ Increased font size */
     }
 
-    /* Profile Image (Rectangular with Frame) */
+    /* Profile card */
     .profile-photo {
-      width: 230px; /* slightly bigger */
+      width: 100%;
+      max-width: 230px;
       height: auto;
-      border-radius: 6px;
+      border-radius: 10px;
       border: 3px solid #5a1a1a;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin: 10px auto;
+      margin: 0 auto 15px;
       display: block;
     }
 
-    /* Talk Photos */
+    /* Talk photos */
     .talk-photo {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
+      border-radius: 8px;
       border: 2px solid #ddd;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 10px auto;
-      display: block;
+      margin-bottom: 10px;
     }
-
     .caption {
       font-size: 14px;
       color: #555;
       text-align: center;
       display: block;
-      margin-top: 6px;
+      margin-bottom: 15px;
     }
 
-    /* Highlighted text inside table */
-    .highlight {
-      color: #7b1e1e; /* maroon for emphasis */
-      font-weight: bold;
-    }
-
-    a {
-      color: #006666; /* dark teal */
-      text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 16px; /* slightly bigger links */
-    }
-    a:hover { text-decoration: underline; }
-
+    /* Links section */
     .link-list a {
       display: block;
-      margin: 0.5em 0;
+      margin: 0.4em 0;
+      color: #006666;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+    .link-list a:hover {
+      color: #7b1e1e;
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: #7b1e1e;
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 5px;
     }
 
     /* Announcement box */
     .announcement {
-      margin: 40px auto;
-      background: #fff2d9; /* sand */
-      border-left: 5px solid #5a1a1a;
-      padding: 20px;
-      text-align: left;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 85%;
       max-width: 900px;
-      border-radius: 5px;
-      font-family: 'Merriweather', Georgia, serif;
+      margin: 20px auto 50px;
+      background: #fffdf7;
+      border-left: 6px solid #5a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
     .announcement h2 {
       margin-top: 0;
       color: #5a1a1a;
       font-size: 20px;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
+    }
+    .announcement p {
+      margin: 8px 0;
+    }
+    .announcement a {
+      color: #006666;
+      font-weight: 600;
     }
 
+    /* Footer */
     footer {
-      margin: 40px 0 20px;
+      padding: 20px;
+      text-align: center;
       font-size: 14px;
       color: #444;
-      text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      background: #f0e6da;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -162,58 +167,48 @@
 
   <!-- Main Content -->
   <main>
-    <table>
-      <tr>
-        <!-- LEFT COLUMN -->
-        <td>
-          <img src="IMG_0447.JPG" alt="Ashmit Gurey" class="profile-photo"><br>
-          <a href="vita.html"><b>Vita</b></a>
-        </td>
+    <!-- Profile Card -->
+    <div class="card">
+      <img src="IMG_0447.JPG" alt="Ashmit Gurey" class="profile-photo">
+      <a href="vita.html"><b>Vita</b></a>
+    </div>
 
-        <!-- CENTER COLUMN -->
-        <td class="link-list">
-          <div>
-            <span class="highlight">Fall 2025</span><br>
-            <b>Courses Undertaken </b><br>
-            <a href="#">KSM3E01: Functional Analysis</a>
-            <a href="#">KSM3E03: Field and Galois Theory</a>
-            <a href="#">KSM3E06: Advanced Complex Analysis</a>
-            <a href="#">KSM3E07: Number Theory</a><br>
-            <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
-            <a href="past_and_future.html"><b>Past and Future Courses</b></a><br>
-          </div>
+    <!-- Links / Courses Card -->
+    <div class="card link-list">
+      <span class="highlight">Fall 2025</span>
+      <b>Courses Undertaken</b><br>
+      <a href="#">KSM3E01: Functional Analysis</a>
+      <a href="#">KSM3E03: Field and Galois Theory</a>
+      <a href="#">KSM3E06: Advanced Complex Analysis</a>
+      <a href="#">KSM3E07: Number Theory</a>
+      <br>
+      <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
+      <a href="past_and_future.html"><b>Past and Future Courses</b></a>
+      <hr>
+      <a href="#">Publications</a>
+      <a href="#">Expositions</a>
+      <a href="#">Programs</a>
+      <a href="schedule.html"><b>Schedule</b></a>
+      <a href="cautionary-tale.html"><b>A Cautionary Tale</b></a>
+    </div>
 
-          <div class="link-list">
-            <a href="#">Publications</a>
-            <a href="#">Expositions</a>
-            <a href="#">Programs</a>
-            <a href="schedule.html"><b>Schedule</b></a>
-            <a href="cautionary-tale.html"><b>A cautionary tale</b></a>
-          </div>
-        </td>
-
-        <!-- RIGHT COLUMN -->
-        <td>
-          <div>
-            <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
-            <span class="caption"><b>Shepp-Logan Phantom</b></span>
-          </div>
-          <div>
-            <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
-            <span class="caption"><b>Fan Beam CT VS Cone Beam CT</b></span>
-          </div>
-        </td>
-      </tr>
-    </table>
+    <!-- Images Card -->
+    <div class="card">
+      <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
+      <span class="caption"><b>Shepp-Logan Phantom</b></span>
+      <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
+      <span class="caption"><b>Fan Beam CT vs Cone Beam CT</b></span>
+    </div>
   </main>
 
-  <!-- Announcement Box -->
+  <!-- Announcements -->
   <div class="announcement">
     <h2>📢 Announcements</h2>
     <p><b>August 2025:</b> Schedule for Fall Semester is now available <a href="schedule.html">here</a>.</p>
     <p><b>June 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
   </div>
 
+  <!-- Footer -->
   <footer>
     © 2025 Ashmit Gurey · Kerala School of Mathematics
   </footer>
