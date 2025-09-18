@@ -108,24 +108,53 @@
       display: block;
     }
 
-    /* Announcement */
+    /* Announcement Base */
     .announcement {
       max-width: 900px;
       margin: 30px auto;
-      background: #fff;
-      border-left: 6px solid #5a1a1a;
       padding: 20px 25px;
       border-radius: 8px;
       font-size: 16px;
+      transition: background 0.3s ease, border 0.3s ease;
     }
     .announcement h2 {
       margin: 0 0 10px;
       font-size: 20px;
-      color: #5a1a1a;
     }
-    .announcement p {
-      margin: 8px 0;
+
+    /* Themes */
+    .gold-theme {
+      background: #fff8e6;
+      border-left: 6px solid #e6b800;
     }
+    .gold-theme h2 { color: #996600; }
+
+    .teal-theme {
+      background: #e6f7f5;
+      border-left: 6px solid #009688;
+    }
+    .teal-theme h2 { color: #00695c; }
+
+    .maroon-theme {
+      background: #fcebea;
+      border-left: 6px solid #7b2e2e;
+    }
+    .maroon-theme h2 { color: #7b2e2e; }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      display: block;
+      margin: 10px auto 0;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      background: #5a1a1a;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .theme-toggle:hover { background: #7b2e2e; }
 
     /* Footer */
     footer {
@@ -188,16 +217,30 @@
   </main>
 
   <!-- Announcement -->
-  <div class="announcement">
+  <div class="announcement gold-theme" id="announcementBox">
     <h2>📢 Announcements</h2>
     <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
     <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
+    <button class="theme-toggle" onclick="switchTheme()">Switch Theme</button>
   </div>
 
   <!-- Footer -->
   <footer>
     © 2025 Ashmit Gurey · Kerala School of Mathematics
   </footer>
+
+  <!-- Script for theme switching -->
+  <script>
+    const themes = ["gold-theme", "teal-theme", "maroon-theme"];
+    let current = 0;
+
+    function switchTheme() {
+      const box = document.getElementById("announcementBox");
+      box.classList.remove(themes[current]);
+      current = (current + 1) % themes.length;
+      box.classList.add(themes[current]);
+    }
+  </script>
 
 </body>
 </html>
