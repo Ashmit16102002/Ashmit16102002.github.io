@@ -9,24 +9,24 @@
 
 <style>
   body {
-    background-color: #f0fdfb; /* light teal tint */
+    background-color: #f8f4ef;
     font-family: 'Merriweather', Georgia, serif;
     color: #222;
     margin: 0;
     padding: 0;
-    line-height: 1.5em;
+    line-height: 1.6em;
   }
 
   header {
-    background: #00695c; /* teal */
+    background: #004d4d;
     color: white;
     padding: 15px 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
   header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-weight: 600;
   }
@@ -34,7 +34,7 @@
     margin: 4px 0 0;
     font-size: 14px;
     font-weight: normal;
-    color: #cceae4;
+    color: #b2dfdb;
   }
   header a {
     color: #ffe082;
@@ -45,31 +45,31 @@
   .content {
     width: 95%;
     max-width: 1100px;
-    margin: 20px auto;
+    margin: 25px auto;
   }
 
   h1.page-title {
     text-align: center;
-    font-size: 28px;
-    color: #00695c;
-    margin-bottom: 10px;
-  }
-
-  h2.section-title {
-    color: #004d40;
-    border-left: 4px solid #00695c;
-    padding-left: 10px;
+    font-size: 30px;
+    color: #004d4d;
     margin-bottom: 15px;
   }
 
-  /* Redesigned section boxes */
+  h2.section-title {
+    color: #00796b;
+    border-left: 4px solid #004d4d;
+    padding-left: 10px;
+    margin-bottom: 18px;
+  }
+
+  /* Section boxes with light grey background */
   .section-box {
-    background: #ffffff;
-    border-left: 6px solid #00695c;
+    background: linear-gradient(145deg, #f5f5f5, #eeeeee);
+    border-left: 6px solid #004d4d;
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -78,14 +78,14 @@
 
   .section-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
   }
 
   .section-box img {
     width: 45%;
     max-width: 450px;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   }
 
@@ -95,11 +95,11 @@
   }
 
   .toc {
-    background-color: #e0f7f4;
-    border-left: 4px solid #00695c;
-    padding: 10px 15px;
+    background-color: #e0f2f1;
+    border-left: 4px solid #004d4d;
+    padding: 12px 18px;
     margin: 20px auto;
-    border-radius: 6px;
+    border-radius: 8px;
     width: 80%;
     font-size: 0.95em;
   }
@@ -107,11 +107,12 @@
     display: block;
     margin-bottom: 6px;
     font-size: 16px;
+    color: #004d4d;
   }
   .toc a {
     display: block;
     margin: 2px 0;
-    color: #00695c;
+    color: #00796b;
     font-weight: bold;
     text-decoration: none;
   }
@@ -119,9 +120,9 @@
 
   .quote {
     font-style: italic;
-    background-color: #e0f2f1;
+    background-color: #f1f8e9;
     padding: 10px 14px;
-    border-left: 5px solid #004d40;
+    border-left: 5px solid #7cb342;
     margin: 15px 0;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
@@ -134,7 +135,7 @@
     margin-top: 25px;
     font-weight: bold;
     font-size: 14px;
-    color: #00695c;
+    color: #004d4d;
     text-decoration: none;
   }
   .back-link:hover { text-decoration: underline; }
@@ -142,7 +143,7 @@
   footer {
     margin: 30px 0 10px;
     font-size: 13px;
-    color: #444;
+    color: #555;
     text-align: center;
   }
 
@@ -157,6 +158,7 @@
     }
   }
 </style>
+
 
 
 </head>
