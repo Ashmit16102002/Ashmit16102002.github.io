@@ -9,49 +9,48 @@
 
   <style>
     body {
-      background-color: #f8f4ef; /* warm beige */
+      background: #faf9f7;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       color: #222;
       margin: 0;
       padding: 0;
-      line-height: 1.7em;
+      line-height: 1.6em;
     }
 
     /* Header */
     header {
-      background: #5a1a1a; /* deep maroon */
+      background: linear-gradient(135deg, #5a1a1a, #7b2e2e);
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     header h1 {
       margin: 0;
-      font-size: 34px;
-      font-weight: 600;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: 'Merriweather', serif;
     }
     header h2 {
-      margin: 8px 0 0;
-      font-size: 17px;
-      font-weight: normal;
+      margin: 10px 0 0;
+      font-size: 20px;
       color: #f3d9d9;
-      font-family: 'Merriweather', Georgia, serif;
     }
     header a {
       display: inline-block;
-      margin-top: 10px;
-      color: #ffe082; /* soft gold */
+      margin-top: 8px;
+      color: #ffe082;
+      font-size: 16px;
       text-decoration: none;
-      font-weight: 600;
     }
     header a:hover { text-decoration: underline; }
 
-    /* Main container */
+    /* Main layout */
     main {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
       gap: 25px;
-      padding: 40px;
+      padding: 30px;
       max-width: 1200px;
       margin: auto;
     }
@@ -59,37 +58,36 @@
     /* Card style */
     .card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
-    /* Profile card */
+    /* Profile photo */
     .profile-photo {
       width: 100%;
-      max-width: 230px;
-      height: auto;
+      max-width: 220px;
       border-radius: 10px;
       border: 3px solid #5a1a1a;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin: 0 auto 15px;
       display: block;
+      margin: 0 auto 15px;
     }
 
     /* Talk photos */
     .talk-photo {
       width: 100%;
       border-radius: 8px;
-      border: 2px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 8px;
     }
     .caption {
       font-size: 14px;
-      color: #555;
+      color: #666;
+      margin-bottom: 12px;
       text-align: center;
-      display: block;
-      margin-bottom: 15px;
     }
 
     /* Links section */
@@ -97,62 +95,51 @@
       display: block;
       margin: 0.4em 0;
       color: #006666;
-      text-decoration: none;
       font-size: 16px;
-      transition: color 0.2s ease;
+      text-decoration: none;
     }
-    .link-list a:hover {
-      color: #7b1e1e;
-      text-decoration: underline;
-    }
+    .link-list a:hover { color: #7b1e1e; }
 
     .highlight {
       color: #7b1e1e;
       font-weight: bold;
       font-size: 18px;
+      margin-bottom: 8px;
       display: block;
-      margin-bottom: 5px;
     }
 
-    /* Announcement box */
+    /* Announcement */
     .announcement {
       max-width: 900px;
-      margin: 20px auto 50px;
-      background: #fffdf7;
+      margin: 30px auto;
+      background: #fff;
       border-left: 6px solid #5a1a1a;
-      padding: 20px;
+      padding: 20px 25px;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-size: 16px;
     }
     .announcement h2 {
-      margin-top: 0;
-      color: #5a1a1a;
+      margin: 0 0 10px;
       font-size: 20px;
-      font-weight: 600;
+      color: #5a1a1a;
     }
     .announcement p {
       margin: 8px 0;
     }
-    .announcement a {
-      color: #006666;
-      font-weight: 600;
-    }
 
     /* Footer */
     footer {
-      padding: 20px;
-      text-align: center;
+      padding: 15px;
       font-size: 14px;
       color: #444;
-      background: #f0e6da;
+      text-align: center;
+      background: #f2ebe6;
       border-top: 1px solid #ddd;
     }
 
     /* Responsive */
     @media (max-width: 900px) {
-      main {
-        grid-template-columns: 1fr;
-      }
+      main { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -165,24 +152,23 @@
     <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main>
-    <!-- Profile Card -->
+    <!-- Profile -->
     <div class="card">
       <img src="IMG_0447.JPG" alt="Ashmit Gurey" class="profile-photo">
       <a href="vita.html"><b>Vita</b></a>
     </div>
 
-    <!-- Links / Courses Card -->
+    <!-- Links -->
     <div class="card link-list">
       <span class="highlight">Fall 2025</span>
-      <b>Courses Undertaken</b><br>
+      <b>Courses Undertaken</b>
       <a href="#">KSM3E01: Functional Analysis</a>
       <a href="#">KSM3E03: Field and Galois Theory</a>
       <a href="#">KSM3E06: Advanced Complex Analysis</a>
       <a href="#">KSM3E07: Number Theory</a>
-      <br>
-      <a href="#"><b>Radon Transform (Inverse Problem):<br>Application in Medical Imaging</b></a><br>
+      <a href="#"><b>Radon Transform (Inverse Problem)</b></a>
       <a href="past_and_future.html"><b>Past and Future Courses</b></a>
       <hr>
       <a href="#">Publications</a>
@@ -192,20 +178,20 @@
       <a href="cautionary-tale.html"><b>A Cautionary Tale</b></a>
     </div>
 
-    <!-- Images Card -->
+    <!-- Images -->
     <div class="card">
       <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
-      <span class="caption"><b>Shepp-Logan Phantom</b></span>
+      <div class="caption"><b>Shepp-Logan Phantom</b></div>
       <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
-      <span class="caption"><b>Fan Beam CT vs Cone Beam CT</b></span>
+      <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
     </div>
   </main>
 
-  <!-- Announcements -->
+  <!-- Announcement -->
   <div class="announcement">
     <h2>📢 Announcements</h2>
-    <p><b>August 2025:</b> Schedule for Fall Semester is now available <a href="schedule.html">here</a>.</p>
-    <p><b>June 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
+    <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
+    <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
   </div>
 
   <!-- Footer -->
