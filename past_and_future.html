@@ -9,130 +9,134 @@
 
   <style>
     body {
-      background-color: #f8fdfc; /* soft teal-tinted beige */
-      font-family: 'Merriweather', Georgia, serif;
+      background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
+      font-family: 'Source Sans Pro', Arial, sans-serif;
       color: #222;
       margin: 0;
       padding: 0;
       line-height: 1.6em;
     }
 
-    /* Header */
+    /* ===== Header ===== */
     header {
-      background: linear-gradient(135deg, #00695c, #009688); /* teal gradient */
-      color: white;
-      padding: 25px;
+      background: linear-gradient(135deg, #004d40, #00796b);
+      color: #fff;
+      padding: 50px 20px 40px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
-   h1.page-title {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
-  font-size: 28px;
-  color: #00695c; /* strong teal */
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.column h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #003366; /* deep navy */
-  font-family: 'Source Sans Pro', Arial, sans-serif;
-  font-weight: 600;
-}
-
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      font-family: 'Merriweather', serif;
+      margin-bottom: 0.4rem;
+    }
+    header h2 {
+      font-size: 1.2rem;
+      color: #d7f5f0;
+      margin-bottom: 0.8rem;
+    }
     header a {
-      color: #ffe082; /* gold accent */
+      color: #ff7043; /* orange accent */
       text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
     }
     header a:hover { text-decoration: underline; }
 
-    /* Main container */
+    /* ===== Container ===== */
     .container {
-      background: #ffffff;
-      margin: 40px auto;
+      background: #fff;
+      margin: 35px auto;
       padding: 25px;
-      width: 85%;
+      width: 90%;
       max-width: 1100px;
-      border-radius: 6px;
-      box-shadow: 0 0 15px rgba(0,150,136,0.2); /* teal shadow */
-      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-
     h1.page-title {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 26px;
-      color: #00695c;
+      font-size: 28px;
+      color: #ff7043; /* orange headline */
+      font-weight: 700;
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
 
+    /* ===== Columns ===== */
     .columns {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 20px;
+      gap: 25px;
+      flex-wrap: wrap;
     }
-
     .column {
       flex: 1;
+      min-width: 300px;
       padding: 10px;
-      text-align: left;
     }
-
     .column h2 {
       text-align: center;
       margin-top: 0;
-      margin-bottom: 20px;
-      color: #00796b; /* teal heading */
+      margin-bottom: 18px;
+      color: #00695c; /* teal heading */
       font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
     }
 
-    /* Year cards */
+    /* ===== Year Cards ===== */
     .year-card {
-      background: #fafafa;
+      background: #f9f9f9;
       border: 1px solid #ddd;
-      border-left: 5px solid #009688; /* teal accent */
-      border-radius: 5px;
-      padding: 15px;
-      margin-bottom: 20px;
+      border-left: 6px solid #00695c; /* teal accent */
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 18px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-
+    .year-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
     .year-card .year {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 10px;
-      color: #00695c;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      color: #ff7043; /* orange year */
     }
+    .year-card p { margin: 6px 0; }
 
-    .year-card p {
-      margin: 5px 0;
-    }
-
+    /* ===== Links ===== */
     a {
       color: #00695c;
       text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      transition: 0.2s;
     }
-    a:hover { text-decoration: underline; }
+    a:hover {
+      color: #ff7043;
+      text-decoration: underline;
+    }
 
+    /* ===== Footer ===== */
     .footer {
-      margin-top: 25px;
+      margin-top: 30px;
       text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 14px;
     }
-
     .footer a {
-      color: #009688;
+      color: #00695c;
       font-weight: bold;
       text-decoration: none;
     }
-    .footer a:hover { text-decoration: underline; }
+    .footer a:hover { color: #ff7043; }
+
+    @media (max-width: 900px) {
+      .columns { flex-direction: column; }
+      header h1 { font-size: 2.2rem; }
+      header h2 { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
