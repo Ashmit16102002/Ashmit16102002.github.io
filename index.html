@@ -11,180 +11,262 @@
     body {
       font-family: 'Source Sans Pro', Arial, sans-serif;
       line-height: 1.6em;
-      background: #121212;
-      color: #e0e0e0;
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 20px;
+      background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
+      color: #333;
+      min-height: 100vh;
     }
 
-    /* ===== Theme Colors ===== */
+    /* ===== Teal + Coral Theme ===== */
     :root {
-      --accent: #ff9800;
-      --accent-light: #ffc107;
-      --bg-card: #1e1e1e;
-      --border: #333;
+      --header-bg: linear-gradient(135deg, #004d40, #00796b); 
+      --header-text: #ffffff;
+      --header-subtext: #d7f5f0;
+      --accent: #ff7043; /* coral accent */
+      --link-color: #00695c;
+      --link-hover: #004d40;
+      --card-bg: #ffffff;
+      --card-border: #cfdedb;
+      --announcement-bg: #e8f5f4;
+      --announcement-border: #ff7043;
+      --announcement-title: #00695c;
+      --footer-bg: #e0f2f1;
+      --footer-text: #004d40;
     }
 
     /* ===== Header ===== */
     header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 60px 20px 50px;
       text-align: center;
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      position: relative;
     }
+
     header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
       font-family: 'Merriweather', serif;
-      font-size: 2.5rem;
-      color: var(--accent-light);
+      margin-bottom: 0.4rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
+
     header h2 {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      color: var(--header-subtext);
+      margin-bottom: 1rem;
+    }
+
+    .title-divider {
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 0 auto 1.2rem;
+      border-radius: 2px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: var(--accent);
-      font-weight: 400;
-      margin-top: 5px;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background: rgba(0,0,0,0.25);
+      border-radius: 25px;
+      transition: 0.3s;
     }
-    .contact {
-      margin-top: 10px;
-      font-size: 0.95rem;
+    .contact-item:hover {
+      background: rgba(0,0,0,0.35);
+      transform: translateY(-2px);
     }
-    .contact a {
-      color: var(--accent-light);
-      text-decoration: none;
-    }
+    .contact-item a { color: var(--accent); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
 
-    /* ===== Section Boxes ===== */
-    section {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      border-radius: 6px;
-      padding: 15px 18px;
-      margin-bottom: 18px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    }
-    section h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: var(--accent-light);
-    }
-    section p, section a, section li {
-      font-size: 0.95rem;
-    }
-    section a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    section a:hover { color: var(--accent-light); }
-
-    /* ===== Lists ===== */
-    ul { list-style: none; padding-left: 0; }
-    ul li {
-      margin: 5px 0;
-      padding-left: 12px;
-      border-left: 2px solid var(--accent);
-    }
-
-    /* ===== Images ===== */
-    .image-grid {
+    /* ===== Main ===== */
+    main {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 25px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .image-grid img {
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      border: 1px solid var(--card-border);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    }
+
+    .profile-photo {
       width: 100%;
+      max-width: 220px;
+      border-radius: 10px;
+      border: 3px solid var(--accent);
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .talk-photo {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 8px;
+      transition: 0.3s;
+    }
+    .talk-photo:hover { transform: scale(1.02); }
+
+    .caption { font-size: 14px; color: #666; text-align: center; margin-bottom: 12px; }
+
+    .link-list a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0.5em 0;
+      color: var(--link-color);
+      font-size: 16px;
+      text-decoration: none;
+      padding: 8px 12px;
       border-radius: 6px;
-      border: 1px solid #444;
+      transition: 0.3s;
     }
-    .caption {
-      font-size: 0.85rem;
-      color: #ccc;
-      text-align: center;
-      margin-top: 4px;
+    .link-list a:hover {
+      color: var(--link-hover);
+      background-color: rgba(0,105,92,0.1);
+      transform: translateX(5px);
     }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+      display: block;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    /* ===== Announcement ===== */
+    .announcement {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      background: var(--announcement-bg);
+      border-left: 6px solid var(--announcement-border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .announcement h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: var(--announcement-title);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .announcement a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .announcement a:hover { text-decoration: underline; }
 
     /* ===== Footer ===== */
     footer {
-      margin-top: 25px;
-      font-size: 0.85rem;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--footer-text);
       text-align: center;
-      color: #aaa;
-      border-top: 1px solid #222;
-      padding-top: 10px;
+      background: var(--footer-bg);
+      border-top: 1px solid #b2dfdb;
+    }
+
+    .math-symbol { color: var(--accent); font-weight: bold; }
+
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      header h1 { font-size: 2.6rem; }
+      header h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Ashmit Gurey</h1>
-    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-    <div class="contact">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+    <div class="header-content">
+      <h1>Ashmit Gurey</h1>
+      <div class="title-divider"></div>
+      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Sections -->
-  <section>
-    <h3>Curriculum Vitae</h3>
-    <p><a href="vita.html"><i class="fas fa-file-alt"></i> View CV</a></p>
-  </section>
-
-  <section>
-    <h3>Fall 2025 · Courses</h3>
-    <ul>
-      <li>KSM3E01: Functional Analysis</li>
-      <li>KSM3E03: Field and Galois Theory</li>
-      <li>KSM3E06: Advanced Complex Analysis</li>
-      <li>KSM3E07: Number Theory</li>
-    </ul>
-    <p><a href="#">Radon Transform (Inverse Problem)</a></p>
-    <p><a href="past_and_future.html">Past and Future Courses</a></p>
-  </section>
-
-  <section>
-    <h3>Work & Writing</h3>
-    <ul>
-      <li><a href="#">Publications</a></li>
-      <li><a href="#">Expositions</a></li>
-      <li><a href="#">Programs</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Other Links</h3>
-    <ul>
-      <li><a href="schedule.html">Schedule</a></li>
-      <li><a href="cautionary-tale.html">A Cautionary Tale</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Images</h3>
-    <div class="image-grid">
-      <div>
-        <img src="IMG_0451.jpg" alt="Shepp-Logan Phantom">
-        <div class="caption">Shepp-Logan Phantom</div>
-      </div>
-      <div>
-        <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Fan Beam CT vs Cone Beam CT">
-        <div class="caption">Fan Beam CT vs Cone Beam CT</div>
-      </div>
+  <!-- Main -->
+  <main>
+    <!-- Profile -->
+    <div class="card">
+      <img src="IMG-20250920-WA0001.jpg" alt="Ashmit Gurey" class="profile-photo">
+      <a href="vita.html"><i class="fas fa-file-alt"></i> <b>Curriculum Vitae</b></a>
     </div>
-  </section>
 
-  <section>
-    <h3>Announcements</h3>
+    <!-- Links -->
+    <div class="card link-list">
+      <span class="highlight">Fall 2025</span>
+      <b>Courses Undertaken</b>
+      <a href="#"><i class="fas fa-calculator"></i> KSM3E01: Functional Analysis</a>
+      <a href="#"><i class="fas fa-infinity"></i> KSM3E03: Field and Galois Theory</a>
+      <a href="#"><i class="fas fa-chart-line"></i> KSM3E06: Advanced Complex Analysis</a>
+      <a href="#"><i class="fas fa-sort-numeric-down"></i> KSM3E07: Number Theory</a>
+      <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem)</a>
+      <a href="past_and_future.html"><i class="fas fa-history"></i> Past and Future Courses</a>
+      <a href="#"><i class="fas fa-book"></i> Publications</a>
+      <a href="#"><i class="fas fa-pen-fancy"></i> Expositions</a>
+      <a href="#"><i class="fas fa-code"></i> Programs</a>
+      <a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a>
+      <a href="cautionary-tale.html"><i class="fas fa-exclamation-triangle"></i> A Cautionary Tale</a>
+    </div>
+
+    <!-- Images -->
+    <div class="card">
+      <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
+      <div class="caption"><b>Shepp-Logan Phantom</b></div>
+      <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
+      <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
+    </div>
+  </main>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
     <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
     <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Ashmit Gurey · Kerala School of Mathematics</p>
-    <p>Mathematics is the language with which God has written the universe. ∮</p>
+    <p>Mathematics is the language with which God has written the universe. <span class="math-symbol">∮</span></p>
   </footer>
 </body>
 </html>
