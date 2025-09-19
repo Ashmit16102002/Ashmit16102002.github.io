@@ -40,7 +40,6 @@
       padding: 60px 20px 50px;
       text-align: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      position: relative;
     }
     header h1 {
       font-size: 3.2rem;
@@ -126,20 +125,22 @@
       padding-left: 8px;
     }
 
+    /* Sub-boxes with alternating colors */
     .sub-box {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
       border-radius: 6px;
-      padding: 8px 10px;
-      margin: 6px 0;
+      padding: 10px 12px;
+      margin: 8px 0;
       font-size: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
-    .sub-box b {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--link-hover);
-    }
+    .sub-box:nth-child(1) { background: #fff8e1; border-left: 5px solid #fbc02d; } /* soft yellow */
+    .sub-box:nth-child(2) { background: #e8f5e9; border-left: 5px solid #43a047; } /* mint green */
+    .sub-box:nth-child(3) { background: #f3e5f5; border-left: 5px solid #8e24aa; } /* lavender */
+    .sub-box:nth-child(4) { background: #e3f2fd; border-left: 5px solid #1e88e5; } /* light blue */
+    .sub-box:nth-child(5) { background: #fbe9e7; border-left: 5px solid #d84315; } /* soft orange */
+
+    .sub-box b { display: block; margin-bottom: 4px; color: var(--link-hover); }
     .sub-box a {
       display: block;
       margin: 3px 0;
@@ -147,6 +148,10 @@
       font-size: 15px;
       text-decoration: none;
       transition: 0.2s;
+    }
+    .sub-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
     .sub-box a:hover { color: var(--link-hover); transform: translateX(3px); }
 
