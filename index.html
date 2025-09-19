@@ -6,271 +6,180 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Source Sans Pro', Arial, sans-serif;
       line-height: 1.6em;
-      background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+      background: #121212;
       color: #e0e0e0;
-      min-height: 100vh;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    /* ===== Theme Variables ===== */
+    /* ===== Theme Colors ===== */
     :root {
-      --primary-accent: #ff9800; /* orange */
-      --secondary-accent: #ffc107; /* amber */
-      --highlight: #ffb74d; /* soft orange */
-      --header-bg: linear-gradient(135deg, #0d0d0d, #1a1a1a, #2a2a2a);
-      --header-text: #ffc107;
-      --header-subtext: #ff9800;
-      --link-color: #ffb74d;
-      --link-hover: #ffc107;
-      --card-bg: #1e1e1e;
-      --card-border: #333;
-      --footer-bg: #111;
-      --footer-text: #aaa;
+      --accent: #ff9800;
+      --accent-light: #ffc107;
+      --bg-card: #1e1e1e;
+      --border: #333;
     }
 
     /* ===== Header ===== */
     header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 60px 20px 50px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--accent);
     }
     header h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
       font-family: 'Merriweather', serif;
-      margin-bottom: 0.5rem;
-      color: var(--header-text);
+      font-size: 2.5rem;
+      color: var(--accent-light);
     }
     header h2 {
-      font-size: 1.3rem;
-      color: var(--header-subtext);
+      font-size: 1.1rem;
+      color: var(--accent);
       font-weight: 400;
-      margin-bottom: 1.2rem;
+      margin-top: 5px;
     }
-    .title-divider {
-      width: 100px;
-      height: 3px;
-      background: var(--primary-accent);
-      margin: 0 auto 1.2rem;
-      border-radius: 2px;
-    }
-
-    /* Contact */
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .contact {
+      margin-top: 10px;
       font-size: 0.95rem;
-      color: var(--secondary-accent);
-      background: rgba(255, 152, 0, 0.15);
-      padding: 6px 12px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
     }
-    .contact-item:hover {
-      background: rgba(255, 152, 0, 0.3);
-      transform: translateY(-2px);
-    }
-    .contact-item a {
-      color: var(--secondary-accent);
+    .contact a {
+      color: var(--accent-light);
       text-decoration: none;
     }
 
-    /* ===== Main ===== */
-    main {
+    /* ===== Section Boxes ===== */
+    section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 15px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    section h3 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--accent-light);
+    }
+    section p, section a, section li {
+      font-size: 0.95rem;
+    }
+    section a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    section a:hover { color: var(--accent-light); }
+
+    /* ===== Lists ===== */
+    ul { list-style: none; padding-left: 0; }
+    ul li {
+      margin: 5px 0;
+      padding-left: 12px;
+      border-left: 2px solid var(--accent);
+    }
+
+    /* ===== Images ===== */
+    .image-grid {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      gap: 25px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
-    .card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-      padding: 20px;
-      border: 1px solid var(--card-border);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
-    }
-
-    /* Profile Photo */
-    .profile-photo {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 8px;
-      border: 3px solid var(--primary-accent);
-      display: block;
-      margin: 0 auto 15px;
-    }
-
-    .talk-photo {
+    .image-grid img {
       width: 100%;
       border-radius: 6px;
       border: 1px solid #444;
-      margin-bottom: 8px;
-      transition: transform 0.3s ease;
     }
-    .talk-photo:hover { transform: scale(1.03); }
     .caption {
-      font-size: 14px;
-      color: var(--highlight);
-      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #ccc;
       text-align: center;
+      margin-top: 4px;
     }
 
-    /* Links */
-    .link-list a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0.5em 0;
-      color: var(--link-color);
-      font-size: 15px;
-      text-decoration: none;
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-    .link-list a:hover {
-      color: var(--link-hover);
-      background-color: rgba(255, 193, 7, 0.1);
-      transform: translateX(5px);
-    }
-
-    .highlight {
-      color: var(--secondary-accent);
-      font-weight: bold;
-      font-size: 17px;
-      margin-bottom: 8px;
-      display: block;
-      border-left: 4px solid var(--primary-accent);
-      padding-left: 10px;
-    }
-
-    /* Announcement */
-    .announcement {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 18px;
-      border-radius: 8px;
-      background: #1c1c1c;
-      border-left: 5px solid var(--primary-accent);
-    }
-    .announcement h2 {
-      font-size: 19px;
-      color: var(--secondary-accent);
-      margin-bottom: 10px;
-    }
-    .announcement a {
-      color: var(--primary-accent);
-      text-decoration: none;
-    }
-    .announcement a:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-    }
-
-    /* Footer */
+    /* ===== Footer ===== */
     footer {
-      padding: 20px;
-      font-size: 14px;
-      color: var(--footer-text);
+      margin-top: 25px;
+      font-size: 0.85rem;
       text-align: center;
-      background: var(--footer-bg);
+      color: #aaa;
       border-top: 1px solid #222;
-    }
-
-    @media (max-width: 900px) {
-      main { grid-template-columns: 1fr; }
-      header h1 { font-size: 2.5rem; }
-      header h2 { font-size: 1rem; }
-      .contact-info { flex-direction: column; gap: 10px; }
+      padding-top: 10px;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="header-content">
-      <h1>Ashmit Gurey</h1>
-      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-        </div>
-      </div>
+    <h1>Ashmit Gurey</h1>
+    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+    <div class="contact">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
     </div>
   </header>
 
-  <!-- Main -->
-  <main>
-    <!-- Profile -->
-    <div class="card">
-      <img src="IMG-20250920-WA0001.jpg" alt="Ashmit Gurey" class="profile-photo">
-      <a href="vita.html" class="link-item">
-        <i class="fas fa-file-alt"></i>
-        <b>Curriculum Vitae</b>
-      </a>
-    </div>
+  <!-- Sections -->
+  <section>
+    <h3>Curriculum Vitae</h3>
+    <p><a href="vita.html"><i class="fas fa-file-alt"></i> View CV</a></p>
+  </section>
 
-    <!-- Links -->
-    <div class="card link-list">
-      <span class="highlight">Fall 2025</span>
-      <b>Courses Undertaken</b>
-      <a href="#"><i class="fas fa-calculator"></i> KSM3E01: Functional Analysis</a>
-      <a href="#"><i class="fas fa-infinity"></i> KSM3E03: Field and Galois Theory</a>
-      <a href="#"><i class="fas fa-chart-line"></i> KSM3E06: Advanced Complex Analysis</a>
-      <a href="#"><i class="fas fa-sort-numeric-down"></i> KSM3E07: Number Theory</a>
-      <hr>
-      <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem)</a>
-      <hr>
-      <a href="past_and_future.html"><i class="fas fa-history"></i> Past and Future Courses</a>
-      <hr>
-      <a href="#"><i class="fas fa-book"></i> Publications</a>
-      <a href="#"><i class="fas fa-pen-fancy"></i> Expositions</a>
-      <a href="#"><i class="fas fa-code"></i> Programs</a>
-      <hr>
-      <a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a>
-      <a href="cautionary-tale.html"><i class="fas fa-exclamation-triangle"></i> A Cautionary Tale</a>
-    </div>
+  <section>
+    <h3>Fall 2025 · Courses</h3>
+    <ul>
+      <li>KSM3E01: Functional Analysis</li>
+      <li>KSM3E03: Field and Galois Theory</li>
+      <li>KSM3E06: Advanced Complex Analysis</li>
+      <li>KSM3E07: Number Theory</li>
+    </ul>
+    <p><a href="#">Radon Transform (Inverse Problem)</a></p>
+    <p><a href="past_and_future.html">Past and Future Courses</a></p>
+  </section>
 
-    <!-- Images -->
-    <div class="card">
-      <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
-      <div class="caption"><b>Shepp-Logan Phantom</b></div>
-      <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
-      <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
-    </div>
-  </main>
+  <section>
+    <h3>Work & Writing</h3>
+    <ul>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Expositions</a></li>
+      <li><a href="#">Programs</a></li>
+    </ul>
+  </section>
 
-  <!-- Announcement -->
-  <div class="announcement">
-    <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
+  <section>
+    <h3>Other Links</h3>
+    <ul>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="cautionary-tale.html">A Cautionary Tale</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Images</h3>
+    <div class="image-grid">
+      <div>
+        <img src="IMG_0451.jpg" alt="Shepp-Logan Phantom">
+        <div class="caption">Shepp-Logan Phantom</div>
+      </div>
+      <div>
+        <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Fan Beam CT vs Cone Beam CT">
+        <div class="caption">Fan Beam CT vs Cone Beam CT</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Announcements</h3>
     <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
     <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer>
