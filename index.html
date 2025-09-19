@@ -18,9 +18,6 @@
 
     /* ===== Theme ===== */
     :root {
-      --header-bg: linear-gradient(135deg, #004d40, #00796b);
-      --header-text: #ffffff;
-      --header-subtext: #d7f5f0;
       --accent: #ff7043;
       --link-color: #00695c;
       --link-hover: #004d40;
@@ -32,47 +29,6 @@
       --footer-bg: #e0f2f1;
       --footer-text: #004d40;
     }
-
-    /* ===== Header ===== */
-    header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 60px 20px 50px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      position: relative;
-    }
-    header h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      font-family: 'Merriweather', serif;
-      margin-bottom: 0.4rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    }
-    header h2 {
-      font-size: 1.4rem;
-      color: var(--header-subtext);
-      margin-bottom: 1rem;
-    }
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--accent);
-      font-size: 1rem;
-      padding: 6px 14px;
-      background: rgba(0,0,0,0.25);
-      border-radius: 25px;
-      transition: 0.3s;
-    }
-    .contact-item:hover { background: rgba(0,0,0,0.35); transform: translateY(-2px); }
-    .contact-item a { color: var(--accent); text-decoration: none; }
 
     /* ===== Main ===== */
     main {
@@ -102,6 +58,28 @@
       display: block;
       margin: 0 auto 12px;
     }
+
+    .profile-info {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .profile-info h1 {
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+      font-family: 'Merriweather', serif;
+    }
+    .profile-info h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .profile-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .profile-info a:hover { text-decoration: underline; }
 
     .talk-photo {
       width: 100%;
@@ -193,29 +171,21 @@
 
     @media (max-width: 900px) {
       main { grid-template-columns: 1fr; }
-      header h1 { font-size: 2.6rem; }
-      header h2 { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Ashmit Gurey</h1>
-    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-      </div>
-    </div>
-  </header>
-
   <!-- Main -->
   <main>
     <!-- Profile -->
     <div class="card">
       <img src="IMG-20250920-WA0001.jpg" alt="Ashmit Gurey" class="profile-photo">
+      <div class="profile-info">
+        <h1>Ashmit Gurey</h1>
+        <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+        <a href="mailto:gureyashmit@ksom.res.in"><i class="fas fa-envelope"></i> gureyashmit@ksom.res.in</a>
+      </div>
+      <hr style="margin:15px 0; border:0; border-top:1px solid #ccc;">
       <a href="vita.html"><i class="fas fa-file-alt"></i> <b>Curriculum Vitae</b></a>
     </div>
 
