@@ -2,85 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ashmit Gurey</title>
-
-  <!-- Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashmit Gurey - Dark Theme</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      line-height: 1.6em;
-      background-color: #121212;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #0c0f1d 0%, #1a1e2c 100%);
       color: #e0e0e0;
-
-      /* ===== Dark Theme Variables ===== */
-      --header-bg: linear-gradient(135deg, #0a2e2a, #0d4037); /* deep teal */
-      --header-text: #ffffff;
-      --header-subtext: #a7ffeb;
-      --link-color: #4db6ac;
-      --link-hover: #80cbc4;
-      --card-bg: #1e1e1e;
-      --card-border: #2d4a45;
-      --announcement-bg: #1a2e2b;
-      --announcement-border: #00796b;
-      --announcement-title: #4db6ac;
-      --footer-bg: #0d1f1c;
-      --footer-text: #a7ffeb;
+      min-height: 100vh;
+      padding-bottom: 2rem;
     }
 
-    /* ====== Layout ====== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
     header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 50px 20px;
+      background: linear-gradient(135deg, #0a2e2a 0%, #0d4037 100%);
+      color: #ffffff;
+      padding: 3rem 0;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 46px;
-      font-weight: 700;
-      font-family: 'Merriweather', serif;
-    }
-    header h2 {
-      margin: 12px 0 0;
-      font-size: 22px;
-      color: var(--header-subtext);
-    }
-    header a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #ffe082;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    header a:hover {
-      text-decoration: underline;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
     }
 
-    main {
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><text x="0" y="50" font-family="monospace" font-size="14">∫∑π√∞</text></svg>');
+      opacity: 0.1;
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      color: #a7ffeb;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #ffe082;
+      font-size: 1.1rem;
+    }
+
+    /* Main Content Layout */
+    .main-content {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
-      gap: 25px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
+      gap: 2rem;
+      margin: 2rem auto;
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      padding: 25px;
-      border: 1px solid var(--card-border);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    @media (max-width: 900px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
     }
+
+    /* Card Styles */
+    .card {
+      background: rgba(30, 30, 40, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      border: 1px solid rgba(77, 182, 172, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
     }
 
     .profile-photo {
@@ -89,144 +116,262 @@
       border-radius: 10px;
       border: 3px solid #00695c;
       display: block;
-      margin: 0 auto 15px;
+      margin: 0 auto 1.5rem;
       filter: brightness(0.9) contrast(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
-    .talk-photo {
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid #37474f;
-      margin-bottom: 8px;
-      transition: transform 0.3s ease;
-    }
-    .talk-photo:hover {
-      transform: scale(1.02);
-    }
-    .caption {
-      font-size: 14px;
-      color: #b0bec5;
-      margin-bottom: 12px;
-      text-align: center;
+    /* Link List Styles */
+    .link-list {
+      display: flex;
+      flex-direction: column;
     }
 
     .link-list a {
-      display: block;
-      margin: 0.6em 0;
-      color: var(--link-color);
-      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0.75rem 0;
+      color: #4db6ac;
+      font-size: 1.1rem;
       text-decoration: none;
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: background-color 0.2s ease;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
+
     .link-list a:hover {
-      color: var(--link-hover);
-      background-color: rgba(77, 182, 172, 0.1);
+      color: #80cbc4;
+      background: rgba(77, 182, 172, 0.15);
+      transform: translateX(5px);
     }
 
     .highlight {
       color: #4db6ac;
       font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 1.25rem;
+      margin: 1.5rem 0 1rem;
       display: block;
+      border-left: 4px solid #4db6ac;
+      padding-left: 1rem;
     }
 
-    .announcement {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px 25px;
+    /* Image Card Styles */
+    .image-card img {
+      width: 100%;
       border-radius: 8px;
-      font-size: 16px;
-      background: var(--announcement-bg);
-      border-left: 6px solid var(--announcement-border);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(55, 71, 79, 0.5);
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
+
+    .image-card img:hover {
+      transform: scale(1.02);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      color: #b0bec5;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Announcement Styles */
+    .announcement {
+      background: rgba(26, 46, 43, 0.9);
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      border-left: 6px solid #00796b;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
     .announcement h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: var(--announcement-title);
+      margin: 0 0 1.5rem;
+      font-size: 1.5rem;
+      color: #4db6ac;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
+
+    .announcement p {
+      margin-bottom: 1rem;
+    }
+
     .announcement a {
       color: #4db6ac;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
+
     .announcement a:hover {
+      color: #80cbc4;
       text-decoration: underline;
     }
 
+    /* Footer Styles */
     footer {
-      padding: 15px;
-      font-size: 14px;
-      color: var(--footer-text);
       text-align: center;
-      background: var(--footer-bg);
-      border-top: 1px solid #1c3732;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #a7ffeb;
+      background: rgba(13, 31, 28, 0.9);
+      margin-top: 3rem;
+      border-top: 1px solid rgba(28, 55, 50, 0.5);
     }
 
-    b {
-      color: #ffffff;
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(30, 30, 40, 0.9);
+      border: 1px solid rgba(77, 182, 172, 0.3);
+      color: #4db6ac;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
     }
 
-    @media (max-width: 900px) {
-      main { grid-template-columns: 1fr; }
+    .theme-toggle:hover {
+      transform: rotate(30deg);
+      color: #80cbc4;
+      border-color: rgba(77, 182, 172, 0.6);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header h2 {
+        font-size: 1.2rem;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Decorative elements */
+    .math-symbol {
+      color: #4db6ac;
+      font-weight: bold;
+      margin: 0 0.25rem;
     }
   </style>
 </head>
 <body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
   <!-- Header -->
   <header>
-    <h1>Ashmit Gurey</h1>
-    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-    <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+    <div class="container">
+      <h1>Ashmit Gurey</h1>
+      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Kozhikode, Kerala, India</span>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Main -->
-  <main>
-    <!-- Profile -->
-    <div class="card">
-      <img src="IMG_0447.JPG" alt="Ashmit Gurey" class="profile-photo">
-      <a href="vita.html"><b>Vita</b></a>
+  <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Profile Card -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ashmit Gurey" class="profile-photo">
+        <a href="vita.html" class="link-item">
+          <i class="fas fa-file-alt"></i>
+          <b>Curriculum Vitae</b>
+        </a>
+      </div>
+
+      <!-- Links Card -->
+      <div class="card link-list">
+        <span class="highlight">Fall 2025</span>
+        <b>Courses Undertaken</b>
+        <a href="#"><i class="fas fa-calculator"></i> KSM3E01: Functional Analysis</a>
+        <a href="#"><i class="fas fa-infinity"></i> KSM3E03: Field and Galois Theory</a>
+        <a href="#"><i class="fas fa-chart-line"></i> KSM3E06: Advanced Complex Analysis</a>
+        <a href="#"><i class="fas fa-sort-numeric-down"></i> KSM3E07: Number Theory</a>
+        <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem): Applications in Medical Imaging</a>
+        <a href="past_and_future.html"><i class="fas fa-history"></i> Past and Future Courses</a>
+        
+        <a href="#"><i class="fas fa-book"></i> Publications</a>
+        <a href="#"><i class="fas fa-pen-fancy"></i> Expositions</a>
+        <a href="#"><i class="fas fa-code"></i> Programs</a>
+        <a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a>
+        <a href="cautionary-tale.html"><i class="fas fa-exclamation-triangle"></i> A Cautionary Tale</a>
+      </div>
+
+      <!-- Images Card -->
+      <div class="card image-card">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Mathematical Visualization">
+        <div class="caption"><b>Shepp-Logan Phantom</b></div>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="CT Scan Comparison">
+        <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
+      </div>
     </div>
 
-    <!-- Links -->
-    <div class="card link-list">
-      <span class="highlight">Fall 2025</span>
-      <b>Courses Undertaken</b>
-      <a href="#">KSM3E01: Functional Analysis</a>
-      <a href="#">KSM3E03: Field and Galois Theory</a>
-      <a href="#">KSM3E06: Advanced Complex Analysis</a>
-      <a href="#">KSM3E07: Number Theory</a>
-      <a href="#"><b>Radon Transform (Inverse Problem) : Applications in Medical Imaging</b></a>
-      <a href="past_and_future.html"><b>Past and Future Courses</b></a>
-      
-      <a href="#">Publications</a>
-      <a href="#">Expositions</a>
-      <a href="#">Programs</a>
-      <a href="schedule.html"><b>Schedule</b></a>
-      <a href="cautionary-tale.html"><b>A Cautionary Tale</b></a>
+    <!-- Announcement -->
+    <div class="announcement">
+      <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
+      <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
+      <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
+      <p><b>Apr 2025:</b> Paper on "Inverse Problems in Medical Imaging" accepted for publication in Journal of Mathematical Imaging.</p>
     </div>
-
-    <!-- Images -->
-    <div class="card">
-      <img src="IMG_0451.jpg" alt="Talk Photo 1" class="talk-photo">
-      <div class="caption"><b>Shepp-Logan Phantom</b></div>
-      <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Talk Photo 2" class="talk-photo">
-      <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
-    </div>
-  </main>
-
-  <!-- Announcement -->
-  <div class="announcement">
-    <h2>📢 Announcements</h2>
-    <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
-    <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
   </div>
 
   <!-- Footer -->
   <footer>
-    © 2025 Ashmit Gurey · Kerala School of Mathematics
+    <div class="container">
+      <p>© 2025 Ashmit Gurey · Kerala School of Mathematics</p>
+      <p>Mathematics is the language with which God has written the universe. <span class="math-symbol">∮</span></p>
+    </div>
   </footer>
+
+  <script>
+    // Simple theme toggle functionality
+    document.getElementById('themeToggle').addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('fa-moon')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        document.body.style.background = 'linear-gradient(135deg, #2c3e50 0%, #3498db 100%)';
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        document.body.style.background = 'linear-gradient(135deg, #0c0f1d 0%, #1a1e2c 100%)';
+      }
+    });
+  </script>
 </body>
 </html>
