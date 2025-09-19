@@ -9,134 +9,130 @@
 
   <style>
     body {
-      background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      background-color: #f8fdfc; /* soft teal-tinted beige */
+      font-family: 'Merriweather', Georgia, serif;
       color: #222;
       margin: 0;
       padding: 0;
       line-height: 1.6em;
     }
 
-    /* ===== Header ===== */
+    /* Header */
     header {
-      background: linear-gradient(135deg, #004d40, #00796b);
-      color: #fff;
-      padding: 50px 20px 40px;
+      background: linear-gradient(135deg, #00695c, #009688); /* teal gradient */
+      color: white;
+      padding: 25px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-    header h1 {
-      font-size: 2.8rem;
+    h1.page-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 28px;
+      color: #00695c; /* strong teal */
       font-weight: 700;
-      font-family: 'Merriweather', serif;
-      margin-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
-    header h2 {
-      font-size: 1.2rem;
-      color: #d7f5f0;
-      margin-bottom: 0.8rem;
-    }
-    header a {
-      color: #ff7043; /* orange accent */
-      text-decoration: none;
+
+    .column h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #003366; /* deep navy */
+      font-family: 'Source Sans Pro', Arial, sans-serif;
       font-weight: 600;
+    }
+
+    header a {
+      color: #ffe082; /* gold accent */
+      text-decoration: none;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
     header a:hover { text-decoration: underline; }
 
-    /* ===== Container ===== */
+    /* Main container */
     .container {
-      background: #fff;
-      margin: 35px auto;
+      background: #ffffff;
+      margin: 40px auto;
       padding: 25px;
-      width: 90%;
+      width: 85%;
       max-width: 1100px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h1.page-title {
-      font-size: 28px;
-      color: #ff7043; /* orange headline */
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 25px;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(0,150,136,0.2); /* teal shadow */
       text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
 
-    /* ===== Columns ===== */
     .columns {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 25px;
-      flex-wrap: wrap;
+      gap: 20px;
     }
+
     .column {
       flex: 1;
-      min-width: 300px;
       padding: 10px;
+      text-align: left;
     }
+
     .column h2 {
       text-align: center;
       margin-top: 0;
-      margin-bottom: 18px;
-      color: #00695c; /* teal heading */
+      margin-bottom: 20px;
+      color: #00796b; /* teal heading */
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-weight: 600;
     }
 
-    /* ===== Year Cards ===== */
+    /* Year cards */
     .year-card {
-      background: #f9f9f9;
+      background: #fafafa;
       border: 1px solid #ddd;
-      border-left: 6px solid #00695c; /* teal accent */
-      border-radius: 6px;
-      padding: 14px;
-      margin-bottom: 18px;
+      border-left: 5px solid #009688; /* teal accent */
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .year-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 6px 14px rgba(0,150,136,0.3);
     }
+
     .year-card .year {
       font-weight: bold;
-      font-size: 17px;
+      font-size: 18px;
       margin-bottom: 10px;
-      color: #ff7043; /* orange year */
+      color: #00695c;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      transition: color 0.3s ease;
     }
-    .year-card p { margin: 6px 0; }
 
-    /* ===== Links ===== */
+    /* Links hover animation like homepage */
     a {
       color: #00695c;
       text-decoration: none;
-      transition: 0.2s;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
     a:hover {
-      color: #ff7043;
-      text-decoration: underline;
+      color: #004d40;
+      transform: scale(1.08);
     }
 
-    /* ===== Footer ===== */
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       text-align: center;
-      font-size: 14px;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
     }
+
     .footer a {
-      color: #00695c;
+      color: #009688;
       font-weight: bold;
       text-decoration: none;
     }
-    .footer a:hover { color: #ff7043; }
-
-    @media (max-width: 900px) {
-      .columns { flex-direction: column; }
-      header h1 { font-size: 2.2rem; }
-      header h2 { font-size: 1rem; }
-    }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
