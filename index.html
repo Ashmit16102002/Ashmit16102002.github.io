@@ -15,98 +15,84 @@
     body {
       font-family: 'Source Sans Pro', Arial, sans-serif;
       line-height: 1.6em;
-      background: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 100%);
-      color: #f5f5f5;
+      background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+      color: #e0e0e0;
       min-height: 100vh;
     }
 
-    /* ===== Black–Yellow–Orange Theme Variables ===== */
+    /* ===== Theme Variables ===== */
     :root {
-      --header-bg: linear-gradient(135deg, #000000, #1a1a1a, #2a2a2a);
-      --header-text: #ffeb3b;
-      --header-subtext: #ffc107;
-      --link-color: #ff9800;
-      --link-hover: #ffeb3b;
+      --primary-accent: #ff9800; /* orange */
+      --secondary-accent: #ffc107; /* amber */
+      --highlight: #ffb74d; /* soft orange */
+      --header-bg: linear-gradient(135deg, #0d0d0d, #1a1a1a, #2a2a2a);
+      --header-text: #ffc107;
+      --header-subtext: #ff9800;
+      --link-color: #ffb74d;
+      --link-hover: #ffc107;
       --card-bg: #1e1e1e;
-      --card-border: #ff9800;
-      --announcement-bg: #2a2a2a;
-      --announcement-border: #ff9800;
-      --announcement-title: #ffeb3b;
-      --footer-bg: #111111;
-      --footer-text: #ff9800;
+      --card-border: #333;
+      --footer-bg: #111;
+      --footer-text: #aaa;
     }
 
-    /* ====== Header ====== */
+    /* ===== Header ===== */
     header {
       background: var(--header-bg);
       color: var(--header-text);
       padding: 60px 20px 50px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
-    
-    .header-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
     header h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       font-weight: 700;
       font-family: 'Merriweather', serif;
       margin-bottom: 0.5rem;
       color: var(--header-text);
     }
-    
     header h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: var(--header-subtext);
       font-weight: 400;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
-    
     .title-divider {
-      width: 120px;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, #ff9800, transparent);
-      margin: 0 auto 1.5rem;
+      width: 100px;
+      height: 3px;
+      background: var(--primary-accent);
+      margin: 0 auto 1.2rem;
       border-radius: 2px;
     }
-    
+
+    /* Contact */
     .contact-info {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
     }
-    
     .contact-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #ffeb3b;
-      font-size: 1rem;
-      padding: 8px 14px;
-      background: rgba(255, 152, 0, 0.2);
+      font-size: 0.95rem;
+      color: var(--secondary-accent);
+      background: rgba(255, 152, 0, 0.15);
+      padding: 6px 12px;
       border-radius: 20px;
       transition: all 0.3s ease;
     }
-    
     .contact-item:hover {
-      background: rgba(255, 152, 0, 0.4);
+      background: rgba(255, 152, 0, 0.3);
       transform: translateY(-2px);
     }
-    
     .contact-item a {
-      color: #ffeb3b;
+      color: var(--secondary-accent);
       text-decoration: none;
     }
 
-    /* ====== Main Content ====== */
+    /* ===== Main ===== */
     main {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -115,26 +101,25 @@
       max-width: 1200px;
       margin: auto;
     }
-
     .card {
       background: var(--card-bg);
       border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
       padding: 20px;
       border: 1px solid var(--card-border);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
     }
 
+    /* Profile Photo */
     .profile-photo {
       width: 100%;
-      max-width: 220px;
+      max-width: 200px;
       border-radius: 8px;
-      border: 3px solid #ff9800;
+      border: 3px solid var(--primary-accent);
       display: block;
       margin: 0 auto 15px;
     }
@@ -142,93 +127,84 @@
     .talk-photo {
       width: 100%;
       border-radius: 6px;
-      border: 1px solid #555;
+      border: 1px solid #444;
       margin-bottom: 8px;
       transition: transform 0.3s ease;
     }
-    
-    .talk-photo:hover {
-      transform: scale(1.03);
-    }
-    
+    .talk-photo:hover { transform: scale(1.03); }
     .caption {
       font-size: 14px;
-      color: #ffcc80;
+      color: var(--highlight);
       margin-bottom: 12px;
       text-align: center;
     }
 
+    /* Links */
     .link-list a {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin: 0.6em 0;
+      margin: 0.5em 0;
       color: var(--link-color);
       font-size: 15px;
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 6px 10px;
       border-radius: 6px;
       transition: all 0.3s ease;
     }
-    
     .link-list a:hover {
       color: var(--link-hover);
-      background-color: rgba(255, 235, 59, 0.1);
+      background-color: rgba(255, 193, 7, 0.1);
       transform: translateX(5px);
     }
 
     .highlight {
-      color: #ffeb3b;
+      color: var(--secondary-accent);
       font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 17px;
+      margin-bottom: 8px;
       display: block;
-      border-left: 4px solid #ff9800;
+      border-left: 4px solid var(--primary-accent);
       padding-left: 10px;
     }
 
+    /* Announcement */
     .announcement {
       max-width: 900px;
       margin: 30px auto;
-      padding: 20px;
+      padding: 18px;
       border-radius: 8px;
-      font-size: 16px;
-      background: var(--announcement-bg);
-      border-left: 6px solid var(--announcement-border);
+      background: #1c1c1c;
+      border-left: 5px solid var(--primary-accent);
     }
-    
     .announcement h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: var(--announcement-title);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 19px;
+      color: var(--secondary-accent);
+      margin-bottom: 10px;
     }
-    
     .announcement a {
-      color: #ff9800;
+      color: var(--primary-accent);
       text-decoration: none;
     }
-    
     .announcement a:hover {
-      color: #ffeb3b;
+      color: var(--link-hover);
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
       padding: 20px;
       font-size: 14px;
       color: var(--footer-text);
       text-align: center;
       background: var(--footer-bg);
-      border-top: 1px solid #333;
+      border-top: 1px solid #222;
     }
 
     @media (max-width: 900px) {
       main { grid-template-columns: 1fr; }
-      header h1 { font-size: 2.8rem; }
-      header h2 { font-size: 1.2rem; }
+      header h1 { font-size: 2.5rem; }
+      header h2 { font-size: 1rem; }
       .contact-info { flex-direction: column; gap: 10px; }
     }
   </style>
@@ -238,7 +214,6 @@
   <header>
     <div class="header-content">
       <h1>Ashmit Gurey</h1>
-      <br>
       <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
       <div class="contact-info">
         <div class="contact-item">
@@ -269,7 +244,7 @@
       <a href="#"><i class="fas fa-chart-line"></i> KSM3E06: Advanced Complex Analysis</a>
       <a href="#"><i class="fas fa-sort-numeric-down"></i> KSM3E07: Number Theory</a>
       <hr>
-      <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem) : Applications in Medical Imaging</a>
+      <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem)</a>
       <hr>
       <a href="past_and_future.html"><i class="fas fa-history"></i> Past and Future Courses</a>
       <hr>
