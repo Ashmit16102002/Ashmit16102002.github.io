@@ -24,7 +24,7 @@
 
     /* ===== Blue/Indigo Theme Variables ===== */
     :root {
-      --header-bg: linear-gradient(135deg, #1a237e, #283593); /* deep indigo */
+      --header-bg: linear-gradient(135deg, #1a237e, #283593, #3949ab); /* enhanced indigo gradient */
       --header-text: #ffffff;
       --header-subtext: #e8eaf6;
       --link-color: #283593;
@@ -38,13 +38,13 @@
       --footer-text: #283593;
     }
 
-    /* ====== Layout ====== */
+    /* ====== Enhanced Header ====== */
     header {
       background: var(--header-bg);
       color: var(--header-text);
-      padding: 50px 20px;
+      padding: 60px 20px 50px;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -56,38 +56,79 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><text x="0" y="50" font-family="monospace" font-size="14">∫∑π√∞</text></svg>');
-      opacity: 0.1;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" opacity="0.08"><path d="M0,0 L200,200 M200,0 L0,200" stroke="%23ffffff" stroke-width="2"/><text x="100" y="30" font-family="monospace" font-size="16" fill="%23ffffff" text-anchor="middle">∑∫√π∞</text><text x="100" y="170" font-family="monospace" font-size="16" fill="%23ffffff" text-anchor="middle">αβγΔδ</text></svg>');
+      opacity: 0.15;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     
     header h1 {
       margin: 0;
-      font-size: 46px;
+      font-size: 3.5rem;
       font-weight: 700;
       font-family: 'Merriweather', serif;
-      position: relative;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 0.5rem;
     }
     
     header h2 {
-      margin: 12px 0 0;
-      font-size: 22px;
+      margin: 0;
+      font-size: 1.5rem;
       color: var(--header-subtext);
-      position: relative;
+      font-weight: 400;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1.5rem;
     }
     
-    header a {
-      display: inline-block;
-      margin-top: 10px;
+    .title-divider {
+      width: 120px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #ffd54f, transparent);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: #ffd54f;
-      font-size: 18px;
-      text-decoration: none;
-      position: relative;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      transition: all 0.3s ease;
     }
     
-    header a:hover {
+    .contact-item:hover {
+      background: rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .contact-item a {
+      color: #ffd54f;
+      text-decoration: none;
+    }
+    
+    .contact-item a:hover {
       text-decoration: underline;
     }
 
+    /* ====== Main Content ====== */
     main {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -201,7 +242,7 @@
     }
 
     footer {
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
       color: var(--footer-text);
       text-align: center;
@@ -211,22 +252,21 @@
 
     @media (max-width: 900px) {
       main { grid-template-columns: 1fr; }
+      
+      header h1 {
+        font-size: 2.8rem;
+      }
+      
+      header h2 {
+        font-size: 1.3rem;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
 
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 15px;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #ffd54f;
-    }
-    
     .math-symbol {
       color: #3949ab;
       font-weight: bold;
@@ -235,18 +275,25 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Enhanced Header -->
   <header>
-    <h1>Ashmit Gurey</h1>
-    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Kozhikode, Kerala, India</span>
+    <div class="header-content">
+      <h1>Ashmit Gurey</h1>
+      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+      <div class="title-divider"></div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Kozhikode, Kerala, India</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Mathematical Research</span>
+        </div>
       </div>
     </div>
   </header>
