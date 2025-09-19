@@ -9,7 +9,7 @@
 
   <style>
     body {
-      background-color: #f8fdfc; /* soft teal-tinted beige */
+      background-color: #f9f9f9; /* light gray background */
       font-family: 'Merriweather', Georgia, serif;
       color: #222;
       margin: 0;
@@ -19,54 +19,56 @@
 
     /* Header */
     header {
-      background: linear-gradient(135deg, #00695c, #009688); /* teal gradient */
+      background: linear-gradient(135deg, #004d40, #00695c); /* dark teal gradient */
       color: white;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-    h1.page-title {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 28px;
-      color: #00695c; /* strong teal */
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 20px;
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      font-family: 'Merriweather', serif;
     }
-
-    .column h2 {
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 20px;
-      color: #003366; /* deep navy */
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-weight: 600;
+    header h2 {
+      font-size: 18px;
+      margin: 8px 0;
+      color: #e0f2f1;
+      font-weight: 400;
     }
-
     header a {
-      color: #ffe082; /* gold accent */
+      color: #ffcc80; /* warm orange-gold accent */
       text-decoration: none;
       font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 16px;
     }
     header a:hover { text-decoration: underline; }
 
     /* Main container */
     .container {
-      background: #ffffff;
+      background: #fff;
       margin: 40px auto;
       padding: 25px;
       width: 85%;
       max-width: 1100px;
-      border-radius: 6px;
-      box-shadow: 0 0 15px rgba(0,150,136,0.2); /* teal shadow */
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
+    }
+
+    h1.page-title {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 26px;
+      color: #ff7043; /* orange title */
+      margin-top: 0;
+      margin-bottom: 25px;
     }
 
     .columns {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 20px;
+      gap: 25px;
     }
 
     .column {
@@ -79,61 +81,71 @@
       text-align: center;
       margin-top: 0;
       margin-bottom: 20px;
-      color: #00796b; /* teal heading */
+      color: #00695c; /* teal subheading */
       font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
     }
 
     /* Year cards */
     .year-card {
-      background: #fafafa;
+      background: #f7f7f7; /* light gray */
       border: 1px solid #ddd;
-      border-left: 5px solid #009688; /* teal accent */
-      border-radius: 5px;
+      border-left: 5px solid #00695c; /* teal accent */
+      border-radius: 6px;
       padding: 15px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     }
     .year-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 6px 14px rgba(0,150,136,0.3);
-      background-color: #e0f7f4; /* subtle teal tint */
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      background-color: #fff8f5; /* soft orange tint */
     }
 
     .year-card .year {
       font-weight: bold;
       font-size: 18px;
       margin-bottom: 10px;
-      color: #00695c;
+      color: #ff7043; /* orange highlight */
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      transition: color 0.3s ease;
     }
 
-    /* Links hover animation like homepage */
+    /* Links */
     a {
       color: #00695c;
       text-decoration: none;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       display: inline-block;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: color 0.3s ease, transform 0.2s ease;
     }
     a:hover {
-      color: #004d40;
-      transform: scale(1.08);
+      color: #ff7043;
+      transform: scale(1.05);
     }
 
+    /* Footer */
     .footer {
-      margin-top: 25px;
+      margin-top: 30px;
       text-align: center;
       font-family: 'Source Sans Pro', Arial, sans-serif;
     }
-
     .footer a {
-      color: #009688;
+      color: #00695c;
       font-weight: bold;
       text-decoration: none;
     }
-    .footer a:hover { text-decoration: underline; }
+    .footer a:hover {
+      color: #ff7043;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .columns {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
