@@ -9,7 +9,7 @@
 
   <style>
     body {
-      background-color: #f8fdfc; /* light teal tint */
+      background-color: #f8fdfc;
       font-family: 'Merriweather', Georgia, serif;
       color: #222;
       margin: 0;
@@ -18,42 +18,60 @@
       text-align: center;
     }
 
+    /* Header */
     header {
-      background: #00695c; /* teal */
+      background: linear-gradient(135deg, #00695c, #004d40);
       color: white;
-      padding: 12px 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      padding: 15px 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
     header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-weight: 600;
+      font-weight: 700;
     }
     header h2 {
-      margin: 3px 0 0;
+      margin: 5px 0 0;
       font-size: 13px;
       font-weight: normal;
-      color: #cceae4;
+      color: #b2dfdb;
     }
     header a {
-      color: #ffe082;
+      color: #ffcc80;
       text-decoration: none;
       font-size: 13px;
     }
     header a:hover { text-decoration: underline; }
 
+    /* Navigation */
+    nav {
+      background: #004d40;
+      padding: 6px 0;
+    }
+    nav a {
+      color: #e0f2f1;
+      text-decoration: none;
+      margin: 0 12px;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #ffb74d;
+    }
+
     .content {
       width: 95%;
       max-width: 900px;
-      margin: 15px auto;
+      margin: 20px auto;
     }
 
     h1.page-title {
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-size: 26px;
-      color: #00695c;
-      margin: 15px 0;
+      color: #ff7043;
+      margin: 18px 0;
       font-weight: 700;
     }
 
@@ -63,7 +81,7 @@
       border-left: 5px solid #00695c;
       border-radius: 10px;
       padding: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -85,16 +103,19 @@
 
     th, td {
       border: 1px solid #ddd;
-      padding: 6px 8px; /* compact */
+      padding: 8px 10px;
       text-align: center;
     }
 
     th {
-      background-color: #e0f2f1; /* light teal */
+      background-color: #e0f2f1;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-weight: 600;
       color: #004d40;
     }
+
+    tr:nth-child(even) td { background: #fafafa; }
+    tr:hover td { background: #f1f8f6; }
 
     .course-red { color: #c62828; font-weight: bold; }
     .course-blue { color: #1565c0; font-weight: bold; }
@@ -104,8 +125,8 @@
     .section-title {
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-size: 16px;
-      color: #004d40;
-      margin: 12px 0 8px;
+      color: #ff7043;
+      margin: 14px 0 8px;
       font-weight: 600;
     }
 
@@ -115,12 +136,17 @@
     }
     a:hover { text-decoration: none; }
 
+    /* Footer */
     footer {
-      margin: 25px 0 15px;
+      margin: 30px 0 15px;
       font-size: 13px;
-      color: #444;
+      color: #004d40;
       text-align: center;
       font-family: 'Source Sans Pro', Arial, sans-serif;
+      padding: 12px;
+      background: #e0f2f1;
+      border-top: 1px solid #b2dfdb;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -131,6 +157,14 @@
   <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
   <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
 </header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="vita.html">Vita</a>
+  <a href="research.html">Research</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="writings.html">Writings</a>
+</nav>
 
 <div class="content">
   <h1 class="page-title">Fall 2025 Schedule</h1>
@@ -197,7 +231,7 @@
 </div>
 
 <footer>
-  © 2025 Ashmit Gurey · Kerala School of Mathematics
+  © 2025 Ashmit Gurey · Kerala School of Mathematics · <span style="color:#ff7043;">∮</span>
 </footer>
 
 </body>
