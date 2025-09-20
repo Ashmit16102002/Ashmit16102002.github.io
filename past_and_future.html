@@ -8,165 +8,120 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      background-color: #f9f9f9; /* light gray background */
-      font-family: 'Merriweather', Georgia, serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6em;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #004d40, #00695c); /* dark teal gradient */
-      color: white;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-      font-family: 'Merriweather', serif;
-    }
-    header h2 {
-      font-size: 18px;
-      margin: 8px 0;
-      color: #e0f2f1;
-      font-weight: 400;
-    }
-    header a {
-      color: #ffcc80; /* warm orange-gold accent */
-      text-decoration: none;
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 16px;
-    }
-    header a:hover { text-decoration: underline; }
-
-    /* Main container */
-    .container {
-      background: #fff;
-      margin: 40px auto;
+      background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
+      color: #333;
+      line-height: 1.6em;
       padding: 25px;
-      width: 85%;
+    }
+
+    /* ===== Container ===== */
+    .container {
       max-width: 1100px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
+      margin: auto;
     }
 
     h1.page-title {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 26px;
-      color: #ff7043; /* orange title */
-      margin-top: 0;
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      color: #ff7043;
+      text-align: center;
       margin-bottom: 25px;
     }
 
     .columns {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .column {
-      flex: 1;
-      padding: 10px;
-      text-align: left;
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      border: 1px solid #cfdedb;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .column h2 {
+    .card h2 {
       text-align: center;
-      margin-top: 0;
-      margin-bottom: 20px;
-      color: #00695c; /* teal subheading */
+      margin-bottom: 15px;
+      color: #00695c;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-weight: 600;
     }
 
-    /* Year cards */
-    .year-card {
-      background: #f7f7f7; /* light gray */
-      border: 1px solid #ddd;
-      border-left: 5px solid #00695c; /* teal accent */
+    /* ===== Year sub-boxes ===== */
+    .year-box {
       border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: 0.3s;
     }
-    .year-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-      background-color: #fff8f5; /* soft orange tint */
-    }
+    .year-box:hover { transform: translateY(-2px); }
 
-    .year-card .year {
+    .year {
       font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #ff7043; /* orange highlight */
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #ff7043;
     }
 
-    /* Links */
+    .year-box p { margin: 4px 0; }
+
+    /* Different year colors */
+    .year-box:nth-child(1) { background: #e8f5e9; border: 1px solid #a5d6a7; } /* Green */
+    .year-box:nth-child(2) { background: #fff3e0; border: 1px solid #ffcc80; } /* Orange */
+    .year-box:nth-child(3) { background: #e3f2fd; border: 1px solid #90caf9; } /* Blue */
+    .year-box:nth-child(4) { background: #fce4ec; border: 1px solid #f48fb1; } /* Pink */
+    .year-box:nth-child(5) { background: #ede7f6; border: 1px solid #b39ddb; } /* Purple */
+
     a {
       color: #00695c;
       text-decoration: none;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      display: inline-block;
-      transition: color 0.3s ease, transform 0.2s ease;
+      transition: 0.2s;
     }
-    a:hover {
-      color: #ff7043;
-      transform: scale(1.05);
-    }
+    a:hover { color: #004d40; text-decoration: underline; }
 
-    /* Footer */
+    /* ===== Footer ===== */
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 14px;
+      color: #004d40;
     }
     .footer a {
-      color: #00695c;
+      color: #ff7043;
       font-weight: bold;
       text-decoration: none;
     }
-    .footer a:hover {
-      color: #ff7043;
-      text-decoration: underline;
-    }
+    .footer a:hover { text-decoration: underline; }
 
-    /* Responsive */
     @media (max-width: 900px) {
-      .columns {
-        flex-direction: column;
-      }
+      .columns { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Ashmit Gurey</h1>
-    <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-    <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-  </header>
-
-  <!-- Main Content -->
   <div class="container">
     <h1 class="page-title">UnderGrad and Master Courses Learnt</h1>
 
     <div class="columns">
       <!-- KSoM Courses -->
-      <div class="column">
+      <div class="card">
         <h2>KSoM Courses</h2>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2025</div>
           <p>KSM3E01 : <a href="#">Functional Analysis</a></p>
           <p>KSM3E03 : <a href="#">Field and Galois Theory</a></p>
@@ -178,7 +133,7 @@
           <p>KSM2C04 : <a href="#">ODE</a></p>
         </div>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2024</div>
           <p>KSM1C01 : <a href="#">Algebra - I</a></p>
           <p>KSM1C02 : <a href="#">Analysis - I</a></p>
@@ -188,10 +143,10 @@
       </div>
 
       <!-- IMA Courses -->
-      <div class="column">
+      <div class="card">
         <h2>IMA Courses</h2>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2024</div>
           <p>C14 : <a href="#">Differential Geometry</a></p>
           <p>DSE3 : <a href="#">Probability - II</a></p>
@@ -199,7 +154,7 @@
           <p>GE7 : <a href="#">Quantum Mechanics</a></p>
         </div>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2023</div>
           <p>C6 : <a href="#">Calculus - III</a></p>
           <p>C7 : <a href="#">Algebra - III (Rings and Fields)</a></p>
@@ -218,7 +173,7 @@
           <p>GE6 : <a href="#">CS - V (Theory of Computation)</a></p>
         </div>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2022</div>
           <p>C4 : <a href="#">Calculus - II</a></p>
           <p>C5 : <a href="#">Algebra - II (Group Theory)</a></p>
@@ -227,7 +182,7 @@
           <p>AECC2 : <a href="#">Environmental Science and Disaster Management</a></p>
         </div>
 
-        <div class="year-card">
+        <div class="year-box">
           <div class="year">2021</div>
           <p>C1 : <a href="#">Calculus - I</a></p>
           <p>C2 : <a href="#">Algebra - I (Matrix Theory)</a></p>
