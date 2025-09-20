@@ -28,30 +28,30 @@
 
     /* ==== Left Profile Block ==== */
     .profile {
-      background: #ffffff;
+      background: linear-gradient(135deg, #00796b, #004d40);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       padding: 20px;
       text-align: center;
-      border: 1px solid #b2dfdb;
+      color: #fff;
     }
 
     .profile h1 {
       font-size: 20px;
       margin-bottom: 8px;
-      color: #00796b;
+      color: #ffffff;
       font-family: 'Merriweather', serif;
     }
 
     .profile h2 {
       font-size: 14px;
       font-weight: normal;
-      color: #555;
+      color: #e0f2f1;
       margin-bottom: 12px;
     }
 
     .profile a {
-      color: #004d40;
+      color: #b2dfdb;
       text-decoration: none;
       font-size: 14px;
       position: relative;
@@ -63,11 +63,11 @@
       bottom: -2px;
       width: 0%;
       height: 2px;
-      background: #00796b;
+      background: #ffffff;
       transition: width 0.3s ease;
     }
     .profile a:hover {
-      color: #00796b;
+      color: #ffffff;
     }
     .profile a:hover::after {
       width: 100%;
@@ -89,23 +89,22 @@
     }
 
     .card {
-      background: #ffffff;
+      background: linear-gradient(135deg, #4db6ac, #00796b);
+      color: #fff;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border: 1px solid #b2dfdb;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: 0.3s;
     }
     .card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-      border-color: #00796b;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
     }
 
     .section-title {
       font-size: 18px;
       font-weight: 600;
-      color: #00796b;
+      color: #ffffff;
       margin-bottom: 12px;
       font-family: 'Source Sans Pro', Arial, sans-serif;
     }
@@ -118,10 +117,11 @@
     td {
       font-size: 0.95em;
       vertical-align: top;
+      color: #f1f1f1;
     }
 
     a {
-      color: #004d40;
+      color: #e0f2f1;
       text-decoration: none;
       position: relative;
     }
@@ -132,11 +132,11 @@
       bottom: -2px;
       width: 0%;
       height: 2px;
-      background: #00796b;
+      background: #ffffff;
       transition: width 0.3s ease;
     }
     a:hover {
-      color: #00796b;
+      color: #ffffff;
     }
     a:hover::after {
       width: 100%;
@@ -146,22 +146,16 @@
       display: inline-block;
       margin-top: 15px;
       font-weight: bold;
-      color: #00796b;
+      color: #004d40;
+      background: #b2dfdb;
+      padding: 8px 14px;
+      border-radius: 8px;
       text-decoration: none;
-      position: relative;
+      transition: 0.3s;
     }
-    .cv-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 2px;
+    .cv-link:hover {
       background: #00796b;
-      transition: width 0.3s ease;
-    }
-    .cv-link:hover::after {
-      width: 100%;
+      color: #fff;
     }
 
     footer {
