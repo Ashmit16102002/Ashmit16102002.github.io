@@ -3,82 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Schedule – Ashmit Gurey</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      background-color: #fdfdfd;
-      font-family: 'Merriweather', Georgia, serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-      line-height: 1.5em;
-      text-align: center;
-    }
-
-    .content {
-      width: 95%;
-      max-width: 900px;
-      margin: 25px auto;
-    }
-
-    h1.page-title {
+      background-color: #f9f9f9;
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 28px;
-      color: #333;
-      margin: 15px 0 25px;
-      font-weight: 700;
+      color: #222;
+      line-height: 1.4;
+      padding: 12px;
     }
 
-    /* Card wrapper with new colors */
-    .card {
-      border-radius: 14px;
-      padding: 18px;
-      margin-bottom: 22px;
-      box-shadow: 0 5px 14px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: white;
-    }
-
-    /* New gradient colors */
-    .card:nth-child(2) {
-      background: linear-gradient(135deg, #ff9a9e, #fecfef); /* pink-peach */
-      color: #333;
-    }
-    .card:nth-child(3) {
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* violet-pink */
-      color: #333;
-    }
-
-    /* Hover effect */
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.2);
-    }
-
-    table {
-      border-collapse: collapse;
+    .container {
+      max-width: 900px;
       margin: 0 auto;
-      width: 100%;
-      background-color: rgba(255,255,255,0.6); /* semi-transparent */
+    }
+
+    /* Header section */
+    .header-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
       border-radius: 8px;
-      overflow: hidden;
-      font-size: 0.9em;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border: 1px solid #e0e0e0;
+    }
+
+    .profile-info h1 {
+      font-size: 20px;
+      margin-bottom: 3px;
+      color: #00796b;
+      font-family: 'Merriweather', serif;
+    }
+
+    .profile-info h2 {
+      font-size: 13px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .profile-info a {
+      color: #004d40;
+      text-decoration: none;
+      font-size: 13px;
+      position: relative;
+    }
+    .profile-info a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 1px;
+      background: #00796b;
+      transition: width 0.3s ease;
+    }
+    .profile-info a:hover {
+      color: #00796b;
+    }
+    .profile-info a:hover::after {
+      width: 100%;
+    }
+
+    .page-title {
+      font-family: 'Merriweather', serif;
+      font-size: 22px;
+      color: #004d40;
+      margin-bottom: 15px;
+      text-align: center;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* Content grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    /* Cards with colors */
+    .card {
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border: 1px solid;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+
+    .schedule-card {
+      background: #e3f2fd; /* Light blue */
+      border-color: #90caf9;
+    }
+
+    .weekend-card {
+      background: #e8f5e9; /* Light green */
+      border-color: #a5d6a7;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #004d40;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: #00796b;
+    }
+
+    /* Table styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 0.85em;
     }
 
     th, td {
       border: 1px solid rgba(0,0,0,0.1);
-      padding: 6px 8px;
+      padding: 5px 6px;
       text-align: center;
-      color: #222;
     }
 
     th {
-      background-color: rgba(255,255,255,0.85);
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      background-color: rgba(255,255,255,0.7);
       font-weight: 600;
+      color: #004d40;
     }
 
     .course-red { color: #b71c1c; font-weight: bold; }
@@ -86,92 +152,172 @@
     .course-green { color: #1b5e20; font-weight: bold; }
     .course-gold { color: #b8860b; font-weight: bold; }
 
-    .section-title {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 16px;
-      color: #333;
-      margin: 14px 0 10px;
-      font-weight: 600;
+    /* Info section */
+    .info-section {
+      background: rgba(255,255,255,0.7);
+      border-radius: 5px;
+      padding: 8px 10px;
+      margin-top: 10px;
+      font-size: 0.9em;
     }
 
-    a {
-      color: #333;
-      text-decoration: underline;
+    .info-section a {
+      color: #004d40;
+      text-decoration: none;
+      position: relative;
     }
-    a:hover { text-decoration: none; }
+    .info-section a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0%;
+      height: 1px;
+      background: #00796b;
+      transition: width 0.3s ease;
+    }
+    .info-section a:hover {
+      color: #00796b;
+    }
+    .info-section a:hover::after {
+      width: 100%;
+    }
 
+    /* Footer */
     footer {
-      margin: 30px 0 20px;
+      margin-top: 20px;
+      text-align: center;
       font-size: 13px;
       color: #555;
-      text-align: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
+      padding: 10px;
+      background: #e0f2f1;
+      border-radius: 5px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .header-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+      }
+      
+      table {
+        font-size: 0.8em;
+      }
+      
+      th, td {
+        padding: 4px 5px;
+      }
+      
+      body {
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 10px;
+      }
+      
+      table {
+        font-size: 0.75em;
+      }
+      
+      th, td {
+        padding: 3px 4px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="content">
-  <h1 class="page-title">Fall 2025 Schedule</h1>
-
-  <div class="card">
-    <table>
-      <tr>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-      </tr>
-      <tr>
-        <td>9:30 - 11:30<br><span class="course-red">KSM3E01</span><br>L2</td>
-        <td></td>
-        <td>9:30 - 11:30<br><span class="course-blue">KSM3E03</span><br>L2</td>
-        <td></td>
-        <td>9:30 - 11:30<br><span class="course-gold">KSM3E07</span><br>L2</td>
-      </tr>
-      <tr>
-        <td>12:00 - 1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
-        <td></td>
-        <td></td>
-        <td>12:00–1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
-        <td>12:00–1:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-      </tr>
-      <tr>
-        <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
-        <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
-        <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-        <td>2:00 - 3:00<br><span class="course-red">KSM3E01</span><br>L2</td>
-        <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-      </tr>
-      <tr>
-        <td>4:30 - 5:30<br><span class="course-green">KSM3E05</span><br>L2 ?</td>
-        <td>3:00 - 4:00<br><span class="course-red">KSM3E01</span><br>L2</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-
-    <div class="section-title">Lectures and Travel</div>
-    <p>11 Aug – 5 Dec 2025 &nbsp;&nbsp;
-      <a href="#">Fall Semester</a> &nbsp;&nbsp;
-      <a href="https://ksom.res.in/">KSoM Kozhikode</a>
-    </p>
+<div class="container">
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="profile-info">
+      <h1>Ashmit Gurey</h1>
+      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
+      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
+    </div>
+    <div class="semester-info">
+      <strong>Fall 2025</strong><br>
+      11 Aug – 5 Dec
+    </div>
   </div>
 
-  <div class="card">
-    <div class="section-title">Weekend Schedule</div>
-    <table>
-      <tr>
-        <th>Sat</th>
-        <th>Sun</th>
-      </tr>
-      <tr>
-        <td>N.A</td>
-        <td>N.A</td>
-      </tr>
-    </table>
+  <!-- Page Title -->
+  <h1 class="page-title">Weekly Schedule</h1>
+
+  <!-- Content Grid -->
+  <div class="content-grid">
+    <div class="card schedule-card">
+      <div class="section-title">
+        <i class="fas fa-calendar-alt"></i>
+        Weekly Class Schedule
+      </div>
+      <table>
+        <tr>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+        </tr>
+        <tr>
+          <td>9:30 - 11:30<br><span class="course-red">KSM3E01</span><br>L2</td>
+          <td></td>
+          <td>9:30 - 11:30<br><span class="course-blue">KSM3E03</span><br>L2</td>
+          <td></td>
+          <td>9:30 - 11:30<br><span class="course-gold">KSM3E07</span><br>L2</td>
+        </tr>
+        <tr>
+          <td>12:00 - 1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
+          <td></td>
+          <td></td>
+          <td>12:00–1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
+          <td>12:00–1:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+        </tr>
+        <tr>
+          <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
+          <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
+          <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+          <td>2:00 - 3:00<br><span class="course-red">KSM3E01</span><br>L2</td>
+          <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+        </tr>
+        <tr>
+          <td>4:30 - 5:30<br><span class="course-green">KSM3E05</span><br>L2 ?</td>
+          <td>3:00 - 4:00<br><span class="course-red">KSM3E01</span><br>L2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      
+      <div class="info-section">
+        <strong>Lectures and Travel</strong><br>
+        11 Aug – 5 Dec 2025 &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="#">Fall Semester</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="https://ksom.res.in/">KSoM Kozhikode</a>
+      </div>
+    </div>
+
+    <div class="card weekend-card">
+      <div class="section-title">
+        <i class="fas fa-calendar-day"></i>
+        Weekend Schedule
+      </div>
+      <table>
+        <tr>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+        <tr>
+          <td>N.A</td>
+          <td>N.A</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
 
