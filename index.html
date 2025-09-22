@@ -10,7 +10,7 @@
 
     body {
       font-family: 'Source Sans Pro', Arial, sans-serif;
-      line-height: 1.6em;
+      line-height: 1.5;
       background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
       color: #333;
       min-height: 100vh;
@@ -34,97 +34,97 @@
     main {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
-      gap: 20px;
-      padding: 25px;
+      gap: 15px;
+      padding: 15px;
       max-width: 1200px;
       margin: auto;
     }
 
     .card {
       background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      padding: 15px;
       border: 1px solid var(--card-border);
       transition: 0.3s;
     }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,0.15); }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.12); }
 
     .profile-photo {
       width: 100%;
-      max-width: 200px;
-      border-radius: 10px;
-      border: 3px solid var(--accent);
+      max-width: 150px;
+      border-radius: 8px;
+      border: 2px solid var(--accent);
       display: block;
-      margin: 0 auto 12px;
+      margin: 0 auto 10px;
     }
 
     .profile-info {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 8px;
     }
     .profile-info h1 {
-      font-size: 1.6rem;
-      margin-bottom: 4px;
+      font-size: 1.4rem;
+      margin-bottom: 3px;
       font-family: 'Merriweather', serif;
     }
     .profile-info h2 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 400;
       color: #555;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .profile-info a {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     .profile-info a:hover { text-decoration: underline; }
 
     .vita-link {
       display: block;
       text-align: center;
-      margin-top: 12px;
+      margin-top: 10px;
       font-weight: bold;
       color: var(--accent);
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     .vita-link:hover { text-decoration: underline; }
 
     .talk-photo {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 6px;
       border: 1px solid #ddd;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       transition: 0.3s;
     }
     .talk-photo:hover { transform: scale(1.02); }
 
-    .caption { font-size: 13px; color: #666; text-align: center; margin-bottom: 10px; }
+    .caption { font-size: 12px; color: #666; text-align: center; margin-bottom: 8px; }
 
     /* ===== Middle Compact Links ===== */
-    .link-list.card { padding: 15px; }
+    .link-list.card { padding: 12px; }
     .highlight {
       color: var(--accent);
       font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 6px;
+      font-size: 15px;
+      margin-bottom: 5px;
       display: block;
-      border-left: 4px solid var(--accent);
-      padding-left: 8px;
+      border-left: 3px solid var(--accent);
+      padding-left: 6px;
     }
 
     /* Sub-boxes with different colors */
     .sub-box {
-      border-radius: 6px;
-      padding: 8px 10px;
-      margin: 6px 0;
-      font-size: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border-radius: 5px;
+      padding: 6px 8px;
+      margin: 5px 0;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       transition: 0.3s;
     }
-    .sub-box:hover { transform: translateY(-2px); }
+    .sub-box:hover { transform: translateY(-1px); }
 
     .sub-box:nth-child(2) { background: #e8f5e9; border: 1px solid #a5d6a7; } /* Green */
     .sub-box:nth-child(3) { background: #fff3e0; border: 1px solid #ffcc80; } /* Orange */
@@ -134,45 +134,46 @@
 
     .sub-box b {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       color: var(--link-hover);
+      font-size: 14px;
     }
     .sub-box a {
       display: block;
-      margin: 3px 0;
+      margin: 2px 0;
       color: var(--link-color);
-      font-size: 15px;
+      font-size: 14px;
       text-decoration: none;
       transition: 0.2s;
     }
-    .sub-box a:hover { color: var(--link-hover); transform: translateX(3px); }
+    .sub-box a:hover { color: var(--link-hover); transform: translateX(2px); }
 
     /* ===== Announcement ===== */
     .announcement {
       max-width: 900px;
-      margin: 25px auto;
-      padding: 18px 22px;
-      border-radius: 8px;
-      font-size: 15px;
+      margin: 15px auto;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 14px;
       background: var(--announcement-bg);
-      border-left: 6px solid var(--announcement-border);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--announcement-border);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     }
     .announcement h2 {
-      margin: 0 0 8px;
-      font-size: 18px;
+      margin: 0 0 6px;
+      font-size: 16px;
       color: var(--announcement-title);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
     .announcement a { color: var(--accent); font-weight: 600; text-decoration: none; }
     .announcement a:hover { text-decoration: underline; }
 
     /* ===== Footer ===== */
     footer {
-      padding: 15px;
-      font-size: 13px;
+      padding: 12px;
+      font-size: 12px;
       color: var(--footer-text);
       text-align: center;
       background: var(--footer-bg);
@@ -180,8 +181,103 @@
     }
     .math-symbol { color: var(--accent); font-weight: bold; }
 
+    /* ===== Mobile Responsive ===== */
     @media (max-width: 900px) {
-      main { grid-template-columns: 1fr; }
+      main { 
+        grid-template-columns: 1fr; 
+        gap: 12px;
+        padding: 12px;
+      }
+      
+      .card {
+        padding: 12px;
+      }
+      
+      .profile-photo {
+        max-width: 120px;
+      }
+      
+      .profile-info h1 {
+        font-size: 1.3rem;
+      }
+      
+      .sub-box {
+        padding: 5px 6px;
+        margin: 4px 0;
+        font-size: 13px;
+      }
+      
+      .sub-box b {
+        font-size: 13px;
+      }
+      
+      .sub-box a {
+        font-size: 13px;
+      }
+      
+      .announcement {
+        margin: 12px auto;
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+      
+      .announcement h2 {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 10px;
+        gap: 10px;
+      }
+      
+      .card {
+        padding: 10px;
+        border-radius: 6px;
+      }
+      
+      .profile-photo {
+        max-width: 100px;
+      }
+      
+      .profile-info h1 {
+        font-size: 1.2rem;
+      }
+      
+      .profile-info h2 {
+        font-size: 0.85rem;
+      }
+      
+      .highlight {
+        font-size: 14px;
+      }
+      
+      .sub-box {
+        font-size: 12px;
+      }
+      
+      .sub-box b {
+        font-size: 12px;
+      }
+      
+      .sub-box a {
+        font-size: 12px;
+      }
+      
+      .announcement {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+      
+      .announcement h2 {
+        font-size: 14px;
+      }
+      
+      footer {
+        padding: 10px;
+        font-size: 11px;
+      }
     }
   </style>
 </head>
@@ -197,7 +293,7 @@
         <h2>Kerala School of Mathematics</h2>
         <a href="mailto:gureyashmit@ksom.res.in"><i class="fas fa-envelope"></i> gureyashmit@ksom.res.in</a>
       </div>
-      <hr style="margin:15px 0; border:0; border-top:1px solid #ccc;">
+      <hr style="margin:12px 0; border:0; border-top:1px solid #ccc;">
       <a href="vita.html" class="vita-link"><i class="fas fa-file-alt"></i> Vita</a>
     </div>
 
