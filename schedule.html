@@ -3,327 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <title>Schedule – Ashmit Gurey</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      background-color: #f9f9f9;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      color: #222;
-      line-height: 1.4;
-      padding: 12px;
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #2e2e2e;
+      color: #000;
     }
 
-    .container {
+    /* Main content box */
+    .content {
+      background: white;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 30px;
     }
 
-    /* Header section */
-    .header-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 12px 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      border: 1px solid #e0e0e0;
-    }
-
-    .profile-info h1 {
-      font-size: 20px;
-      margin-bottom: 3px;
-      color: #00796b;
-      font-family: 'Merriweather', serif;
-    }
-
-    .profile-info h2 {
-      font-size: 13px;
-      font-weight: normal;
-      color: #555;
-    }
-
-    .profile-info a {
-      color: #004d40;
-      text-decoration: none;
-      font-size: 13px;
-      position: relative;
-    }
-    .profile-info a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 1px;
-      background: #00796b;
-      transition: width 0.3s ease;
-    }
-    .profile-info a:hover {
-      color: #00796b;
-    }
-    .profile-info a:hover::after {
-      width: 100%;
-    }
-
-    .page-title {
-      font-family: 'Merriweather', serif;
+    .content h2 {
       font-size: 22px;
-      color: #004d40;
-      margin-bottom: 15px;
-      text-align: center;
-      padding-bottom: 5px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    /* Content grid */
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    /* Cards with colors */
-    .card {
-      border-radius: 8px;
-      padding: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      border: 1px solid;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-
-    .schedule-card {
-      background: #e3f2fd; /* Light blue */
-      border-color: #90caf9;
-    }
-
-    .weekend-card {
-      background: #e8f5e9; /* Light green */
-      border-color: #a5d6a7;
-    }
-
-    .section-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #004d40;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title i {
-      color: #00796b;
-    }
-
-    /* Table styles */
+    /* Schedule Table */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 10px 0;
-      font-size: 0.85em;
+      margin: 15px 0;
+      font-size: 15px;
     }
 
     th, td {
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 5px 6px;
+      border: 1px solid #ccc;
+      padding: 8px;
       text-align: center;
     }
 
     th {
-      background-color: rgba(255,255,255,0.7);
-      font-weight: 600;
-      color: #004d40;
+      background-color: #f2f2f2;
     }
 
+    /* Course Colors */
     .course-red { color: #b71c1c; font-weight: bold; }
     .course-blue { color: #0d47a1; font-weight: bold; }
     .course-green { color: #1b5e20; font-weight: bold; }
     .course-gold { color: #b8860b; font-weight: bold; }
 
     /* Info section */
-    .info-section {
-      background: rgba(255,255,255,0.7);
-      border-radius: 5px;
-      padding: 8px 10px;
-      margin-top: 10px;
-      font-size: 0.9em;
-    }
-
-    .info-section a {
-      color: #004d40;
-      text-decoration: none;
-      position: relative;
-    }
-    .info-section a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 0%;
-      height: 1px;
-      background: #00796b;
-      transition: width 0.3s ease;
-    }
-    .info-section a:hover {
-      color: #00796b;
-    }
-    .info-section a:hover::after {
-      width: 100%;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 20px;
+    .info {
+      margin-top: 15px;
+      font-size: 14px;
       text-align: center;
-      font-size: 13px;
-      color: #555;
-      padding: 10px;
-      background: #e0f2f1;
-      border-radius: 5px;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .header-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
-      
-      table {
-        font-size: 0.8em;
-      }
-      
-      th, td {
-        padding: 4px 5px;
-      }
-      
-      body {
-        padding: 8px;
-      }
+    .info a {
+      color: #1d257a;
+      text-decoration: none;
     }
 
-    @media (max-width: 480px) {
-      .card {
-        padding: 10px;
-      }
-      
-      table {
-        font-size: 0.75em;
-      }
-      
-      th, td {
-        padding: 3px 4px;
-      }
+    .info a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- Header Section -->
-  <div class="header-section">
-    <div class="profile-info">
-      <h1>Ashmit Gurey</h1>
-      <h2>IPhD · Kerala School of Mathematics, Kozhikode</h2>
-      <a href="mailto:gureyashmit@ksom.res.in">gureyashmit@ksom.res.in</a>
-    </div>
-    <div class="semester-info">
-      <strong>Fall 2025</strong><br>
-      11 Aug – 5 Dec
-    </div>
-  </div>
+  <!-- Content -->
+  <div class="content">
+    <h2>Weekly Schedule – Fall 2025</h2>
+    <table>
+      <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+      <tr>
+        <td>9:30 - 11:30<br><span class="course-red">KSM3E01</span><br>L2</td>
+        <td></td>
+        <td>9:30 - 11:30<br><span class="course-blue">KSM3E03</span><br>L2</td>
+        <td></td>
+        <td>9:30 - 11:30<br><span class="course-gold">KSM3E07</span><br>L2</td>
+      </tr>
+      <tr>
+        <td>12:00 - 1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
+        <td></td>
+        <td></td>
+        <td>12:00–1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
+        <td>12:00–1:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+      </tr>
+      <tr>
+        <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
+        <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
+        <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+        <td>2:00 - 3:00<br><span class="course-red">KSM3E01</span><br>L2</td>
+        <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
+      </tr>
+      <tr>
+        <td>4:30 - 5:30<br><span class="course-green">KSM3E05</span><br>L2 ?</td>
+        <td>3:00 - 4:00<br><span class="course-red">KSM3E01</span><br>L2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
 
-  <!-- Page Title -->
-  <h1 class="page-title">Weekly Schedule</h1>
+    <h2>Weekend Schedule</h2>
+    <table>
+      <tr>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      <tr>
+        <td>N.A</td>
+        <td>N.A</td>
+      </tr>
+    </table>
 
-  <!-- Content Grid -->
-  <div class="content-grid">
-    <div class="card schedule-card">
-      <div class="section-title">
-        <i class="fas fa-calendar-alt"></i>
-        Weekly Class Schedule
-      </div>
-      <table>
-        <tr>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-        </tr>
-        <tr>
-          <td>9:30 - 11:30<br><span class="course-red">KSM3E01</span><br>L2</td>
-          <td></td>
-          <td>9:30 - 11:30<br><span class="course-blue">KSM3E03</span><br>L2</td>
-          <td></td>
-          <td>9:30 - 11:30<br><span class="course-gold">KSM3E07</span><br>L2</td>
-        </tr>
-        <tr>
-          <td>12:00 - 1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
-          <td></td>
-          <td></td>
-          <td>12:00–1:00<br><span class="course-blue">KSM3E03</span><br>L2</td>
-          <td>12:00–1:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-        </tr>
-        <tr>
-          <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
-          <td>2:00 - 3:00<br><span class="course-gold">KSM3E07</span><br>L2</td>
-          <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-          <td>2:00 - 3:00<br><span class="course-red">KSM3E01</span><br>L2</td>
-          <td>2:00 - 3:00<br><span class="course-green">KSM3E05</span><br>L2</td>
-        </tr>
-        <tr>
-          <td>4:30 - 5:30<br><span class="course-green">KSM3E05</span><br>L2 ?</td>
-          <td>3:00 - 4:00<br><span class="course-red">KSM3E01</span><br>L2</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-      
-      <div class="info-section">
-        <strong>Lectures and Travel</strong><br>
-        11 Aug – 5 Dec 2025 &nbsp;&nbsp; | &nbsp;&nbsp;
-        <a href="#">Fall Semester</a> &nbsp;&nbsp; | &nbsp;&nbsp;
-        <a href="https://ksom.res.in/">KSoM Kozhikode</a>
-      </div>
-    </div>
-
-    <div class="card weekend-card">
-      <div class="section-title">
-        <i class="fas fa-calendar-day"></i>
-        Weekend Schedule
-      </div>
-      <table>
-        <tr>
-          <th>Sat</th>
-          <th>Sun</th>
-        </tr>
-        <tr>
-          <td>N.A</td>
-          <td>N.A</td>
-        </tr>
-      </table>
+    <div class="info">
+      11 Aug – 5 Dec 2025 | <a href="https://ksom.res.in/">KSoM Kozhikode</a>
     </div>
   </div>
-</div>
-
-<footer>
-  © 2025 Ashmit Gurey · Kerala School of Mathematics
-</footer>
 
 </body>
 </html>
