@@ -11,19 +11,19 @@
     body {
       font-family: 'Merriweather', serif;
       line-height: 1.6;
-      background-color: #ffffff;
+      background-color: #e6e6e6; /* soft gray background */
       color: #222;
-      min-height: 100vh;
     }
 
-    /* ===== Theme (academic style) ===== */
+    /* ===== Theme ===== */
     :root {
-      --header-bg: #1d2671;      /* deep blue */
-      --header-text: #ffffff;    /* white */
-      --link-color: #f39c12;     /* orange links */
-      --link-hover: #ffcc00;     /* yellow hover */
+      --header-bg: #1d2671;     /* deep academic blue */
+      --header-text: #ffffff;   /* white */
+      --accent: #e64c3c;        /* scarlet */
+      --link-color: #f39c12;    /* orange */
+      --link-hover: #ffcc00;    /* yellow */
       --card-bg: #ffffff;
-      --card-border: #ddd;
+      --card-border: #ccc;
       --footer-bg: #1d2671;
       --footer-text: #ffffff;
     }
@@ -37,12 +37,11 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header h1 {
       font-size: 26px;
       font-weight: bold;
+      color: var(--accent);
     }
-
     header nav a {
       color: var(--link-color);
       margin-left: 20px;
@@ -59,7 +58,7 @@
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
       gap: 20px;
-      padding: 20px;
+      padding: 25px;
       max-width: 1200px;
       margin: auto;
     }
@@ -68,24 +67,23 @@
       background: var(--card-bg);
       border-radius: 6px;
       border: 1px solid var(--card-border);
-      padding: 15px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
-    .card:hover { box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-3px); }
 
     /* ===== Profile ===== */
     .profile-photo {
       width: 100%;
       max-width: 150px;
       border-radius: 6px;
-      border: 2px solid var(--link-color);
+      border: 2px solid var(--accent);
       display: block;
-      margin: 0 auto 10px;
+      margin: 0 auto 12px;
     }
-
     .profile-info {
       text-align: center;
-      margin-top: 8px;
     }
     .profile-info h1 {
       font-size: 1.4rem;
@@ -102,25 +100,24 @@
       text-decoration: none;
     }
     .profile-info a:hover { text-decoration: underline; color: var(--link-hover); }
-
     .vita-link {
       display: block;
       text-align: center;
       margin-top: 12px;
       font-weight: bold;
-      color: var(--link-color);
+      color: var(--accent);
       text-decoration: none;
     }
-    .vita-link:hover { text-decoration: underline; color: var(--link-hover); }
+    .vita-link:hover { text-decoration: underline; }
 
-    /* ===== Sub-boxes ===== */
+    /* ===== Middle Sub-boxes ===== */
     .highlight {
       color: var(--header-bg);
       font-weight: bold;
       font-size: 15px;
       margin-bottom: 5px;
       display: block;
-      border-left: 3px solid var(--link-color);
+      border-left: 3px solid var(--accent);
       padding-left: 6px;
     }
 
@@ -128,16 +125,15 @@
       border-radius: 4px;
       padding: 8px;
       margin: 6px 0;
-      background: #f9f9f9;
+      background: #fafafa;
       border: 1px solid #ddd;
       transition: 0.3s;
     }
     .sub-box:hover { background: #f0f0f0; transform: translateY(-2px); }
-
     .sub-box b {
       display: block;
       margin-bottom: 3px;
-      color: #000;
+      color: var(--accent);
       font-size: 14px;
     }
     .sub-box a {
@@ -164,11 +160,12 @@
     .announcement {
       max-width: 900px;
       margin: 20px auto;
-      padding: 14px 18px;
+      padding: 16px 20px;
       border-radius: 6px;
       font-size: 14px;
-      background: #f4f4f4;
-      border-left: 4px solid var(--link-color);
+      background: #ffffff;
+      border-left: 4px solid var(--accent);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
     .announcement h2 {
       margin: 0 0 6px;
@@ -178,8 +175,8 @@
       align-items: center;
       gap: 6px;
     }
-    .announcement a { color: var(--link-color); font-weight: 600; text-decoration: none; }
-    .announcement a:hover { color: var(--link-hover); text-decoration: underline; }
+    .announcement a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .announcement a:hover { text-decoration: underline; }
 
     /* ===== Footer ===== */
     footer {
@@ -190,7 +187,7 @@
       color: var(--footer-text);
       margin-top: 40px;
     }
-    .math-symbol { color: var(--link-color); font-weight: bold; }
+    .math-symbol { color: var(--accent); font-weight: bold; }
   </style>
 </head>
 <body>
