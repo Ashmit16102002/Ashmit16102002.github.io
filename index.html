@@ -2,275 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ashmit Gurey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashmit Gurey - Homepage</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      font-family: 'Merriweather', serif;
-      line-height: 1.6;
-      background-color: #e6e6e6; /* soft gray background */
-      color: #222;
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #2e2e2e;
+      color: #000;
     }
 
-    /* ===== Theme ===== */
-    :root {
-      --header-bg: #1d2671;     /* deep academic blue */
-      --header-text: #ffffff;   /* white */
-      --accent: #e64c3c;        /* scarlet */
-      --link-color: #f39c12;    /* orange */
-      --link-hover: #ffcc00;    /* yellow */
-      --card-bg: #ffffff;
-      --card-border: #ccc;
-      --footer-bg: #1d2671;
-      --footer-text: #ffffff;
-    }
-
-    /* ===== Header ===== */
-    header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 18px 40px;
+    /* Header */
+    .header {
+      background-color: #1d257a; /* Dark Blue */
+      color: white;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header h1 {
+
+    .header h1 {
+      margin: 0;
       font-size: 26px;
       font-weight: bold;
-      color: var(--accent);
+      color: #e64c66; /* Scarlet Red for Name */
     }
-    header nav a {
-      color: var(--link-color);
+
+    .header .subtitle {
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    .nav a {
+      color: orange;
       margin-left: 20px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
-    header nav a:hover {
-      color: var(--link-hover);
+
+    .nav a:hover {
       text-decoration: underline;
     }
 
-    /* ===== Main Grid ===== */
-    main {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      gap: 20px;
-      padding: 25px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 6px;
-      border: 1px solid var(--card-border);
-      padding: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .card:hover { transform: translateY(-3px); }
-
-    /* ===== Profile ===== */
-    .profile-photo {
-      width: 100%;
-      max-width: 150px;
-      border-radius: 6px;
-      border: 2px solid var(--accent);
-      display: block;
-      margin: 0 auto 12px;
-    }
-    .profile-info {
-      text-align: center;
-    }
-    .profile-info h1 {
-      font-size: 1.4rem;
-      margin-bottom: 3px;
-    }
-    .profile-info h2 {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .profile-info a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-    .profile-info a:hover { text-decoration: underline; color: var(--link-hover); }
-    .vita-link {
-      display: block;
-      text-align: center;
-      margin-top: 12px;
-      font-weight: bold;
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .vita-link:hover { text-decoration: underline; }
-
-    /* ===== Middle Sub-boxes ===== */
-    .highlight {
-      color: var(--header-bg);
-      font-weight: bold;
-      font-size: 15px;
-      margin-bottom: 5px;
-      display: block;
-      border-left: 3px solid var(--accent);
-      padding-left: 6px;
-    }
-
-    .sub-box {
-      border-radius: 4px;
-      padding: 8px;
-      margin: 6px 0;
-      background: #fafafa;
-      border: 1px solid #ddd;
-      transition: 0.3s;
-    }
-    .sub-box:hover { background: #f0f0f0; transform: translateY(-2px); }
-    .sub-box b {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--accent);
-      font-size: 14px;
-    }
-    .sub-box a {
-      display: block;
-      margin: 2px 0;
-      color: var(--header-bg);
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .sub-box a:hover { color: var(--link-color); transform: translateX(2px); }
-
-    /* ===== Images ===== */
-    .talk-photo {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-bottom: 6px;
-      transition: 0.3s;
-    }
-    .talk-photo:hover { transform: scale(1.02); }
-    .caption { font-size: 12px; color: #444; text-align: center; margin-bottom: 8px; }
-
-    /* ===== Announcement ===== */
-    .announcement {
+    /* Main content box */
+    .content {
+      background: white;
       max-width: 900px;
       margin: 20px auto;
-      padding: 16px 20px;
-      border-radius: 6px;
-      font-size: 14px;
-      background: #ffffff;
-      border-left: 4px solid var(--accent);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    .announcement h2 {
-      margin: 0 0 6px;
-      font-size: 16px;
-      color: var(--header-bg);
+      padding: 30px;
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: row;
+      align-items: flex-start;
     }
-    .announcement a { color: var(--accent); font-weight: 600; text-decoration: none; }
-    .announcement a:hover { text-decoration: underline; }
 
-    /* ===== Footer ===== */
-    footer {
-      padding: 14px;
-      font-size: 13px;
-      text-align: center;
-      background: var(--footer-bg);
-      color: var(--footer-text);
-      margin-top: 40px;
+    /* Text content */
+    .text {
+      flex: 3;
+      margin-right: 30px;
     }
-    .math-symbol { color: var(--accent); font-weight: bold; }
+
+    .text h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* Profile Image */
+    .profile-pic {
+      flex: 1;
+    }
+
+    .profile-pic img {
+      width: 200px;
+      border-radius: 4px;
+    }
+
+    /* Contact info */
+    .contact {
+      margin-top: 20px;
+    }
+
+    .contact strong {
+      display: inline-block;
+      width: 70px;
+    }
+
+    /* News Section */
+    .news {
+      margin-top: 30px;
+    }
+
+    .news h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .news ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .news li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .news a {
+      color: #1d257a;
+      text-decoration: none;
+    }
+
+    .news a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <!-- Header -->
-  <header>
-    <h1>Ashmit Gurey</h1>
-    <nav>
-      <a href="#">About</a>
+  <div class="header">
+    <div>
+      <h1>Ashmit Gurey</h1>
+      <div class="subtitle">
+        Recent Graduate, Mathematics and Computing <br>
+        Institute of Mathematics and Applications, Bhubaneswar
+      </div>
+    </div>
+    <div class="nav">
+      <a href="#">Home</a>
       <a href="#">Research</a>
       <a href="#">Teaching</a>
       <a href="#">Publications</a>
-      <a href="vita.html">CV</a>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main>
-    <!-- Profile -->
-    <div class="card">
-      <img src="IMG-20250920-WA0001.jpg" alt="Ashmit Gurey" class="profile-photo">
-      <div class="profile-info">
-        <h1>Ashmit Gurey</h1>
-        <h2>IPhD</h2>
-        <h2>Kerala School of Mathematics</h2>
-        <a href="mailto:gureyashmit@ksom.res.in"><i class="fas fa-envelope"></i> gureyashmit@ksom.res.in</a>
-      </div>
-      <a href="vita.html" class="vita-link"><i class="fas fa-file-alt"></i> Vita</a>
+      <a href="#">CV</a>
     </div>
-
-    <!-- Links (Compact Middle) -->
-    <div class="card link-list">
-      <span class="highlight">Fall 2025</span>
-
-      <div class="sub-box">
-        <b>Courses Undertaken</b>
-        <a href="#"><i class="fas fa-calculator"></i> KSM3E01 : Functional Analysis</a>
-        <a href="#"><i class="fas fa-infinity"></i> KSM3E03 : Field and Galois Theory</a>
-        <a href="#"><i class="fas fa-chart-line"></i> KSM3E06 : Advanced Complex Analysis</a>
-        <a href="#"><i class="fas fa-sort-numeric-down"></i> KSM3E07 : Number Theory</a>
-      </div>
-
-      <div class="sub-box">
-        <b>Applications in X-ray Tomography</b>
-        <a href="#"><i class="fas fa-brain"></i> Radon Transform (Inverse Problem)</a>
-      </div>
-      
-      <div class="sub-box">
-        <a href="past_and_future.html"><i class="fas fa-history"></i> Past and Future Courses</a>
-      </div>
-      
-      <div class="sub-box">
-        <a href="#"><i class="fas fa-book"></i> Publications</a>
-        <a href="#"><i class="fas fa-pen-fancy"></i> Expositions</a>
-        <a href="#"><i class="fas fa-code"></i> Programs</a>
-      </div>
-
-      <div class="sub-box">
-        <b>Awareness</b>
-        <a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a>
-        <a href="cautionary-tale.html"><i class="fas fa-exclamation-triangle"></i> A Cautionary Tale</a>
-      </div>
-    </div>
-
-    <!-- Images -->
-    <div class="card">
-      <img src="IMG_0451.jpg" alt="Shepp-Logan Phantom" class="talk-photo">
-      <div class="caption"><b>Shepp-Logan Phantom</b></div>
-      <img src="The Endo Blog Cone Beam Computed Tomography (CBCT) A Proper Introduction.jpeg" alt="Fan Beam vs Cone Beam" class="talk-photo">
-      <div class="caption"><b>Fan Beam CT vs Cone Beam CT</b></div>
-    </div>
-  </main>
-
-  <!-- Announcement -->
-  <div class="announcement">
-    <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
-    <p><b>Aug 2025:</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</p>
-    <p><b>Jun 2025:</b> Visiting Student position at TIFR-CAM confirmed.</p>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ashmit Gurey · Kerala School of Mathematics</p>
-    <p>Never say obvious. <span class="math-symbol">∮</span></p>
-  </footer>
+  <!-- Content -->
+  <div class="content">
+    <div class="text">
+      <h2>About Me</h2>
+      <p>
+        I have recently graduated in <b>Mathematics and Computing</b> 
+        from the <a href="#">Institute of Mathematics and Applications, Bhubaneswar</a>.  
+        My research interests lie in the study of <b>reconstruction techniques 
+        of the Radon transform</b> and its <b>applications in computerized tomography</b>.  
+        I am open to <b>working on project collaborations</b>.
+      </p>
+
+      <div class="contact">
+        <p><strong>Office:</strong> Room 123, IMA Campus</p>
+        <p><strong>Phone:</strong> +91-9876543210</p>
+        <p><strong>Email:</strong> ashmitgurey [at] gmail.com</p>
+      </div>
+
+      <div class="news">
+        <h3>News:</h3>
+        <ul>
+          <li>(Sep 2025) Exploring collaborative opportunities in tomography and Radon transform research.</li>
+          <li>(Jul 2025) Completed my undergraduate thesis on Radon transform reconstruction methods.</li>
+          <li>(Jun 2025) Graduated from Institute of Mathematics and Applications, Bhubaneswar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="profile-pic">
+      <img src="your-photo.jpg" alt="Profile Picture">
+    </div>
+  </div>
+
 </body>
 </html>
