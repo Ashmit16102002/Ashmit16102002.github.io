@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
-      background-color: #f4f6fa;
+      background-color: #2e2e2e; /* Dark background */
       color: #222;
       line-height: 1.6em;
     }
@@ -40,11 +40,14 @@
     }
     .nav a:hover { text-decoration: underline; }
 
-    /* Main content */
-    .container {
+    /* White content box */
+    .content {
+      background: white;
       max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     h2.section-title {
@@ -85,12 +88,11 @@
       margin-top: 40px;
       text-align: center;
       font-size: 14px;
-      color: #444;
+      color: #ddd;
       padding: 20px 0;
-      border-top: 1px solid #ccc;
     }
     .footer a {
-      color: #e64c66;
+      color: orange;
       font-weight: bold;
       text-decoration: none;
     }
@@ -104,11 +106,7 @@
     <div>
       <h1>ASHMIT GUREY</h1>
       <div class="subtitle">
-        Integrated PhD<br>
-        Kerala School of Mathematics, Kozhikode<br>
-        Kunnamangalam PO<br> 
-        Kozhikode, Kerala - 673571<br>
-        India
+        Integrated PhD · Kerala School of Mathematics, Kozhikode
       </div>
     </div>
     <div class="nav">
@@ -122,8 +120,8 @@
     </div>
   </div>
 
-  <!-- Content -->
-  <div class="container">
+  <!-- Main Content -->
+  <div class="content">
     <h2 class="section-title">UnderGrad and Master Courses Learnt</h2>
 
     <!-- KSoM Courses -->
