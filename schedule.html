@@ -3,13 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Schedule – Ashmit Gurey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
       background-color: #2e2e2e;
       color: #000;
+    }
+
+    /* Header */
+    .header {
+      background-color: #1d257a; /* Dark Blue */
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+      color: #e64c66; /* Scarlet Red */
+    }
+
+    .header .subtitle {
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    .nav a {
+      color: orange;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav a:hover {
+      text-decoration: underline;
     }
 
     /* Main content box */
@@ -23,11 +55,10 @@
     }
 
     .content h2 {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 20px;
       text-align: center;
-      color: #1d2671;
+      color: #1d257a;
     }
 
     /* Schedule Table */
@@ -47,17 +78,11 @@
     th {
       background-color: #f2f2f2;
       font-weight: 600;
-      font-family: 'Source Sans Pro', sans-serif;
     }
 
     /* Alternate row shading */
-    tr:nth-child(even) td {
-      background-color: #fafafa;
-    }
-
-    tr:nth-child(odd) td {
-      background-color: #ffffff;
-    }
+    tr:nth-child(even) td { background-color: #fafafa; }
+    tr:nth-child(odd) td { background-color: #ffffff; }
 
     /* Course Colors */
     .course-red { color: #b71c1c; font-weight: bold; }
@@ -70,21 +95,35 @@
       margin-top: 15px;
       font-size: 14px;
       text-align: center;
-      font-family: 'Source Sans Pro', sans-serif;
     }
-
     .info a {
       color: #1d257a;
       text-decoration: none;
       font-weight: 600;
     }
-
-    .info a:hover {
-      text-decoration: underline;
-    }
+    .info a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>ASHMIT GUREY</h1>
+      <div class="subtitle">
+        Integrated PhD · Kerala School of Mathematics, Kozhikode
+      </div>
+    </div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="vita.html">Vita</a>
+      <a href="cautionary-tale.html">Cautionary Tale</a>
+      <a href="#">Radon Transform</a>
+      <a href="#">Publications</a>
+      <a href="#">Exposition</a>
+      <a href="#">Programs</a>
+    </div>
+  </div>
 
   <!-- Content -->
   <div class="content">
