@@ -3,130 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <title>UnderGrad and Master Courses Learnt – Ashmit Gurey</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      background: linear-gradient(135deg, #fdfdfd 0%, #f2f6f5 100%);
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: #f4f6fa;
       color: #333;
-      line-height: 1.6em;
-      padding: 25px;
     }
 
-    /* ===== Container ===== */
+    /* ===== Header (same as homepage) ===== */
+    .header {
+      background-color: #1d257a; /* Dark Blue */
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+      color: #e64c66; /* Scarlet Red */
+    }
+    .header .subtitle {
+      font-size: 12px;
+      color: #ddd;
+    }
+    .nav a {
+      color: orange;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav a:hover { text-decoration: underline; }
+
+    /* ===== Main container ===== */
     .container {
       max-width: 1100px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 20px;
     }
 
-    h1.page-title {
-      font-family: 'Merriweather', serif;
-      font-size: 30px;
-      color: #00695c;
+    h2.section-title {
       text-align: center;
+      font-size: 24px;
+      color: #1d257a;
       margin-bottom: 30px;
     }
 
+    /* ===== Timeline style ===== */
     .columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 30px;
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       padding: 20px;
-      border: 1px solid #cfdedb;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .card h2 {
+    .card h3 {
       text-align: center;
       margin-bottom: 15px;
-      color: #ff7043;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-weight: 600;
+      color: #e64c66;
+      font-size: 20px;
     }
 
-    /* ===== Year sub-boxes ===== */
     .year-box {
-      border-radius: 6px;
+      border-left: 4px solid #1d257a;
       padding: 12px 15px;
       margin-bottom: 15px;
-      font-size: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      background: #f9f9f9;
+      border-radius: 4px;
       transition: 0.3s;
     }
-    .year-box:hover { transform: translateY(-3px); }
+    .year-box:hover { background: #eef2ff; }
 
     .year {
       font-weight: bold;
       font-size: 16px;
-      margin-bottom: 8px;
-      color: #00695c;
+      margin-bottom: 6px;
+      color: #1d257a;
     }
 
-    .year-box p { margin: 4px 0; }
+    .year-box p {
+      margin: 3px 0;
+      font-size: 15px;
+    }
 
-    /* Different year colors */
-    .year-box:nth-child(1) { background: #e8f5e9; border: 1px solid #a5d6a7; } /* Green */
-    .year-box:nth-child(2) { background: #fff3e0; border: 1px solid #ffcc80; } /* Orange */
-    .year-box:nth-child(3) { background: #e3f2fd; border: 1px solid #90caf9; } /* Blue */
-    .year-box:nth-child(4) { background: #fce4ec; border: 1px solid #f48fb1; } /* Pink */
-    .year-box:nth-child(5) { background: #ede7f6; border: 1px solid #b39ddb; } /* Purple */
-
-    /* Links with homepage hover style */
     a {
-      color: #00695c;
+      color: #1d257a;
       text-decoration: none;
-      transition: all 0.3s ease;
-      padding: 2px 4px;
-      border-radius: 4px;
+      font-weight: 600;
     }
     a:hover {
-      color: #004d40;
-      background: #e0f2f1;
-      text-decoration: none;
+      color: #e64c66;
+      text-decoration: underline;
     }
 
     /* ===== Footer ===== */
     .footer {
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
       font-size: 14px;
-      color: #004d40;
+      color: #444;
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
     }
     .footer a {
-      color: #ff7043;
+      color: #e64c66;
       font-weight: bold;
       text-decoration: none;
     }
     .footer a:hover { text-decoration: underline; }
 
+    /* Responsive */
     @media (max-width: 900px) {
       .columns { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>ASHMIT GUREY</h1>
+      <div class="subtitle">
+        Integrated PhD · Kerala School of Mathematics, Kozhikode
+      </div>
+    </div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="vita.html">Vita</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="cautionary-tale.html">Cautionary Tale</a>
+      <a href="#">Publications</a>
+      <a href="#">Exposition</a>
+      <a href="#">Programs</a>
+    </div>
+  </div>
+
+  <!-- Content -->
   <div class="container">
-    <h1 class="page-title">UnderGrad and Master Courses Learnt</h1>
+    <h2 class="section-title">UnderGrad and Master Courses Learnt</h2>
 
     <div class="columns">
       <!-- KSoM Courses -->
       <div class="card">
-        <h2>KSoM Courses</h2>
+        <h3>KSoM Courses</h3>
 
         <div class="year-box">
           <div class="year">2025</div>
@@ -151,7 +181,7 @@
 
       <!-- IMA Courses -->
       <div class="card">
-        <h2>IMA Courses</h2>
+        <h3>IMA Courses</h3>
 
         <div class="year-box">
           <div class="year">2024</div>
@@ -206,5 +236,6 @@
       <p>© 2025 Ashmit Gurey · Kerala School of Mathematics</p>
     </div>
   </div>
+
 </body>
 </html>
