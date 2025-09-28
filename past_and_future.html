@@ -9,7 +9,7 @@
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
       background-color: #2e2e2e; /* Dark background */
-      color: #222;
+      color: #000;
       line-height: 1.6em;
     }
 
@@ -40,49 +40,46 @@
     }
     .nav a:hover { text-decoration: underline; }
 
-    /* Content box */
+    /* White content box (consistent with homepage) */
     .content {
       background: white;
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 20px auto;
       padding: 30px;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     h2.section-title {
       text-align: center;
-      font-size: 24px;
-      color: #1d257a;
-      margin-bottom: 30px;
+      font-size: 22px;
+      color: #000;
+      margin-bottom: 25px;
     }
 
     h3 {
-      color: #e64c66;
+      color: #000;
       font-size: 20px;
       margin-top: 25px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+      margin-bottom: 10px;
     }
 
-    /* Year colors */
-    .year-2025 { color: #e64c66; font-weight: bold; margin-top: 15px; }
-    .year-2024 { color: #1d257a; font-weight: bold; margin-top: 15px; }
-    .year-2023 { color: #1b5e20; font-weight: bold; margin-top: 15px; }
-    .year-2022 { color: #b8860b; font-weight: bold; margin-top: 15px; }
-    .year-2021 { color: #4b0082; font-weight: bold; margin-top: 15px; }
+    .year {
+      font-weight: bold;
+      color: #1d257a;
+      margin-top: 15px;
+    }
 
     p {
       margin: 5px 0;
       font-size: 15px;
+      color: #000;
     }
 
     a {
       color: #1d257a;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
-    a:hover { color: #e64c66; }
+    a:hover { text-decoration: underline; }
 
     /* Two-column layout */
     .columns {
@@ -96,19 +93,20 @@
     }
 
     /* Footer */
-    .footer {
-      margin-top: 40px;
+    footer {
       text-align: center;
       font-size: 14px;
-      color: #ddd;
-      padding: 20px 0;
+      margin: 30px 0;
+      color: white;
     }
-    .footer a {
+    footer a {
       color: orange;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
     }
-    .footer a:hover { text-decoration: underline; }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -143,7 +141,7 @@
       <!-- Left Column -->
       <div>
         <h3>KSoM Courses</h3>
-        <div class="year-2025">2025</div>
+        <div class="year">2025</div>
         <p>KSM3E01 : <a href="#">Functional Analysis</a></p>
         <p>KSM3E03 : <a href="#">Field and Galois Theory</a></p>
         <p>KSM3E06 : <a href="#">Advanced Complex Analysis</a></p>
@@ -153,7 +151,7 @@
         <p>KSM2C03 : <a href="#">Complex Analysis</a></p>
         <p>KSM2C04 : <a href="#">ODE</a></p>
 
-        <div class="year-2024">2024</div>
+        <div class="year">2024</div>
         <p>KSM1C01 : <a href="#">Algebra - I</a></p>
         <p>KSM1C02 : <a href="#">Analysis - I</a></p>
         <p>KSM1C03 : <a href="#">Topology (Point - Set)</a></p>
@@ -163,13 +161,13 @@
       <!-- Right Column -->
       <div>
         <h3>IMA Courses</h3>
-        <div class="year-2024">2024</div>
+        <div class="year">2024</div>
         <p>C14 : <a href="#">Differential Geometry</a></p>
         <p>DSE3 : <a href="#">Probability - II</a></p>
         <p>DSE4 : <a href="#">Bachelor Thesis</a></p>
         <p>GE7 : <a href="#">Quantum Mechanics</a></p>
 
-        <div class="year-2023">2023</div>
+        <div class="year">2023</div>
         <p>C6 : <a href="#">Calculus - III</a></p>
         <p>C7 : <a href="#">Algebra - III (Rings and Fields)</a></p>
         <p>C8 : <a href="#">ODE</a></p>
@@ -186,14 +184,14 @@
         <p>DSE2 : <a href="#">Optimization and LPP</a></p>
         <p>GE6 : <a href="#">CS - V (Theory of Computation)</a></p>
 
-        <div class="year-2022">2022</div>
+        <div class="year">2022</div>
         <p>C4 : <a href="#">Calculus - II</a></p>
         <p>C5 : <a href="#">Algebra - II (Group Theory)</a></p>
         <p>GE2 : <a href="#">CS - II (Design and Analysis of Algorithms)</a></p>
         <p>GE3 : <a href="#">Probability - I</a></p>
         <p>AECC2 : <a href="#">Environmental Science and Disaster Management</a></p>
 
-        <div class="year-2021">2021</div>
+        <div class="year">2021</div>
         <p>C1 : <a href="#">Calculus - I</a></p>
         <p>C2 : <a href="#">Algebra - I (Matrix Theory)</a></p>
         <p>C3 : <a href="#">CS - I (Introduction to Programming and Data Structures)</a></p>
@@ -204,10 +202,9 @@
   </div>
 
   <!-- Footer -->
-  <div class="footer">
+  <footer>
     <a href="index.html">← Back to Home</a>
-    <p>© 2025 Ashmit Gurey · Kerala School of Mathematics</p>
-  </div>
+  </footer>
 
 </body>
 </html>
