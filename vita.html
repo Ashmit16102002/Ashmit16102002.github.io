@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vita – Ashmit Gurey</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
-      background-color: #2e2e2e; /* Dark Gray */
-      color: #000;
+      background-color: #2e2e2e;
+      color: #222;
+      line-height: 1.5;
     }
 
     /* Header */
     .header {
-      background-color: #1d257a; /* Dark Blue */
+      background-color: #2e2e2e;
       color: white;
-      padding: 15px 40px;
+      padding: 15px 30px;  /* compact */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,62 +28,92 @@
     .header h1 {
       margin: 0;
       font-size: 26px;
-      font-weight: bold;
-      color: #e64c66; /* Scarlet Red */
+      font-weight: 700;
+      color: #e64c66;
     }
 
     .header .subtitle {
       font-size: 12px;
-      color: #ddd;
+      color: #d9d9d9;
+      margin-top: 4px;
+      line-height: 1.4;
     }
 
+    /* Navigation */
     .nav a {
-      color: orange;
-      margin-left: 20px;
+      color: #ffd166;
+      margin-left: 18px;
       text-decoration: none;
-      font-weight: bold;
-    }
-    .nav a:hover {
-      text-decoration: underline;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      transition: all 0.3s ease;
     }
 
-    /* Main content box (consistent with homepage) */
+    .nav a:hover {
+      color: #ffffff;
+    }
+
+    .nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #ffd166;
+      width: 0;
+      transition: width 0.3s ease;
+      margin: 2px auto 0 auto;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Main content box */
     .content {
-      background: white;
+      background: #fff;
       max-width: 900px;
       margin: 20px auto;
-      padding: 30px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(8px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     .content h1 {
-      font-size: 26px;
+      font-size: 22px;
       text-align: center;
-      color: #1d257a;
-      margin-bottom: 20px;
+      color: #e64c66;
+      margin-bottom: 15px;
     }
 
     .content h2 {
-      font-size: 22px;
-      margin-top: 25px;
-      margin-bottom: 15px;
-      color: #000;
+      font-size: 18px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      color: #2e2e2e;
     }
 
-    .content p, 
+    .content p,
     .content li {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #000;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 6px;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 18px;
     }
 
     a {
       color: #1d257a;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
     a:hover { 
       text-decoration: underline; 
@@ -89,17 +122,18 @@
     /* CV button */
     .cv-section {
       text-align: center;
-      margin: 30px 0;
+      margin: 20px 0;
     }
     .cv-link {
       display: inline-block;
-      padding: 10px 20px;
-      background: #e64c66; /* Scarlet */
+      padding: 8px 16px;
+      background: #e64c66;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s;
     }
     .cv-link:hover {
       background: #c73a52;
@@ -108,14 +142,14 @@
     /* Footer */
     footer {
       text-align: center;
-      font-size: 14px;
-      margin: 30px 0;
+      font-size: 13px;
+      margin: 20px 0;
       color: white;
     }
     footer a {
-      color: orange;
+      color: #ffd166;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
     footer a:hover {
       text-decoration: underline;
@@ -168,8 +202,6 @@
       <a href="Ashmit_CV.pdf" class="cv-link">📄 Detailed CV (PDF)</a>
     </div>
   </div>
-
-
 
 </body>
 </html>
