@@ -4,105 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashmit Gurey - Homepage</title>
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
-      background-color: #2e2e2e;
-      color: #222;
-      line-height: 1.5;
-    }
-
-    /* Header */
-    .header {
-      background-color: #2e2e2e;
-      color: white;
-      padding: 15px 30px;   /* compact padding */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-      font-weight: 700;
-      color: #e64c66;
-      letter-spacing: 1px;
-    }
-
-    .header .subtitle {
-      font-size: 12px;
-      color: #d9d9d9;
-      margin-top: 4px;
-      line-height: 1.4;
-    }
-
-    /* Navigation */
-    .nav a {
-      color: #ffd166;
-      margin-left: 18px; /* tighter spacing */
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav a:hover {
-      color: #ffffff;
-    }
-
-    .nav a::after {
-      content: "";
-      display: block;
-      height: 2px;
-      background: #ffd166;
-      width: 0;
-      transition: width 0.3s ease;
-      margin: 2px auto 0 auto;
-    }
-
-    .nav a:hover::after {
-      width: 100%;
-    }
-
-    /* Main content */
-    .content {
       background: #fff;
-      max-width: 900px;
-      margin: 20px auto;   /* reduced space around */
-      padding: 25px;
-      display: flex;
-      gap: 25px;           /* smaller gap */
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-      animation: fadeIn 0.6s ease;
+      color: #111;
+      line-height: 1.6;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(8px);}
-      to {opacity: 1; transform: translateY(0);}
+    /* Header nav */
+    .header {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+
+    .header a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 400;
+      transition: 0.2s;
+    }
+
+    .header a:hover {
+      color: #d633b3; /* purple hover */
+    }
+
+    .header a.active {
+      color: #d633b3;
+      font-weight: 600;
+    }
+
+    /* Main layout */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      gap: 30px;
+      padding: 0 20px;
     }
 
     .text {
       flex: 3;
     }
 
-    .text h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #2e2e2e;
+    .text h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .text h1 strong {
+      font-weight: 700;
     }
 
     .text p {
-      font-size: 15px;
-      margin-bottom: 12px;  /* reduced spacing */
+      margin: 10px 0;
     }
 
-    /* Profile */
+    .text a {
+      color: #d633b3;
+      text-decoration: none;
+    }
+
+    .text a:hover {
+      text-decoration: underline;
+    }
+
     .profile-pic {
       flex: 1;
       display: flex;
@@ -111,64 +85,54 @@
     }
 
     .profile-pic img {
-      width: 180px;   /* slightly smaller */
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      max-width: 220px;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     }
 
-    /* Contact */
-    .contact {
-      margin-top: 20px;
-      padding: 12px 15px;
-      background: #f9f9f9;
-      border-left: 4px solid #e64c66;
-      border-radius: 5px;
+    .address {
+      margin-top: 10px;
+      font-family: monospace;
       font-size: 14px;
+      color: #333;
     }
 
-    .contact strong {
-      display: inline-block;
-      width: 70px;
-      color: #444;
+    /* Sections */
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
     }
 
-    .contact a {
-      color: #1d257a;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* News */
-    .news {
+    .section {
       margin-top: 20px;
     }
 
-    .news h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: #e64c66;
+    .news-list, .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .news ul {
-      list-style-type: disc;
-      padding-left: 18px;
-    }
-
-    .news li {
-      margin-bottom: 6px;
+    .news-list li, .post-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
       font-size: 14px;
     }
 
-    .news a {
-      color: #1d257a;
-      font-weight: 600;
+    .news-list li b, .post-list li b {
+      min-width: 120px;
     }
 
-    .news a:hover {
-      text-decoration: underline;
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      padding: 30px 0;
+      color: #555;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -176,64 +140,71 @@
 
   <!-- Header -->
   <div class="header">
-    <div>
-      <h1>ASHMIT GUREY</h1>
-      <div class="subtitle">
-        Integrated PhD<br>
-        Kerala School of Mathematics, Kozhikode<br>
-        Kunnamangalam PO<br> 
-        Kozhikode, Kerala - 673571<br>
-        India
-      </div>
-    </div>
-    <div class="nav">
-      <a href="#">Home</a>
-      <a href="cautionary-tale.html">Cautionary Tale</a>
-      <a href="#">Publications</a>
-      <a href="#">Exposition</a>
-      <a href="#">Programs</a>
-    </div>
+    <a href="#" class="active">about</a>
+    <a href="#">blog</a>
+    <a href="#">publications</a>
+    <a href="#">projects</a>
+    <a href="#">repositories</a>
+    <a href="#">cv</a>
+    <a href="#">teaching</a>
+    <a href="#">people</a>
+    <a href="#">submenus</a>
   </div>
 
   <!-- Content -->
-  <div class="content">
+  <div class="container">
     <div class="text">
-      <h2>About Me</h2>
+      <h1><strong>Ashmit</strong> Gurey</h1>
+      <p><a href="#">Affiliations</a>. Address. Contacts. Motto. Etc.</p>
       <p>
-        I am currently a <b>Master's student in Mathematics</b> at the <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. I completed my <b>undergraduate</b> studies in <b>Mathematics and Computing</b> 
-        at the <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, graduating in mid-2024.
+        I am currently a <b>Master's student in Mathematics</b> at the 
+        <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
+        I completed my <b>undergraduate</b> studies in 
+        <b>Mathematics and Computing</b> at the 
+        <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar.
       </p>
       <p>
-        My research interests lie in the study of <b>inverse problems</b> in the realm of <b>X-ray Tomography</b>. Earlier I have worked on the <b>Image reconstruction 
-        of the Radon transform</b> and its <b>applications in computerized tomography</b>.
+        My research interests lie in <b>inverse problems</b> in <b>X-ray Tomography</b>. 
+        Earlier I have worked on <b>Radon transforms</b> and their <b>applications in CT</b>.
       </p>
       <p>
-        I am currently working on my <b>Master Thesis</b> under the guidance of <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.
+        I am currently working on my <b>Master Thesis</b> under 
+        <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.
       </p>
 
-      <div class="contact">
-        <p>Here is my <b><a href="vita.html">Vita</a></b>, <b><a href="schedule.html">Schedule</a></b> and <b><a href="past_and_future.html">Past Courses</a></b></p>
-        <p><strong>Email:</strong> "<b>gureyashmit</b>" followed by "<b>@ksom.res.in</b>"</p>
-        <h2>Fall 2025 Courses Undertaken</h2>
-        <b>KSM3E01</b> Functional Analysis<br>
-        <b>KSM3E03</b> Field and Galois Theory<br>
-        <b>KSM3E06</b> Advanced Complex Analysis<br>
-        <b>KSM3E07</b> Number Theory<br>
+      <div class="section">
+        <h2>news</h2>
+        <ul class="news-list">
+          <li><b>Sep 2025</b> <span>Exploring collaborative opportunities in tomography.</span></li>
+          <li><b>Aug 2025</b> <span>Schedule for Fall Semester available <a href="schedule.html">here</a>.</span></li>
+          <li><b>Jun 2025</b> <span>Visiting Student position at TIFR-CAM confirmed.</span></li>
+        </ul>
       </div>
 
-      <div class="news">
-        <h3>News</h3>
-        <ul>
-          <li><b>Sep 2025</b> Exploring collaborative opportunities in tomography and Radon transform research.</li>
-          <li><b>Aug 2025</b> Schedule for Fall Semester available <a href="schedule.html">here</a>.</li>
-          <li><b>Jun 2025</b> Visiting Student position at TIFR-CAM confirmed.</li>
+      <div class="section">
+        <h2>latest posts</h2>
+        <ul class="post-list">
+          <li><b>Mar 26, 2025</b> <span><a href="#">a post with plotly.js</a></span></li>
+          <li><b>Dec 04, 2024</b> <span><a href="#">a post with image galleries</a></span></li>
+          <li><b>May 14, 2024</b> <span><a href="#">Google Gemini updates: Flash 1.5, Gemma 2 and Astra</a></span></li>
         </ul>
       </div>
     </div>
 
     <div class="profile-pic">
-      <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture">
+      <div>
+        <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture">
+        <div class="address">
+          555 your office number<br>
+          123 your address street<br>
+          Your City, State 12345
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="footer">
+    © Copyright 2025 Ashmit Gurey. Powered by Jekyll with al-folio theme.
   </div>
 
 </body>
