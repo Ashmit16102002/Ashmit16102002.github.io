@@ -13,147 +13,142 @@
     
     body {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: #333;
+      color: #ddd;
       line-height: 1.6;
-      background-color: #fff;
+      background-color: #000;
+      display: flex;
+      min-height: 100vh;
     }
     
     .container {
+      display: flex;
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      gap: 40px;
-    }
-    
-    /* Header Styles */
-    header {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-    }
-    
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    
-    .name-title h1 {
-      font-size: 28px;
-      font-weight: normal;
-      margin-bottom: 5px;
-      color: #333;
-    }
-    
-    .tagline {
-      font-size: 16px;
-      font-style: italic;
-      color: #666;
-    }
-    
-    .search-bar {
-      display: flex;
-    }
-    
-    .search-bar input {
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-      width: 200px;
-    }
-    
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 20px 0;
     }
     
     /* Sidebar Styles */
     .sidebar {
-      width: 30%;
-      background-color: #fff;
+      width: 280px;
+      padding: 40px 25px;
+      background-color: #000;
+      border-right: 1px solid #222;
+      font-size: 13px;
+      line-height: 1.8;
     }
     
-    .sidebar-section {
-      margin-bottom: 30px;
+    .sidebar h3 {
+      font-size: 12px;
+      font-weight: bold;
+      color: #aaa;
+      text-transform: uppercase;
+      border-bottom: 1px solid #333;
+      padding-bottom: 3px;
+      margin-top: 25px;
+      letter-spacing: 0.5px;
     }
     
-    .sidebar-section h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      font-weight: normal;
-      color: #444;
+    .sidebar ul {
+      list-style: none;
+      margin: 8px 0;
+      padding: 0;
     }
     
-    .sidebar-section ul {
-      list-style-type: none;
+    .sidebar li {
+      margin: 3px 0;
     }
     
-    .sidebar-section li {
-      margin-bottom: 8px;
-      padding-left: 15px;
-      position: relative;
-    }
-    
-    .sidebar-section li:before {
-      content: "-";
-      position: absolute;
-      left: 0;
-    }
-    
-    .sidebar-section a {
-      color: #0066cc;
+    .sidebar a {
+      color: #ccc;
       text-decoration: none;
+      transition: 0.2s;
     }
     
-    .sidebar-section a:hover {
-      text-decoration: underline;
+    .sidebar a:hover {
+      color: #fff;
     }
     
-    /* Nested lists */
-    .sidebar-section ul ul {
-      margin-left: 15px;
-      margin-top: 5px;
+    /* Header in Sidebar */
+    .header {
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+    }
+    
+    .header h1 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .tagline {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    
+    .search-bar input {
+      background-color: #111;
+      border: 1px solid #333;
+      color: #ddd;
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 3px;
+      width: 100%;
+    }
+    
+    .search-bar input::placeholder {
+      color: #666;
     }
     
     /* Main Content Styles */
     .main-content {
-      width: 70%;
-      background-color: #fff;
+      flex: 1;
+      padding: 40px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .main-section {
+      max-width: 850px;
     }
     
     .intro-section h2 {
       font-size: 24px;
       margin-bottom: 15px;
       font-weight: normal;
-      color: #333;
+      color: #fff;
     }
     
     .profile-image {
       width: 200px;
       height: 200px;
-      background-color: #e0e0e0;
-      border-radius: 4px;
+      background-color: #333;
+      border-radius: 6px;
       margin: 0 auto 15px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #777;
       font-style: italic;
+      border: 1px solid #444;
     }
     
     .caption {
       text-align: center;
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 25px;
+      font-size: 12px;
+      color: #aaa;
+      margin: 6px 0 30px 0;
     }
     
     .intro-text {
       margin-bottom: 30px;
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.6;
     }
     
     .intro-text p {
@@ -161,14 +156,24 @@
     }
     
     .intro-text strong {
+      color: #fff;
       font-weight: bold;
+    }
+    
+    .intro-text a {
+      color: #66b3ff;
+      text-decoration: none;
+    }
+    
+    .intro-text a:hover {
+      color: #fff;
     }
     
     /* Two-column icon section */
     .icon-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 30px;
       margin-top: 40px;
     }
     
@@ -182,26 +187,40 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background-color: #e0e0e0;
+      background-color: #222;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
+      color: #ddd;
       font-weight: bold;
       font-size: 14px;
       text-align: center;
       padding: 10px;
       flex-shrink: 0;
+      border: 2px solid #333;
     }
     
     .icon-text {
       flex: 1;
     }
     
+    .icon-text h3 {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
     .icon-text p {
-      font-size: 14px;
-      color: #444;
-      margin-top: 5px;
+      font-size: 13px;
+      color: #aaa;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+      margin-top: 40px;
     }
     
     /* Responsive adjustments */
@@ -210,8 +229,10 @@
         flex-direction: column;
       }
       
-      .sidebar, .main-content {
+      .sidebar {
         width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #222;
       }
       
       .icon-section {
@@ -224,154 +245,137 @@
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-      <header>
-        <div class="header-top">
-          <div class="name-title">
-            <h1>Doug Shaw, Ph.D.</h1>
-            <p class="tagline">The Math Professor Who Loves You</p>
-          </div>
-          <div class="search-bar">
-            <input type="text" placeholder="Search...">
-          </div>
+      <div class="header">
+        <h1>Doug Shaw, Ph.D.</h1>
+        <p class="tagline">The Math Professor Who Loves You</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
         </div>
-        <hr>
-      </header>
-
-      <div class="sidebar-section">
-        <h2>ABOUT ME</h2>
-        <ul>
-          <li><a href="#">MAIN STUFF *</a></li>
-          <li><a href="#">WORKSHOPS AND PRESENTATIONS *</a></li>
-          <li><a href="#">THE SOCIAL NONSENSE BOOK</a></li>
-          <li><a href="#">DOUG'S OTHER PAGES *</a></li>
-        </ul>
       </div>
 
-      <hr>
+      <h3>ABOUT ME</h3>
+      <ul>
+        <li><a href="#">MAIN STUFF *</a></li>
+        <li><a href="#">WORKSHOPS AND PRESENTATIONS *</a></li>
+        <li><a href="#">THE SOCIAL NONSENSE BOOK</a></li>
+        <li><a href="#">DOUG'S OTHER PAGES *</a></li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>FUN STUFF *</h2>
-        <ul>
-          <li><a href="#">THE BLOG</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </div>
+      <h3>FUN STUFF *</h3>
+      <ul>
+        <li><a href="#">THE BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
 
-      <hr>
+      <h3>ABOUT ME</h3>
+      <ul>
+        <li><a href="#">MAIN STUFF *</a></li>
+        <li>
+          <ul>
+            <li><a href="#">My CV</a></li>
+            <li><a href="#">Selected Articles</a></li>
+            <li>
+              <ul>
+                <li><a href="#">What is Not a Proof</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Find the Error!</a></li>
+            <li><a href="#">Today's Full Limit</a></li>
+          </ul>
+        </li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>ABOUT ME</h2>
-        <ul>
-          <li><a href="#">MAIN STUFF *</a></li>
-          <li>
-            <ul>
-              <li><a href="#">My CV</a></li>
-              <li><a href="#">Selected Articles</a></li>
-              <li>
-                <ul>
-                  <li><a href="#">What is Not a Proof</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Find the Error!</a></li>
-              <li><a href="#">Today's Full Limit</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <h3>WORKSHOPS AND PRESENTATIONS</h3>
+      <ul>
+        <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
+        <li><a href="#">Fast Food Joyce!</a></li>
+        <li><a href="#">Social Nonsense Keynote / Social Nonsense Workshop</a></li>
+        <li><a href="#">Improve for Educators Workshop</a></li>
+        <li><a href="#">Improve for Business Students Workshop</a></li>
+        <li><a href="#">Math Keynotes and Talks</a></li>
+        <li><a href="#">OK Zoomer Registration Page!</a></li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>WORKSHOPS AND PRESENTATIONS</h2>
-        <ul>
-          <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
-          <li><a href="#">Fast Food Joyce!</a></li>
-          <li><a href="#">Social Nonsense Keynote / Social Nonsense Workshop</a></li>
-          <li><a href="#">Improve for Educators Workshop</a></li>
-          <li><a href="#">Improve for Business Students Workshop</a></li>
-          <li><a href="#">Math Keynotes and Talks</a></li>
-          <li><a href="#">OK Zoomer Registration Page!</a></li>
-        </ul>
-      </div>
+      <h3>THE SOCIAL NONSENSE BOOK</h3>
+      <ul>
+        <li><a href="#">DOUG'S OTHER PAGES</a></li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>THE SOCIAL NONSENSE BOOK</h2>
-      </div>
+      <h3>DOUG'S OTHER PAGES</h3>
+      <ul>
+        <li><a href="#">Doug's Personal Page</a></li>
+        <li><a href="#">Doug's UNI page</a></li>
+        <li><a href="#">The Social Nonsense Page</a></li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>DOUG'S OTHER PAGES</h2>
-        <ul>
-          <li><a href="#">Doug's Personal Page</a></li>
-          <li><a href="#">Doug's UNI page</a></li>
-          <li><a href="#">The Social Nonsense Page</a></li>
-        </ul>
-      </div>
+      <h3>FUN STUFF</h3>
+      <ul>
+        <li><a href="#">Essays and Reviews</a></li>
+        <li><a href="#">Hard Words to Spell</a></li>
+        <li><a href="#">Cosmic Euches</a></li>
+        <li><a href="#">Mama's Vacation Snapshots!</a></li>
+        <li><a href="#">How to memorize the two letter Scrabble words!</a></li>
+      </ul>
 
-      <div class="sidebar-section">
-        <h2>FUN STUFF</h2>
-        <ul>
-          <li><a href="#">Essays and Reviews</a></li>
-          <li><a href="#">Hard Words to Spell</a></li>
-          <li><a href="#">Cosmic Euches</a></li>
-          <li><a href="#">Mama's Vacation Snapshots!</a></li>
-          <li><a href="#">How to memorize the two letter Scrabble words!</a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-section">
-        <h2>THE BLOG</h2>
-      </div>
-
-      <div class="sidebar-section">
-        <h2>CONTACT</h2>
-      </div>
+      <h3>THE BLOG</h3>
+      <ul>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-      <div class="intro-section">
-        <h2>Hi! I'm Doug Shaw</h2>
-        
-        <div class="profile-image">Profile Image</div>
-        <p class="caption">This is me.</p>
-        
-        <div class="intro-text">
-          <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
+      <div class="main-section">
+        <div class="intro-section">
+          <h2>Hi! I'm Doug Shaw</h2>
           
-          <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
+          <div class="profile-image">Profile Image</div>
+          <p class="caption">This is me.</p>
           
-          <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, commendance, and graph theory. He is or has been an author, systems engineer, street-busher, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board. He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an <strong>Applied Improvisation Certified Practitioner</strong>. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
+          <div class="intro-text">
+            <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
+            
+            <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
+            
+            <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, commendance, and graph theory. He is or has been an author, systems engineer, street-busher, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board. He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an <strong>Applied Improvisation Certified Practitioner</strong>. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
+          </div>
+          
+          <div class="profile-image">Group Photo</div>
+          
+          <div class="icon-section">
+            <div class="icon-item">
+              <div class="icon-circle">Math and Math Teaching Coolness!</div>
+              <div class="icon-text">
+                <h3>Research & Mathematical Exploration</h3>
+                <p>Description of research activities and mathematical interests.</p>
+              </div>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">Entertaining writing of many kinds!</div>
+              <div class="icon-text">
+                <h3>Writing & Publications</h3>
+                <p>Various writings, articles, and published works.</p>
+              </div>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">Workshops and Presentations!</div>
+              <div class="icon-text">
+                <h3>Workshops & Presentations</h3>
+                <p>Educational workshops and public speaking engagements.</p>
+              </div>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">The Social Nonsense Book!</div>
+              <div class="icon-text">
+                <h3>Projects & Collaborations</h3>
+                <p>Notable projects and collaborative work.</p>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="profile-image">Group Photo</div>
-        
-        <div class="icon-section">
-          <div class="icon-item">
-            <div class="icon-circle">Math and Math Teaching Coolness!</div>
-            <div class="icon-text">
-              <h3>Research & Mathematical Exploration</h3>
-              <p>Description of research activities and mathematical interests.</p>
-            </div>
-          </div>
-          <div class="icon-item">
-            <div class="icon-circle">Entertaining writing of many kinds!</div>
-            <div class="icon-text">
-              <h3>Writing & Publications</h3>
-              <p>Various writings, articles, and published works.</p>
-            </div>
-          </div>
-          <div class="icon-item">
-            <div class="icon-circle">Workshops and Presentations!</div>
-            <div class="icon-text">
-              <h3>Workshops & Presentations</h3>
-              <p>Educational workshops and public speaking engagements.</p>
-            </div>
-          </div>
-          <div class="icon-item">
-            <div class="icon-circle">The Social Nonsense Book!</div>
-            <div class="icon-text">
-              <h3>Projects & Collaborations</h3>
-              <p>Notable projects and collaborative work.</p>
-            </div>
-          </div>
+        <div class="footer">
+          © 2025 Doug Shaw, Ph.D. • Cedar Falls, Iowa
         </div>
       </div>
     </div>
