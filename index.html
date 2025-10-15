@@ -177,6 +177,9 @@
       font-size: 14px;
       color: #ddd;
       line-height: 1.6;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
     }
     
     .intro-text p {
@@ -261,6 +264,10 @@
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #222;
+      }
+      
+      .intro-text {
+        grid-template-columns: 1fr;
       }
       
       .icon-section {
@@ -361,11 +368,16 @@
           <p class="caption">This is me.</p>
           
           <div class="intro-text">
-            <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
-            
-            <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
-            
-            <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, commendance, and graph theory. He is or has been an author, systems engineer, street-busher, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board. He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an <strong>Applied Improvisation Certified Practitioner</strong>. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
+            <div class="column">
+              <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
+              
+              <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
+            </div>
+            <div class="column">
+              <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, commendance, and graph theory. He is or has been an author, systems engineer, street-busher, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board.</p>
+              
+              <p>He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an <strong>Applied Improvisation Certified Practitioner</strong>. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
+            </div>
           </div>
           
           <div class="profile-image">Group Photo</div>
