@@ -17,14 +17,81 @@
       line-height: 1.6;
       background-color: #000;
       display: flex;
+      flex-direction: column;
       min-height: 100vh;
     }
     
+    /* Header Styles */
+    .main-header {
+      width: 100%;
+      padding: 25px 40px;
+      background-color: #000;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .name-title h1 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .tagline {
+      font-size: 14px;
+      color: #aaa;
+      font-style: italic;
+    }
+    
+    .search-bar input {
+      background-color: #111;
+      border: 1px solid #333;
+      color: #ddd;
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 3px;
+      width: 200px;
+    }
+    
+    .search-bar input::placeholder {
+      color: #666;
+    }
+    
+    /* Navigation Menu */
+    .nav-menu {
+      width: 100%;
+      padding: 15px 40px;
+      background-color: #000;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .nav-section {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-section a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+    
+    .nav-section a:hover {
+      color: #fff;
+    }
+    
+    /* Main Container */
     .container {
       display: flex;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
+      flex: 1;
     }
     
     /* Sidebar Styles */
@@ -94,41 +161,6 @@
     
     .sidebar ul ul ul li {
       padding-left: 15px;
-    }
-    
-    /* Header in Sidebar */
-    .header {
-      padding-bottom: 15px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #333;
-    }
-    
-    .header h1 {
-      font-size: 24px;
-      font-weight: normal;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    
-    .tagline {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 15px;
-      font-style: italic;
-    }
-    
-    .search-bar input {
-      background-color: #111;
-      border: 1px solid #333;
-      color: #ddd;
-      padding: 6px 12px;
-      font-size: 12px;
-      border-radius: 3px;
-      width: 100%;
-    }
-    
-    .search-bar input::placeholder {
-      color: #666;
     }
     
     /* Main Content Styles */
@@ -273,35 +305,52 @@
       .icon-section {
         grid-template-columns: 1fr;
       }
+      
+      .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      
+      .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="name-title">
+      <h1>Doug Shaw, Ph.D.</h1>
+      <p class="tagline">The Math Professor Who Loves You</p>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu">
+    <div class="nav-section">
+      <a href="#">ABOUT ME</a>
+      <a href="#">MATH STUFF *</a>
+      <a href="#">WORKSHOPS AND PRESENTATIONS *</a>
+      <a href="#">THE SOCIAL NONSENSE BOOK</a>
+      <a href="#">DOUG'S OTHER PAGES *</a>
+    </div>
+    <div class="nav-section">
+      <a href="#">FUN STUFF *</a>
+      <a href="#">THE BLOG</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="header">
-        <h1>Doug Shaw, Ph.D.</h1>
-        <p class="tagline">The Math Professor Who Loves You</p>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-        </div>
-      </div>
-
-      <h3>ABOUT ME</h3>
-      <ul>
-        <li><a href="#">MAIN STUFF *</a></li>
-        <li><a href="#">WORKSHOPS AND PRESENTATIONS *</a></li>
-        <li><a href="#">THE SOCIAL NONSENSE BOOK</a></li>
-        <li><a href="#">DOUG'S OTHER PAGES *</a></li>
-      </ul>
-
-      <h3>FUN STUFF *</h3>
-      <ul>
-        <li><a href="#">THE BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-
       <h3>ABOUT ME</h3>
       <ul>
         <li><a href="#">MAIN STUFF *</a></li>
