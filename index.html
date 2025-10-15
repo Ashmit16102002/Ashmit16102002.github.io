@@ -3,300 +3,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashmit Gurey - Homepage</title>
-
+  <title>Doug Shaw, Ph.D.</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      margin: 0;
-      font-family: Verdana, Geneva, sans-serif;
-      background-color: #000;
-      color: #ddd;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
       display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      gap: 40px;
     }
-
-    /* Header */
-    .header {
-      padding: 25px 40px;
-      background-color: #000;
-      border-bottom: 1px solid #222;
+    
+    /* Header Styles */
+    header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
     }
-
-    .header h1 {
-      font-size: 24px;
+    
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .name-title h1 {
+      font-size: 28px;
       font-weight: normal;
-      color: #fff;
-      margin: 0 0 5px 0;
-      letter-spacing: 0.5px;
+      margin-bottom: 5px;
     }
-
-    .header .tagline {
+    
+    .tagline {
+      font-size: 16px;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .search-bar {
+      display: flex;
+    }
+    
+    .search-bar input {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-size: 14px;
-      color: #aaa;
-      margin: 0;
+      width: 200px;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+    
+    /* Sidebar Styles */
+    .sidebar {
+      width: 30%;
+    }
+    
+    .sidebar-section {
+      margin-bottom: 30px;
+    }
+    
+    .sidebar-section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: normal;
+      color: #444;
+    }
+    
+    .sidebar-section ul {
+      list-style-type: none;
+    }
+    
+    .sidebar-section li {
+      margin-bottom: 8px;
+      padding-left: 15px;
+      position: relative;
+    }
+    
+    .sidebar-section li:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+    }
+    
+    .sidebar-section a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    
+    .sidebar-section a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Main Content Styles */
+    .main-content {
+      width: 70%;
+    }
+    
+    .intro-section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+    
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
       font-style: italic;
     }
-
-    .search-container {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-    }
-
-    .search-container input {
-      background-color: #111;
-      border: 1px solid #333;
-      color: #ddd;
-      padding: 6px 12px;
-      font-size: 12px;
-      border-radius: 3px;
-      width: 180px;
-    }
-
-    .search-container input::placeholder {
-      color: #666;
-    }
-
-    /* Main Container */
-    .container {
-      display: flex;
-      flex: 1;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 280px;
-      padding: 40px 25px;
-      background-color: #000;
-      border-right: 1px solid #222;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .sidebar h3 {
-      font-size: 12px;
-      font-weight: bold;
-      color: #aaa;
-      text-transform: uppercase;
-      border-bottom: 1px solid #333;
-      padding-bottom: 3px;
-      margin-top: 25px;
-      letter-spacing: 0.5px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      margin: 8px 0;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin: 3px 0;
-    }
-
-    .sidebar a {
-      color: #ccc;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .sidebar a:hover {
-      color: #fff;
-    }
-
-    /* Main Content */
-    .content {
-      flex: 1;
-      padding: 40px 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .main-section {
-      max-width: 850px;
-    }
-
-    .profile-pic {
-      display: block;
-      margin: 0 auto;
-      max-width: 240px;
-      border-radius: 6px;
-    }
-
+    
     .caption {
       text-align: center;
-      font-size: 12px;
-      color: #aaa;
-      margin: 6px 0 30px 0;
-    }
-
-    .intro {
       font-size: 14px;
-      color: #ddd;
-      line-height: 1.6;
+      color: #666;
       margin-bottom: 25px;
     }
-
-    .intro strong {
-      color: #fff;
+    
+    .intro-text {
+      margin-bottom: 30px;
     }
-
-    .group-photo {
-      display: block;
-      margin: 20px auto;
-      width: 250px;
-      border-radius: 6px;
+    
+    .intro-text p {
+      margin-bottom: 15px;
     }
-
-    /* Icon Row */
-    .icons {
+    
+    .intro-text strong {
+      font-weight: bold;
+    }
+    
+    /* Icon Section */
+    .icon-section {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 45px;
       flex-wrap: wrap;
+      gap: 20px;
       margin-top: 40px;
-      margin-bottom: 40px;
     }
-
-    .icon {
+    
+    .icon-item {
+      flex: 1;
+      min-width: 150px;
       text-align: center;
-      width: 140px;
     }
-
-    .icon img {
-      width: 110px;
-      height: 110px;
+    
+    .icon-circle {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      margin-bottom: 10px;
-      border: 3px solid #000;
-    }
-
-    .icon p {
-      font-size: 13px;
-      color: #eee;
-      line-height: 1.3;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 11px;
+      background-color: #e0e0e0;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #666;
-      margin-top: 40px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
     }
-
-    a {
-      color: #66b3ff;
+    
+    .icon-item p {
+      font-size: 14px;
+      color: #444;
     }
-
-    a:hover {
-      color: #fff;
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar, .main-content {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <div class="header">
-    <h1>Ashmit Gurey</h1>
-    <p class="tagline">Mathematics Student & Researcher</p>
-    <div class="search-container">
-      <input type="text" placeholder="Search...">
-    </div>
-  </div>
-
-  <!-- Main Container -->
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-      <h3>MAIN</h3>
-      <ul>
-        <li><a href="vita.html">My CV</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
+      <header>
+        <div class="header-top">
+          <div class="name-title">
+            <h1>Doug Shaw, Ph.D.</h1>
+            <p class="tagline">The Math Professor Who Loves You</p>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search...">
+          </div>
+        </div>
+        <hr>
+      </header>
 
-      <h3>RESEARCH</h3>
-      <ul>
-        <li><a href="#">Radon and Fan-Beam Transforms</a></li>
-        <li><a href="#">Inverse Problems</a></li>
-        <li><a href="#">Image Reconstruction</a></li>
-      </ul>
+      <div class="sidebar-section">
+        <h2>ABOUT ME</h2>
+        <ul>
+          <li><a href="#">MAIN STUFF *</a></li>
+          <li><a href="#">WORKSHOPS AND PRESENTATIONS *</a></li>
+          <li><a href="#">THE SOCIAL NONSENSE BOOK</a></li>
+          <li><a href="#">DOUG'S OTHER PAGES *</a></li>
+        </ul>
+      </div>
 
-      <h3>TEACHING</h3>
-      <ul>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="past_and_future.html">Past Courses</a></li>
-      </ul>
+      <hr>
 
-      <h3>FUN STUFF</h3>
-      <ul>
-        <li><a href="#">Essays and Reviews</a></li>
-        <li><a href="#">Books I Like</a></li>
-        <li><a href="#">Photography</a></li>
-      </ul>
+      <div class="sidebar-section">
+        <h2>FUN STUFF *</h2>
+        <ul>
+          <li><a href="#">THE BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
 
-      <h3>CONTACT</h3>
-      <ul>
-        <li>Kerala School of Mathematics<br>Kozhikode, India</li>
-        <li>Email: <b>gureyashmit@ksom.res.in</b></li>
-      </ul>
+      <hr>
+
+      <div class="sidebar-section">
+        <h2>ABOUT ME</h2>
+        <ul>
+          <li><a href="#">MAIN STUFF *</a></li>
+          <li>
+            <ul>
+              <li><a href="#">My CV</a></li>
+              <li><a href="#">Selected Articles</a></li>
+              <li>
+                <ul>
+                  <li><a href="#">What is Not a Proof</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Find the Error!</a></li>
+              <li><a href="#">Today's Full Limit</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>WORKSHOPS AND PRESENTATIONS</h2>
+        <ul>
+          <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
+          <li><a href="#">Fast Food Joyce!</a></li>
+          <li><a href="#">Social Nonsense Keynote / Social Nonsense Workshop</a></li>
+          <li><a href="#">Improve for Educators Workshop</a></li>
+          <li><a href="#">Improve for Business Students Workshop</a></li>
+          <li><a href="#">Math Keynotes and Talks</a></li>
+          <li><a href="#">OK Zoomer Registration Page!</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>THE SOCIAL NONSENSE BOOK</h2>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>DOUG'S OTHER PAGES</h2>
+        <ul>
+          <li><a href="#">Doug's Personal Page</a></li>
+          <li><a href="#">Doug's UNI page</a></li>
+          <li><a href="#">The Social Nonsense Page</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>FUN STUFF</h2>
+        <ul>
+          <li><a href="#">Essays and Reviews</a></li>
+          <li><a href="#">Hard Words to Spell</a></li>
+          <li><a href="#">Cosmic Euches</a></li>
+          <li><a href="#">Mama's Vacation Snapshots!</a></li>
+          <li><a href="#">How to memorize the two letter Scrabble words!</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>THE BLOG</h2>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>CONTACT</h2>
+      </div>
     </div>
 
     <!-- Main Content -->
-    <div class="content">
-      <div class="main-section">
-
-        <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="caption">This is me.</div>
-
-        <div class="intro">
-          <p><strong>Ashmit Gurey</strong> is a mathematics student at the 
-            <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
-            His research lies in the study of <strong>inverse problems</strong> and 
-            <strong>X-ray tomography</strong>, focusing on the <strong>Radon and fan-beam transforms</strong> 
-            and their applications in computerized tomography.</p>
-
-          <p>He completed his undergraduate studies in <strong>Mathematics and Computing</strong> at the 
-            <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, 
-            and is currently pursuing his Master's Thesis under the guidance of 
-            <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.</p>
-
-          <p>When he's not doing mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
-            He's open to collaborations in imaging and applied analysis, and is always looking for new opportunities to learn and contribute.</p>
+    <div class="main-content">
+      <div class="intro-section">
+        <h2>Hi! I'm Doug Shaw</h2>
+        
+        <div class="profile-image">Profile Image</div>
+        <p class="caption">This is me.</p>
+        
+        <div class="intro-text">
+          <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
+          
+          <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
+          
+          <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, commendance, and graph theory. He is or has been an author, systems engineer, street-busher, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board. He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an <strong>Applied Improvisation Certified Practitioner</strong>. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
         </div>
-
-        <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo" class="group-photo">
-
-        <div class="icons">
-          <div class="icon">
-            <img src="icon1.png" style="background-color:#ffcc00;" alt="Math Icon">
+        
+        <div class="profile-image">Group Photo</div>
+        
+        <div class="icon-section">
+          <div class="icon-item">
+            <div class="icon-circle">Math and Math Teaching Coolness!</div>
             <p>Research & Mathematical Exploration</p>
           </div>
-          <div class="icon">
-            <img src="icon2.png" style="background-color:#66ccff;" alt="Writing Icon">
+          <div class="icon-item">
+            <div class="icon-circle">Entertaining writing of many kinds!</div>
             <p>Writing & Publications</p>
           </div>
-          <div class="icon">
-            <img src="icon3.png" style="background-color:#ff6699;" alt="Workshops Icon">
+          <div class="icon-item">
+            <div class="icon-circle">Workshops and Presentations!</div>
             <p>Workshops & Presentations</p>
           </div>
-          <div class="icon">
-            <img src="icon4.png" style="background-color:#66ff99;" alt="Projects Icon">
+          <div class="icon-item">
+            <div class="icon-circle">The Social Nonsense Book!</div>
             <p>Projects & Collaborations</p>
           </div>
         </div>
-
-        <div class="footer">
-          © 2025 Ashmit Gurey • Kerala School of Mathematics
-        </div>
-
       </div>
     </div>
   </div>
-
 </body>
 </html>
