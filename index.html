@@ -5,47 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashmit Gurey - Homepage</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: Verdana, Geneva, sans-serif;
       background-color: #000;
-      color: #eee;
+      color: #ddd;
       display: flex;
       min-height: 100vh;
     }
 
     /* Sidebar */
     .sidebar {
-      width: 260px;
+      width: 280px;
+      padding: 40px 25px;
       background-color: #000;
-      padding: 40px 20px;
       border-right: 1px solid #222;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.8;
     }
 
     .sidebar h3 {
-      font-size: 13px;
-      font-weight: 600;
-      color: #bbb;
-      border-bottom: 1px solid #222;
-      padding-bottom: 5px;
-      margin-top: 25px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #aaa;
       text-transform: uppercase;
+      border-bottom: 1px solid #333;
+      padding-bottom: 3px;
+      margin-top: 25px;
+      letter-spacing: 0.5px;
     }
 
     .sidebar ul {
       list-style: none;
-      margin: 10px 0;
+      margin: 8px 0;
       padding: 0;
     }
 
-    .sidebar ul li {
-      margin: 4px 0;
+    .sidebar li {
+      margin: 3px 0;
     }
 
     .sidebar a {
@@ -58,37 +56,35 @@
       color: #fff;
     }
 
-    /* Main content */
+    /* Main Content */
     .content {
       flex: 1;
-      padding: 40px 50px;
+      padding: 40px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .main-section {
-      max-width: 800px;
-      text-align: left;
+      max-width: 850px;
     }
 
     .profile-pic {
       display: block;
-      margin: 0 auto 15px auto;
-      max-width: 220px;
-      border-radius: 5px;
-      border: 2px solid #222;
+      margin: 0 auto;
+      max-width: 240px;
+      border-radius: 6px;
     }
 
     .caption {
       text-align: center;
-      font-size: 13px;
+      font-size: 12px;
       color: #aaa;
-      margin-bottom: 20px;
+      margin: 6px 0 30px 0;
     }
 
     .intro {
-      font-size: 15px;
+      font-size: 14px;
       color: #ddd;
       line-height: 1.6;
       margin-bottom: 25px;
@@ -98,54 +94,50 @@
       color: #fff;
     }
 
-    .photo-row {
-      text-align: center;
-      margin: 25px 0;
+    .group-photo {
+      display: block;
+      margin: 20px auto;
+      width: 250px;
+      border-radius: 6px;
     }
 
-    .photo-row img {
-      width: 240px;
-      border-radius: 5px;
-    }
-
-    /* Circle icons section */
+    /* Icon Row */
     .icons {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      align-items: flex-start;
+      gap: 45px;
       flex-wrap: wrap;
       margin-top: 40px;
-      text-align: center;
+      margin-bottom: 40px;
     }
 
     .icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 160px;
+      text-align: center;
+      width: 140px;
     }
 
     .icon img {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      border: 3px solid #000;
       margin-bottom: 10px;
+      border: 3px solid #000;
     }
 
     .icon p {
-      font-size: 14px;
+      font-size: 13px;
       color: #eee;
+      line-height: 1.3;
     }
 
     .footer {
       text-align: center;
+      font-size: 11px;
       color: #666;
-      font-size: 12px;
       margin-top: 40px;
     }
 
-    /* Link colors in text */
     a {
       color: #66b3ff;
     }
@@ -194,46 +186,46 @@
     </ul>
   </div>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <div class="content">
     <div class="main-section">
+
       <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture" class="profile-pic">
       <div class="caption">This is me.</div>
 
       <div class="intro">
-        <p><strong>Ashmit Gurey</strong> is a mathematics student currently pursuing his Master's at the 
+        <p><strong>Ashmit Gurey</strong> is a mathematics student at the 
           <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
-          His research interests lie in the study of <strong>inverse problems</strong> and <strong>X-ray tomography</strong>, 
-          with a focus on the <strong>Radon transform</strong> and its applications in image reconstruction.</p>
+          His research lies in the study of <strong>inverse problems</strong> and 
+          <strong>X-ray tomography</strong>, focusing on the <strong>Radon and fan-beam transforms</strong> 
+          and their applications in computerized tomography.</p>
 
         <p>He completed his undergraduate studies in <strong>Mathematics and Computing</strong> at the 
-          <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar. 
-          He is currently working on his <strong>Master’s Thesis</strong> under the supervision of 
+          <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, 
+          and is currently pursuing his Master’s Thesis under the guidance of 
           <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.</p>
 
-        <p>When not working on mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
-          He’s always looking forward to collaborating on interesting problems in imaging and applied analysis.</p>
+        <p>When he’s not doing mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
+          He’s open to collaborations in imaging and applied analysis, and is always looking for new opportunities to learn and contribute.</p>
       </div>
 
-      <div class="photo-row">
-        <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo">
-      </div>
+      <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo" class="group-photo">
 
       <div class="icons">
         <div class="icon">
-          <img src="icon1.png" alt="Math Icon" style="background-color:#ffcc00;">
+          <img src="icon1.png" style="background-color:#ffcc00;" alt="Math Icon">
           <p>Research & Mathematical Exploration</p>
         </div>
         <div class="icon">
-          <img src="icon2.png" alt="Writing Icon" style="background-color:#66ccff;">
+          <img src="icon2.png" style="background-color:#66ccff;" alt="Writing Icon">
           <p>Writing & Publications</p>
         </div>
         <div class="icon">
-          <img src="icon3.png" alt="Workshops Icon" style="background-color:#ff6699;">
+          <img src="icon3.png" style="background-color:#ff6699;" alt="Workshops Icon">
           <p>Workshops & Presentations</p>
         </div>
         <div class="icon">
-          <img src="icon4.png" alt="Projects Icon" style="background-color:#66ff99;">
+          <img src="icon4.png" style="background-color:#66ff99;" alt="Projects Icon">
           <p>Projects & Collaborations</p>
         </div>
       </div>
@@ -241,6 +233,7 @@
       <div class="footer">
         © 2025 Ashmit Gurey • Kerala School of Mathematics
       </div>
+
     </div>
   </div>
 
