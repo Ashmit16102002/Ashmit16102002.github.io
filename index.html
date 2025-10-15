@@ -6,207 +6,242 @@
   <title>Ashmit Gurey - Homepage</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    /* Header nav */
-    .header {
+      background-color: #000;
+      color: #eee;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-      font-size: 15px;
+      min-height: 100vh;
     }
 
-    .header a {
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background-color: #000;
+      padding: 40px 20px;
+      border-right: 1px solid #222;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .sidebar h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #bbb;
+      border-bottom: 1px solid #222;
+      padding-bottom: 5px;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 4px 0;
+    }
+
+    .sidebar a {
+      color: #ccc;
       text-decoration: none;
-      color: #444;
-      font-weight: 400;
       transition: 0.2s;
     }
 
-    .header a:hover {
-      color: #d633b3; /* purple hover */
+    .sidebar a:hover {
+      color: #fff;
     }
 
-    .header a.active {
-      color: #d633b3;
-      font-weight: 600;
-    }
-
-    /* Main layout */
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
+    /* Main content */
+    .content {
+      flex: 1;
+      padding: 40px 50px;
       display: flex;
-      gap: 30px;
-      padding: 0 20px;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .text {
-      flex: 3;
-    }
-
-    .text h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-
-    .text h1 strong {
-      font-weight: 700;
-    }
-
-    .text p {
-      margin: 10px 0;
-    }
-
-    .text a {
-      color: #d633b3;
-      text-decoration: none;
-    }
-
-    .text a:hover {
-      text-decoration: underline;
+    .main-section {
+      max-width: 800px;
+      text-align: left;
     }
 
     .profile-pic {
-      flex: 1;
+      display: block;
+      margin: 0 auto 15px auto;
+      max-width: 220px;
+      border-radius: 5px;
+      border: 2px solid #222;
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #ddd;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .intro strong {
+      color: #fff;
+    }
+
+    .photo-row {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .photo-row img {
+      width: 240px;
+      border-radius: 5px;
+    }
+
+    /* Circle icons section */
+    .icons {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      text-align: center;
     }
 
-    .profile-pic img {
-      max-width: 220px;
-      border-radius: 6px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 160px;
     }
 
-    .address {
-      margin-top: 10px;
-      font-family: monospace;
-      font-size: 14px;
-      color: #333;
-    }
-
-    /* Sections */
-    h2 {
-      font-size: 20px;
-      margin-top: 30px;
+    .icon img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #000;
       margin-bottom: 10px;
     }
 
-    .section {
-      margin-top: 20px;
-    }
-
-    .news-list, .post-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-list li, .post-list li {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 0;
-      border-bottom: 1px solid #f0f0f0;
+    .icon p {
       font-size: 14px;
-    }
-
-    .news-list li b, .post-list li b {
-      min-width: 120px;
+      color: #eee;
     }
 
     .footer {
       text-align: center;
-      font-size: 13px;
-      padding: 30px 0;
-      color: #555;
-      border-top: 1px solid #eee;
+      color: #666;
+      font-size: 12px;
       margin-top: 40px;
+    }
+
+    /* Link colors in text */
+    a {
+      color: #66b3ff;
+    }
+
+    a:hover {
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <a href="#" class="active">about</a>
-    <a href="#">blog</a>
-    <a href="#">publications</a>
-    <a href="#">projects</a>
-    <a href="#">repositories</a>
-    <a href="#">cv</a>
-    <a href="#">teaching</a>
-    <a href="#">people</a>
-    <a href="#">submenus</a>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>MAIN</h3>
+    <ul>
+      <li><a href="vita.html">My CV</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+
+    <h3>RESEARCH</h3>
+    <ul>
+      <li><a href="#">Radon and Fan-Beam Transforms</a></li>
+      <li><a href="#">Inverse Problems</a></li>
+      <li><a href="#">Image Reconstruction</a></li>
+    </ul>
+
+    <h3>TEACHING</h3>
+    <ul>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="past_and_future.html">Past Courses</a></li>
+    </ul>
+
+    <h3>FUN STUFF</h3>
+    <ul>
+      <li><a href="#">Essays and Reviews</a></li>
+      <li><a href="#">Books I Like</a></li>
+      <li><a href="#">Photography</a></li>
+    </ul>
+
+    <h3>CONTACT</h3>
+    <ul>
+      <li>Kerala School of Mathematics<br>Kozhikode, India</li>
+      <li>Email: <b>gureyashmit@ksom.res.in</b></li>
+    </ul>
   </div>
 
-  <!-- Content -->
-  <div class="container">
-    <div class="text">
-      <h1><strong>Ashmit</strong> Gurey</h1>
-      <p><a href="#">IPhD @ KSoM.</a><br>
-      Email:</strong> "<b>gureyashmit</b>" followed by "<b>@ksom.res.in</b>".</p>
-      <p>
-        I am currently a <b>Master's student in Mathematics</b> at the <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. I completed my <b>undergraduate</b> studies in <b>Mathematics and Computing</b> 
-        at the <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, graduating in mid-2024.
-      </p>
-      <p>
-My research interests lie in the study of <b>inverse problems</b> in the realm of <b>X-ray Tomography</b>. Earlier I have worked on the <b>Image reconstruction 
-        of the Radon transform</b> and its <b>applications in computerized tomography</b>.
-      </p>
-      <p>
-        I am currently working on my <b>Master Thesis</b> under the guidance of
-        <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.
-      </p>
+  <!-- Main content -->
+  <div class="content">
+    <div class="main-section">
+      <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="caption">This is me.</div>
 
-      <div class="section">
-        <h2>news</h2>
-        <ul class="news-list">
-          <li><b>Sep 2025</b> <span>Exploring collaborative opportunities in tomography.</span></li>
-          <li><b>Aug 2025</b> <span>Schedule for Fall Semester available <a href="schedule.html">here</a>.</span></li>
-          <li><b>Jun 2025</b> <span>Visiting Student position at TIFR-CAM confirmed.</span></li>
-        </ul>
+      <div class="intro">
+        <p><strong>Ashmit Gurey</strong> is a mathematics student currently pursuing his Master's at the 
+          <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
+          His research interests lie in the study of <strong>inverse problems</strong> and <strong>X-ray tomography</strong>, 
+          with a focus on the <strong>Radon transform</strong> and its applications in image reconstruction.</p>
+
+        <p>He completed his undergraduate studies in <strong>Mathematics and Computing</strong> at the 
+          <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar. 
+          He is currently working on his <strong>Master’s Thesis</strong> under the supervision of 
+          <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.</p>
+
+        <p>When not working on mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
+          He’s always looking forward to collaborating on interesting problems in imaging and applied analysis.</p>
       </div>
 
-      <div class="section">
-        <h2>latest posts</h2>
-        <ul class="post-list">
-          <li><b>Mar 26, 2025</b> <span><a href="#">a post with plotly.js</a></span></li>
-          <li><b>Dec 04, 2024</b> <span><a href="#">a post with image galleries</a></span></li>
-          <li><b>May 14, 2024</b> <span><a href="#">Google Gemini updates: Flash 1.5, Gemma 2 and Astra</a></span></li>
-        </ul>
+      <div class="photo-row">
+        <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo">
       </div>
-    </div>
 
-    <div class="profile-pic">
-      <div>
-        <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture">
-        <div class="address">
-        Kerala School of Mathematics, Kozhikode<br>
-        Kunnamangalam PO<br> 
-        Kozhikode, Kerala - 673571<br>
-        India<br>
-        <a href="vita.html">Vita</a><br>
-        <a href="schedule.html">Schedule</a><br>
-        <a href="past_and_future.html">Past Courses</a>
+      <div class="icons">
+        <div class="icon">
+          <img src="icon1.png" alt="Math Icon" style="background-color:#ffcc00;">
+          <p>Research & Mathematical Exploration</p>
+        </div>
+        <div class="icon">
+          <img src="icon2.png" alt="Writing Icon" style="background-color:#66ccff;">
+          <p>Writing & Publications</p>
+        </div>
+        <div class="icon">
+          <img src="icon3.png" alt="Workshops Icon" style="background-color:#ff6699;">
+          <p>Workshops & Presentations</p>
+        </div>
+        <div class="icon">
+          <img src="icon4.png" alt="Projects Icon" style="background-color:#66ff99;">
+          <p>Projects & Collaborations</p>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    © Copyright 2025 Ashmit Gurey.
+      <div class="footer">
+        © 2025 Ashmit Gurey • Kerala School of Mathematics
+      </div>
+    </div>
   </div>
 
 </body>
