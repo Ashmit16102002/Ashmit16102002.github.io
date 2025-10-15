@@ -103,7 +103,7 @@
       width: 280px;
       padding: 40px 25px;
       background-color: #000;
-      border-right: 1px solid #222;
+      /* Removed border-right to remove the vertical line */
       font-size: 13px;
       line-height: 1.8;
     }
@@ -116,7 +116,6 @@
       padding-bottom: 3px;
       margin-top: 25px;
       letter-spacing: 0.5px;
-      /* Removed border-bottom to remove underline */
     }
     
     .sidebar ul {
@@ -302,8 +301,7 @@
       
       .sidebar {
         width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #222;
+        /* No border-bottom needed since there's no vertical line anymore */
       }
       
       .intro-text {
