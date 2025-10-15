@@ -56,6 +56,16 @@
     
     .sidebar li {
       margin: 3px 0;
+      position: relative;
+      padding-left: 15px;
+    }
+    
+    .sidebar li:before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: #ccc;
+      font-size: 10px;
     }
     
     .sidebar a {
@@ -66,6 +76,24 @@
     
     .sidebar a:hover {
       color: #fff;
+    }
+    
+    /* Nested list styling */
+    .sidebar ul ul {
+      margin-left: 15px;
+      margin-top: 5px;
+    }
+    
+    .sidebar ul ul li {
+      padding-left: 15px;
+    }
+    
+    .sidebar ul ul ul {
+      margin-left: 15px;
+    }
+    
+    .sidebar ul ul ul li {
+      padding-left: 15px;
     }
     
     /* Header in Sidebar */
