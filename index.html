@@ -12,7 +12,56 @@
       background-color: #000;
       color: #ddd;
       display: flex;
+      flex-direction: column;
       min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      padding: 25px 40px;
+      background-color: #000;
+      border-bottom: 1px solid #222;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #fff;
+      margin: 0 0 5px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .header .tagline {
+      font-size: 14px;
+      color: #aaa;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .search-container {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+    }
+
+    .search-container input {
+      background-color: #111;
+      border: 1px solid #333;
+      color: #ddd;
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 3px;
+      width: 180px;
+    }
+
+    .search-container input::placeholder {
+      color: #666;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      flex: 1;
     }
 
     /* Sidebar */
@@ -149,91 +198,103 @@
 </head>
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h3>MAIN</h3>
-    <ul>
-      <li><a href="vita.html">My CV</a></li>
-      <li><a href="#">Publications</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-
-    <h3>RESEARCH</h3>
-    <ul>
-      <li><a href="#">Radon and Fan-Beam Transforms</a></li>
-      <li><a href="#">Inverse Problems</a></li>
-      <li><a href="#">Image Reconstruction</a></li>
-    </ul>
-
-    <h3>TEACHING</h3>
-    <ul>
-      <li><a href="schedule.html">Schedule</a></li>
-      <li><a href="past_and_future.html">Past Courses</a></li>
-    </ul>
-
-    <h3>FUN STUFF</h3>
-    <ul>
-      <li><a href="#">Essays and Reviews</a></li>
-      <li><a href="#">Books I Like</a></li>
-      <li><a href="#">Photography</a></li>
-    </ul>
-
-    <h3>CONTACT</h3>
-    <ul>
-      <li>Kerala School of Mathematics<br>Kozhikode, India</li>
-      <li>Email: <b>gureyashmit@ksom.res.in</b></li>
-    </ul>
+  <!-- Header -->
+  <div class="header">
+    <h1>Ashmit Gurey</h1>
+    <p class="tagline">Mathematics Student & Researcher</p>
+    <div class="search-container">
+      <input type="text" placeholder="Search...">
+    </div>
   </div>
 
-  <!-- Main Content -->
-  <div class="content">
-    <div class="main-section">
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>MAIN</h3>
+      <ul>
+        <li><a href="vita.html">My CV</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
 
-      <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture" class="profile-pic">
-      <div class="caption">This is me.</div>
+      <h3>RESEARCH</h3>
+      <ul>
+        <li><a href="#">Radon and Fan-Beam Transforms</a></li>
+        <li><a href="#">Inverse Problems</a></li>
+        <li><a href="#">Image Reconstruction</a></li>
+      </ul>
 
-      <div class="intro">
-        <p><strong>Ashmit Gurey</strong> is a mathematics student at the 
-          <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
-          His research lies in the study of <strong>inverse problems</strong> and 
-          <strong>X-ray tomography</strong>, focusing on the <strong>Radon and fan-beam transforms</strong> 
-          and their applications in computerized tomography.</p>
+      <h3>TEACHING</h3>
+      <ul>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="past_and_future.html">Past Courses</a></li>
+      </ul>
 
-        <p>He completed his undergraduate studies in <strong>Mathematics and Computing</strong> at the 
-          <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, 
-          and is currently pursuing his Master's Thesis under the guidance of 
-          <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.</p>
+      <h3>FUN STUFF</h3>
+      <ul>
+        <li><a href="#">Essays and Reviews</a></li>
+        <li><a href="#">Books I Like</a></li>
+        <li><a href="#">Photography</a></li>
+      </ul>
 
-        <p>When he's not doing mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
-          He's open to collaborations in imaging and applied analysis, and is always looking for new opportunities to learn and contribute.</p>
+      <h3>CONTACT</h3>
+      <ul>
+        <li>Kerala School of Mathematics<br>Kozhikode, India</li>
+        <li>Email: <b>gureyashmit@ksom.res.in</b></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="main-section">
+
+        <img src="IMG-20250920-WA0001.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="caption">This is me.</div>
+
+        <div class="intro">
+          <p><strong>Ashmit Gurey</strong> is a mathematics student at the 
+            <a href="https://ksom.res.in">Kerala School of Mathematics</a>, Kozhikode, India. 
+            His research lies in the study of <strong>inverse problems</strong> and 
+            <strong>X-ray tomography</strong>, focusing on the <strong>Radon and fan-beam transforms</strong> 
+            and their applications in computerized tomography.</p>
+
+          <p>He completed his undergraduate studies in <strong>Mathematics and Computing</strong> at the 
+            <a href="https://iomaorissa.ac.in">Institute of Mathematics and Applications</a>, Bhubaneswar, 
+            and is currently pursuing his Master's Thesis under the guidance of 
+            <a href="https://subrahmanyamgorthi.weebly.com">Prof. Subrahmanyam Gorthi</a>.</p>
+
+          <p>When he's not doing mathematics, Ashmit enjoys reading, exploring creative ideas, and developing interactive academic tools. 
+            He's open to collaborations in imaging and applied analysis, and is always looking for new opportunities to learn and contribute.</p>
+        </div>
+
+        <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo" class="group-photo">
+
+        <div class="icons">
+          <div class="icon">
+            <img src="icon1.png" style="background-color:#ffcc00;" alt="Math Icon">
+            <p>Research & Mathematical Exploration</p>
+          </div>
+          <div class="icon">
+            <img src="icon2.png" style="background-color:#66ccff;" alt="Writing Icon">
+            <p>Writing & Publications</p>
+          </div>
+          <div class="icon">
+            <img src="icon3.png" style="background-color:#ff6699;" alt="Workshops Icon">
+            <p>Workshops & Presentations</p>
+          </div>
+          <div class="icon">
+            <img src="icon4.png" style="background-color:#66ff99;" alt="Projects Icon">
+            <p>Projects & Collaborations</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          © 2025 Ashmit Gurey • Kerala School of Mathematics
+        </div>
+
       </div>
-
-      <img src="IMG-20251015-GroupPhoto.jpg" alt="Group Photo" class="group-photo">
-
-      <div class="icons">
-        <div class="icon">
-          <img src="icon1.png" style="background-color:#ffcc00;" alt="Math Icon">
-          <p>Research & Mathematical Exploration</p>
-        </div>
-        <div class="icon">
-          <img src="icon2.png" style="background-color:#66ccff;" alt="Writing Icon">
-          <p>Writing & Publications</p>
-        </div>
-        <div class="icon">
-          <img src="icon3.png" style="background-color:#ff6699;" alt="Workshops Icon">
-          <p>Workshops & Presentations</p>
-        </div>
-        <div class="icon">
-          <img src="icon4.png" style="background-color:#66ff99;" alt="Projects Icon">
-          <p>Projects & Collaborations</p>
-        </div>
-      </div>
-
-      <div class="footer">
-        © 2025 Ashmit Gurey • Kerala School of Mathematics
-      </div>
-
     </div>
   </div>
 
