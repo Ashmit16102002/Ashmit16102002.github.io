@@ -13,8 +13,8 @@
 
     body {
       font-family: "Source Sans Pro", Verdana, sans-serif;
-      color: #222;
-      background: linear-gradient(180deg, #f9fafc 0%, #fef6f0 100%);
+      color: #333;
+      background-color: #f8f8f8;
       line-height: 1.6;
       display: flex;
       flex-direction: column;
@@ -27,63 +27,61 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 30px 25px 15px;
-      background: linear-gradient(90deg, #0088cc, #00bfa6);
-      color: #fff;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e5e5;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 0 0 12px 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     .name-title h1 {
       font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: #000;
     }
 
     .name-title h1 span {
-      color: #ffe06b;
+      background: linear-gradient(90deg, #f6b400, #ffcc33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .tagline {
       font-size: 14px;
-      color: #e9f9ff;
+      color: #666;
       margin-top: 6px;
       line-height: 1.4;
     }
 
     .search-bar input {
-      background-color: rgba(255, 255, 255, 0.85);
-      border: 1px solid #ddd;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
       color: #333;
       padding: 6px 12px;
       font-size: 13px;
-      border-radius: 20px;
+      border-radius: 4px;
       width: 220px;
       transition: all 0.2s;
     }
 
     .search-bar input:focus {
       outline: none;
-      border-color: #ffe06b;
+      border-color: #f6b400;
       background-color: #fff;
-      box-shadow: 0 0 6px rgba(255, 224, 107, 0.8);
     }
 
     /* Nav Menu */
     .nav-menu {
       width: 100%;
       max-width: 1200px;
-      margin: 15px auto;
+      margin: 0 auto;
       padding: 12px 25px;
-      background: linear-gradient(90deg, #ffe06b, #ff9a5a);
-      border-radius: 8px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
 
     .nav-section {
@@ -93,15 +91,15 @@
     }
 
     .nav-section a {
-      color: #222;
+      color: #444;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 14px;
       transition: 0.2s;
     }
 
     .nav-section a:hover {
-      color: #007a8e;
+      color: #f6b400;
     }
 
     /* Layout */
@@ -109,18 +107,19 @@
       display: flex;
       width: 100%;
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 0 auto;
       flex: 1;
-      background-color: #ffffff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
       overflow: hidden;
+      margin-top: 30px;
     }
 
     /* Sidebar */
     .sidebar {
       width: 260px;
-      background: linear-gradient(180deg, #f0faff 0%, #fff8ec 100%);
+      background-color: #fafafa;
       border-right: 1px solid #eee;
       padding: 30px 20px;
       font-size: 14px;
@@ -129,7 +128,7 @@
     .sidebar h3 {
       font-size: 12px;
       font-weight: bold;
-      color: #ff7b54;
+      color: #f6b400;
       text-transform: uppercase;
       margin-top: 25px;
       letter-spacing: 0.6px;
@@ -148,21 +147,21 @@
     }
 
     .sidebar li:before {
-      content: "◆";
+      content: "•";
       position: absolute;
       left: 0;
-      color: #00bfa6;
-      font-size: 10px;
+      color: #f6b400;
+      font-size: 14px;
     }
 
     .sidebar a {
-      color: #444;
+      color: #555;
       text-decoration: none;
       transition: 0.2s;
     }
 
     .sidebar a:hover {
-      color: #0088cc;
+      color: #000;
       font-weight: 500;
     }
 
@@ -170,14 +169,13 @@
     .main-content {
       flex: 1;
       padding: 50px 60px;
-      background: linear-gradient(180deg, #fffdf9 0%, #f8fbff 100%);
     }
 
     .intro-section h2 {
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 20px;
-      font-weight: 700;
-      color: #007a8e;
+      font-weight: 600;
+      color: #111;
     }
 
     .profile-image {
@@ -186,8 +184,8 @@
       border-radius: 8px;
       overflow: hidden;
       margin-bottom: 10px;
-      border: 3px solid #ffe06b;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 2px solid #eee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .profile-image img {
@@ -198,7 +196,7 @@
 
     .caption {
       font-size: 13px;
-      color: #666;
+      color: #777;
       margin-bottom: 30px;
     }
 
@@ -211,13 +209,17 @@
       margin-bottom: 40px;
     }
 
+    .intro-text strong {
+      color: #000;
+    }
+
     .intro-text a {
-      color: #ff7b54;
+      color: #f6b400;
       text-decoration: none;
     }
 
     .intro-text a:hover {
-      color: #007a8e;
+      color: #000;
     }
 
     /* Icon Section */
@@ -236,34 +238,26 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #ffcf91, #ff9a5a);
-      border: 2px solid #fff;
+      background-color: #fffdf2;
+      border: 2px solid #f6b400;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
       font-weight: 600;
-      color: #fff;
+      color: #444;
       padding: 15px;
       margin: 0 auto 10px;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
-    }
-
-    .icon-circle:hover {
-      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     /* Footer */
     .footer {
       text-align: center;
       font-size: 12px;
-      color: #444;
+      color: #888;
       margin-top: 40px;
-      padding: 25px;
-      background: linear-gradient(90deg, #00bfa6, #0088cc);
-      color: #fff;
-      border-radius: 12px 12px 0 0;
+      padding: 20px;
     }
 
     /* Responsive */
@@ -304,12 +298,7 @@
   <header class="main-header">
     <div class="name-title">
       <h1><span>Ashmit Gurey, IPh.D.</span></h1>
-      <p class="tagline">
-        Kerala School of Mathematics<br />
-        Kozhikode<br />
-        Kunnamangalam PO<br />
-        Kerala - 673571
-      </p>
+      <p class="tagline">Kerala School of Mathematics<br> Kozhikode <br> Kunnamangalam PO <br> Kozhikode, Kerala - 673571</p>
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Search..." />
@@ -321,7 +310,7 @@
     <div class="nav-section">
       <a href="#">ABOUT ME</a>
       <a href="#">MATH STUFF</a>
-      <a href="#">WORKSHOPS</a>
+      <a href="#">WORKSHOPS & PRESENTATIONS</a>
       <a href="#">THE SOCIAL NONSENSE BOOK</a>
       <a href="#">OTHER PAGES</a>
       <a href="#">FUN STUFF</a>
@@ -341,24 +330,24 @@
         <li><a href="#">Expositions</a></li>
       </ul>
 
-      <h3>Workshops</h3>
+      <h3>Workshops & Presentations</h3>
       <ul>
-        <li><a href="#">OK Chat GPT</a></li>
+        <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
         <li><a href="#">Fast Food Joyce!</a></li>
         <li><a href="#">Social Nonsense Workshop</a></li>
       </ul>
 
       <h3>Fun Stuff</h3>
       <ul>
-        <li><a href="#">Essays</a></li>
-        <li><a href="#">Hard Words</a></li>
+        <li><a href="#">Essays and Reviews</a></li>
+        <li><a href="#">Hard Words to Spell</a></li>
         <li><a href="#">Cosmic Euches</a></li>
       </ul>
     </aside>
 
     <main class="main-content">
       <section class="intro-section">
-        <h2>Hi! I'm <span style="color: #ff7b54;">Ashmit Gurey</span></h2>
+        <h2>Hi! I'm <span style="color: #f6b400;">Ashmit Gurey</span></h2>
         <div class="profile-image">
           <img src="IMG_0334.jpeg" alt="Ashmit Gurey" />
         </div>
@@ -366,20 +355,12 @@
 
         <div class="intro-text">
           <div>
-            <p>
-              Hey, I'm glad you've arrived. I've gathered years of academic and creative work under one roof. You can also access my earlier pages from here.
-            </p>
-            <p>
-              Here’s my “About Me” paragraph, written in the third person because it looks more professional.
-            </p>
+            <p>Hey, I'm glad you've arrived. I've gathered years of academic and creative work under one roof. You can also access my earlier pages from here.</p>
+            <p>Here’s my “About Me” paragraph, written in the third person because it looks more professional.</p>
           </div>
           <div>
-            <p>
-              Ashmit Gurey is a researcher at the Kerala School of Mathematics. His interests include mathematical transforms, pedagogy, and creative exposition.
-            </p>
-            <p>
-              He has facilitated lectures and workshops across India and enjoys connecting mathematics with storytelling, clarity, and humor.
-            </p>
+            <p>Ashmit Gurey is a researcher at the Kerala School of Mathematics. His interests include mathematical transforms, pedagogy, and creative exposition. He is also passionate about teaching and bridging abstract theory with intuition.</p>
+            <p>He has facilitated lectures and workshops across India and enjoys connecting mathematics with storytelling, clarity, and humor.</p>
           </div>
         </div>
 
@@ -387,14 +368,12 @@
           <div class="icon-item"><div class="icon-circle">Mathematical Thinking</div></div>
           <div class="icon-item"><div class="icon-circle">Creative Writing</div></div>
           <div class="icon-item"><div class="icon-circle">Workshops & Talks</div></div>
-          <div class="icon-item"><div class="icon-circle">Social Nonsense Book</div></div>
+          <div class="icon-item"><div class="icon-circle">The Social Nonsense Book</div></div>
         </div>
       </section>
     </main>
   </div>
 
-  <footer class="footer">
-    © 2025 Ashmit Gurey • Kerala School of Mathematics
-  </footer>
+  <footer class="footer">© 2025 Ashmit Gurey • Kerala School of Mathematics</footer>
 </body>
 </html>
