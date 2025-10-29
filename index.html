@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashmit Gurey - KSoM</title>
   <style>
     * {
@@ -10,453 +10,370 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: #ddd;
+      font-family: "Source Sans Pro", Verdana, sans-serif;
+      color: #333;
+      background-color: #f8f8f8;
       line-height: 1.6;
-      background-color: #000;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
-    
-    /* Header Styles */
+
+    /* Header */
     .main-header {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 25px 25px 15px;
-      background-color: #000;
-      border-bottom: 1px solid #222;
+      padding: 30px 25px 15px;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e5e5;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    
+
     .name-title h1 {
-      font-size: 24px;
-      font-weight: normal;
-      color: #fff;
-      margin-bottom: 5px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #000;
     }
-    
+
+    .name-title h1 span {
+      background: linear-gradient(90deg, #f6b400, #ffcc33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     .tagline {
       font-size: 14px;
-      color: #aaa;
-      font-style: italic;
-    }
-    
-    .search-bar input {
-      background-color: #111;
-      border: 1px solid #333;
-      color: #ddd;
-      padding: 6px 12px;
-      font-size: 12px;
-      border-radius: 3px;
-      width: 200px;
-    }
-    
-    .search-bar input::placeholder {
       color: #666;
+      margin-top: 6px;
+      line-height: 1.4;
     }
-    
-    /* Navigation Menu */
+
+    .search-bar input {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      color: #333;
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 4px;
+      width: 220px;
+      transition: all 0.2s;
+    }
+
+    .search-bar input:focus {
+      outline: none;
+      border-color: #f6b400;
+      background-color: #fff;
+    }
+
+    /* Nav Menu */
     .nav-menu {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 15px 25px;
-      background-color: #000;
-      border-bottom: 1px solid #222;
+      padding: 12px 25px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
       display: flex;
       justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
-    
+
     .nav-section {
       display: flex;
-      gap: 30px;
+      flex-wrap: wrap;
+      gap: 25px;
     }
-    
+
     .nav-section a {
-      color: #ccc;
+      color: #444;
       text-decoration: none;
+      font-weight: 500;
       font-size: 14px;
       transition: 0.2s;
     }
-    
+
     .nav-section a:hover {
-      color: #fff;
+      color: #f6b400;
     }
-    
-    /* Main Container */
+
+    /* Layout */
     .container {
       display: flex;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       flex: 1;
+      background-color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 30px;
     }
-    
-    /* Sidebar Styles */
+
+    /* Sidebar */
     .sidebar {
-      width: 280px;
-      padding: 40px 25px;
-      background-color: #000;
-      font-size: 13px;
-      line-height: 1.8;
+      width: 260px;
+      background-color: #fafafa;
+      border-right: 1px solid #eee;
+      padding: 30px 20px;
+      font-size: 14px;
     }
-    
+
     .sidebar h3 {
       font-size: 12px;
       font-weight: bold;
-      color: #aaa;
+      color: #f6b400;
       text-transform: uppercase;
-      border-bottom: 1px solid #333;
-      padding-bottom: 3px;
       margin-top: 25px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
-    
+
     .sidebar ul {
       list-style: none;
-      margin: 8px 0;
+      margin: 10px 0 20px 0;
       padding: 0;
     }
-    
+
     .sidebar li {
-      margin: 3px 0;
-      position: relative;
+      margin: 6px 0;
       padding-left: 15px;
+      position: relative;
     }
-    
+
     .sidebar li:before {
-      content: "■";
+      content: "•";
       position: absolute;
       left: 0;
-      color: #ccc;
-      font-size: 10px;
+      color: #f6b400;
+      font-size: 14px;
     }
-    
+
     .sidebar a {
-      color: #ccc;
+      color: #555;
       text-decoration: none;
       transition: 0.2s;
     }
-    
+
     .sidebar a:hover {
-      color: #fff;
+      color: #000;
+      font-weight: 500;
     }
-    
-    /* Nested list styling */
-    .sidebar ul ul {
-      margin-left: 15px;
-      margin-top: 5px;
-    }
-    
-    .sidebar ul ul li {
-      padding-left: 15px;
-    }
-    
-    .sidebar ul ul ul {
-      margin-left: 15px;
-    }
-    
-    .sidebar ul ul ul li {
-      padding-left: 15px;
-    }
-    
-    /* Main Content Styles */
+
+    /* Main Content */
     .main-content {
       flex: 1;
-      padding: 40px 60px;
-      display: flex;
-      flex-direction: column;
+      padding: 50px 60px;
     }
-    
-    .main-section {
-      width: 100%;
-    }
-    
+
     .intro-section h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      font-weight: normal;
-      color: #fff;
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #111;
     }
-    
+
     .profile-image {
       width: 200px;
       height: 200px;
-      background-color: #333;
-      border-radius: 6px;
-      margin: 0 0 15px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-style: italic;
-      border: 1px solid #444;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border: 2px solid #eee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
+
     .profile-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  border: 1px solid #444;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .caption {
-      font-size: 12px;
-      color: #aaa;
-      margin: 0 0 30px 0;
-    }
-    
-    .intro-text {
+      font-size: 13px;
+      color: #777;
       margin-bottom: 30px;
-      font-size: 14px;
-      color: #ddd;
-      line-height: 1.6;
+    }
+
+    .intro-text {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 40px;
     }
-    
-    .intro-text p {
-      margin-bottom: 15px;
-    }
-    
+
     .intro-text strong {
-      color: #fff;
-      font-weight: bold;
+      color: #000;
     }
-    
+
     .intro-text a {
-      color: #66b3ff;
+      color: #f6b400;
       text-decoration: none;
     }
-    
+
     .intro-text a:hover {
-      color: #fff;
+      color: #000;
     }
-    
-    /* Four-column icon section */
+
+    /* Icon Section */
     .icon-section {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
       margin-top: 40px;
     }
-    
+
     .icon-item {
       text-align: center;
     }
-    
+
     .icon-circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background-color: #222;
+      background-color: #fffdf2;
+      border: 2px solid #f6b400;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ddd;
-      font-weight: bold;
       font-size: 14px;
-      text-align: center;
-      padding: 10px;
+      font-weight: 600;
+      color: #444;
+      padding: 15px;
       margin: 0 auto 10px;
-      border: 2px solid #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-    
-    .icon-text {
-      flex: 1;
-    }
-    
-    .icon-text h3 {
-      font-size: 16px;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    
-    .icon-text p {
-      font-size: 13px;
-      color: #aaa;
-    }
-    
+
     /* Footer */
     .footer {
       text-align: center;
-      font-size: 11px;
-      color: #666;
+      font-size: 12px;
+      color: #888;
       margin-top: 40px;
-      width: 100%;
-      max-width: 1200px;
-      margin: 40px auto 0;
-      padding: 0 25px;
+      padding: 20px;
     }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
+
+    /* Responsive */
+    @media (max-width: 900px) {
       .container {
         flex-direction: column;
       }
-      
+
       .sidebar {
         width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
       }
-      
+
       .intro-text {
         grid-template-columns: 1fr;
       }
-      
+
       .icon-section {
         grid-template-columns: 1fr 1fr;
       }
-      
-      .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-      
-      .nav-menu {
+    }
+
+    @media (max-width: 600px) {
+      .nav-section {
         flex-direction: column;
         gap: 10px;
+      }
+
+      .icon-section {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Main Header -->
+  <!-- Header -->
   <header class="main-header">
     <div class="name-title">
-      <h1><span style="color: #ffcc00;">Ashmit Gurey, IPh.D.</span></h1>
-      <p class="tagline"><span style="color: #32CD32;">Kerala School of Mathematics <br>
-        Kozhikode <br>
-      Kunnamangalam PO <br>
-      Kozhikode, Kerala - 673571</span></p>
+      <h1><span>Ashmit Gurey, IPh.D.</span></h1>
+      <p class="tagline">Kerala School of Mathematics<br>Kozhikode, Kerala – 673571</p>
     </div>
     <div class="search-bar">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </header>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <nav class="nav-menu">
     <div class="nav-section">
-      <a href="#"><span style="color: #FFD700;">ABOUT ME</span></a>
-      <a href="#"><span style="color: #FFD700;">MATH STUFF^</span></a>
-      <a href="#"><span style="color:#FFD700;">WORKSHOPS AND PRESENTATIONS^</span></a>
-      <a href="#"><span style="color:#FFD700;">THE SOCIAL NONSENSE BOOK</span></a>
-      <a href="#"><span style="color:#FFD700;">DOUG'S OTHER PAGES^</span></a>
-      <a href="#"><span style="color:#FFD700;">FUN STUFF^</span></a>
-      <a href="#"><span style="color:#FFD700;">THE BLOG</span></a>
-      <a href="#"><span style="color:#FFD700;">CONTACT</span></a>
+      <a href="#">ABOUT ME</a>
+      <a href="#">MATH STUFF</a>
+      <a href="#">WORKSHOPS & PRESENTATIONS</a>
+      <a href="#">THE SOCIAL NONSENSE BOOK</a>
+      <a href="#">OTHER PAGES</a>
+      <a href="#">FUN STUFF</a>
+      <a href="#">THE BLOG</a>
+      <a href="#">CONTACT</a>
     </div>
   </nav>
 
-  <!-- Main Content Container -->
+  <!-- Content -->
   <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <h3><span style="color: #ff0000;">ABOUT ME</span></h3>
+    <aside class="sidebar">
+      <h3>About Me</h3>
       <ul>
-        <h3><span style="color: #ff0000;">MAIN STUFF</span></h3>
-          <ul>
-            <li><a href="#">My CV</a></li>
-            <li><a href="#">My Schedule</a></li>
-            <li><a href="#">Past Courses Undertaken</a></li>
-            <li><a href="#">Fall 2025</a></li>
-            <li><a href="#">Expositions</a></li>
-          </ul>
-        </li>
+        <li><a href="#">My CV</a></li>
+        <li><a href="#">My Schedule</a></li>
+        <li><a href="#">Past Courses</a></li>
+        <li><a href="#">Expositions</a></li>
       </ul>
 
-      <h3><span style="color: #ff0000;">WORKSHOPS AND PRESENTATIONS</span></h3>
+      <h3>Workshops & Presentations</h3>
       <ul>
         <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
         <li><a href="#">Fast Food Joyce!</a></li>
-        <li><a href="#">Social Nonsense Keynote / Social Nonsense Workshop</a></li>
-        <li><a href="#">Improve for Educators Workshop</a></li>
-        <li><a href="#">Improve for Business Students Workshop</a></li>
-        <li><a href="#">Math Keynotes and Talks</a></li>
-        <li><a href="#">OK Zoomer Registration Page!</a></li>
+        <li><a href="#">Social Nonsense Workshop</a></li>
       </ul>
 
-      <h3><span style="color: #ff0000;">THE SOCIAL NONSENSE BOOK</span></h3>
-      <ul>
-        <li><a href="#">DOUG'S OTHER PAGES</a></li>
-      </ul>
-
-      <h3><span style="color: #ff0000;">DOUG'S OTHER PAGES</span></h3>
-      <ul>
-        <li><a href="#">Doug's Personal Page</a></li>
-        <li><a href="#">Doug's UNI page</a></li>
-        <li><a href="#">The Social Nonsense Page</a></li>
-      </ul>
-
-      <h3><span style="color: #ff0000;">FUN STUFF</span></h3>
+      <h3>Fun Stuff</h3>
       <ul>
         <li><a href="#">Essays and Reviews</a></li>
         <li><a href="#">Hard Words to Spell</a></li>
         <li><a href="#">Cosmic Euches</a></li>
-        <li><a href="#">Mama's Vacation Snapshots!</a></li>
-        <li><a href="#">How to memorize the two letter Scrabble words!</a></li>
       </ul>
+    </aside>
 
-      <h3><span style="color: #ff0000;">THE BLOG</span></h3>
-      <ul>
-        <h3><span style="color: #ff0000;">CONTACT</span></h3>
-      </ul>
-    </div>
+    <main class="main-content">
+      <section class="intro-section">
+        <h2>Hi! I'm <span style="color: #f6b400;">Ashmit Gurey</span></h2>
+        <div class="profile-image">
+          <img src="IMG_0334.jpeg" alt="Ashmit Gurey" />
+        </div>
+        <p class="caption">This is me.</p>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="main-section">
-        <div class="intro-section">
-          <h2>Hi! I'm <span style="color: #ffcc00;">Ashmit Gurey</span></h2>
-          
-          <div class="profile-image">
-  <img src="IMG_0334.jpeg" alt="Ashmit Gurey" class="profile-pic">
-</div>
-
-          <p class="caption">This is me.</p>
-          
-          <div class="intro-text">
-            <div class="column">
-              <p>Hey, I'm glad you've arrived. I've attempted to put years of various content under one roof. I've left my old personal and professional pages up, and you can get to them from here as well.</p>
-              
-              <p>Here's my "About Me" paragraph, put into the third person because that looks more professional.</p>
-            </div>
-            <div class="column">
-              <p>Doug Shaw is a mathematics professor who has won many awards for his teaching. His research is in tertiary math education, combinatorics, and graph theory. He is or has been an author, systems engineer, street-busker, variety show performer, comedy troupe director, emcee, and elected member of the Cedar Falls School Board.</p>
-              
-              <p>He's facilitated workshops about teaching, mathematics, improv, creativity, innovation, and all sorts of things since 1995 in Iowa, Illinois, Minnesota, and Montreal. He's an Applied Improvisation Certified Practitioner. He's waiting to be invited to present in Hawaii, Scotland, or any other place his family wants to visit. Oh – and your town. That's #1 on his list.</p>
-            </div>
+        <div class="intro-text">
+          <div>
+            <p>Hey, I'm glad you've arrived. I've gathered years of academic and creative work under one roof. You can also access my earlier pages from here.</p>
+            <p>Here’s my “About Me” paragraph, written in the third person because it looks more professional.</p>
           </div>
-          
-          <div class="icon-section">
-            <div class="icon-item">
-              <div class="icon-circle">Math and Math Teaching Coolness!</div>
-            </div>
-            <div class="icon-item">
-              <div class="icon-circle">Entertaining writing of many kinds!</div>
-            </div>
-            <div class="icon-item">
-              <div class="icon-circle">Workshops and Presentations!</div>
-            </div>
-            <div class="icon-item">
-              <div class="icon-circle">The Social Nonsense Book!</div>
-            </div>
+          <div>
+            <p>Ashmit Gurey is a researcher at the Kerala School of Mathematics. His interests include mathematical transforms, pedagogy, and creative exposition. He is also passionate about teaching and bridging abstract theory with intuition.</p>
+            <p>He has facilitated lectures and workshops across India and enjoys connecting mathematics with storytelling, clarity, and humor.</p>
           </div>
         </div>
-      </div>
-    </div>
+
+        <div class="icon-section">
+          <div class="icon-item"><div class="icon-circle">Mathematical Thinking</div></div>
+          <div class="icon-item"><div class="icon-circle">Creative Writing</div></div>
+          <div class="icon-item"><div class="icon-circle">Workshops & Talks</div></div>
+          <div class="icon-item"><div class="icon-circle">The Social Nonsense Book</div></div>
+        </div>
+      </section>
+    </main>
   </div>
-  
-  <div class="footer">
-    © 2025 Doug Shaw, Ph.D. • Cedar Falls, Iowa
-  </div>
+
+  <footer class="footer">© 2025 Ashmit Gurey • Kerala School of Mathematics</footer>
 </body>
 </html>
