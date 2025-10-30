@@ -13,8 +13,8 @@
 
     body {
       font-family: "Source Sans Pro", Verdana, sans-serif;
-      color: #333;
-      background-color: #f8f8f8;
+      color: #222;
+      background-color: #f4f4f4;
       line-height: 1.6;
       display: flex;
       flex-direction: column;
@@ -27,36 +27,30 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 30px 25px 15px;
-      background-color: #fff;
-      border-bottom: 1px solid #e5e5e5;
+      background-color: #15314b; /* Deep academic blue */
+      border-bottom: 4px solid #f6b400; /* Yellow accent line */
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
 
     .name-title h1 {
       font-size: 28px;
       font-weight: 600;
-      color: #000;
-    }
-
-    .name-title h1 span {
-      background: linear-gradient(90deg, #f6b400, #ffcc33);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #f6b400;
     }
 
     .tagline {
       font-size: 14px;
-      color: #666;
+      color: #e0e0e0;
       margin-top: 6px;
       line-height: 1.4;
     }
 
     .search-bar input {
-      background-color: #f2f2f2;
-      border: 1px solid #ccc;
+      background-color: #fff;
+      border: 1px solid #ddd;
       color: #333;
       padding: 6px 12px;
       font-size: 13px;
@@ -68,7 +62,6 @@
     .search-bar input:focus {
       outline: none;
       border-color: #f6b400;
-      background-color: #fff;
     }
 
     /* Nav Menu */
@@ -77,11 +70,10 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 12px 25px;
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
+      background-color: #f6b400; /* Warm yellow bar */
       display: flex;
       justify-content: space-between;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .nav-section {
@@ -91,15 +83,15 @@
     }
 
     .nav-section a {
-      color: #444;
+      color: #15314b;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       transition: 0.2s;
     }
 
     .nav-section a:hover {
-      color: #f6b400;
+      color: #fff;
     }
 
     /* Layout */
@@ -107,20 +99,19 @@
       display: flex;
       width: 100%;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 30px auto;
       flex: 1;
-      background-color: #fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       border-radius: 10px;
       overflow: hidden;
-      margin-top: 30px;
     }
 
     /* Sidebar */
     .sidebar {
       width: 260px;
-      background-color: #fafafa;
-      border-right: 1px solid #eee;
+      background-color: #faf3dc; /* light cream tone */
+      border-right: 2px solid #f6b400;
       padding: 30px 20px;
       font-size: 14px;
     }
@@ -128,7 +119,7 @@
     .sidebar h3 {
       font-size: 12px;
       font-weight: bold;
-      color: #f6b400;
+      color: #15314b;
       text-transform: uppercase;
       margin-top: 25px;
       letter-spacing: 0.6px;
@@ -155,27 +146,28 @@
     }
 
     .sidebar a {
-      color: #555;
+      color: #333;
       text-decoration: none;
       transition: 0.2s;
     }
 
     .sidebar a:hover {
-      color: #000;
-      font-weight: 500;
+      color: #15314b;
+      font-weight: 600;
     }
 
     /* Main Content */
     .main-content {
       flex: 1;
       padding: 50px 60px;
+      background-color: #fffef8;
     }
 
     .intro-section h2 {
       font-size: 26px;
       margin-bottom: 20px;
       font-weight: 600;
-      color: #111;
+      color: #15314b;
     }
 
     .profile-image {
@@ -184,8 +176,8 @@
       border-radius: 8px;
       overflow: hidden;
       margin-bottom: 10px;
-      border: 2px solid #eee;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 3px solid #f6b400;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .profile-image img {
@@ -214,12 +206,13 @@
     }
 
     .intro-text a {
-      color: #f6b400;
+      color: #15314b;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .intro-text a:hover {
-      color: #000;
+      color: #f6b400;
     }
 
     /* Icon Section */
@@ -238,14 +231,14 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background-color: #fffdf2;
+      background-color: #fff7cf;
       border: 2px solid #f6b400;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
       font-weight: 600;
-      color: #444;
+      color: #15314b;
       padding: 15px;
       margin: 0 auto 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -255,9 +248,11 @@
     .footer {
       text-align: center;
       font-size: 12px;
-      color: #888;
-      margin-top: 40px;
+      color: #eee;
+      background-color: #15314b;
       padding: 20px;
+      margin-top: 40px;
+      border-top: 4px solid #f6b400;
     }
 
     /* Responsive */
@@ -269,7 +264,7 @@
       .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 2px solid #f6b400;
       }
 
       .intro-text {
@@ -297,7 +292,7 @@
   <!-- Header -->
   <header class="main-header">
     <div class="name-title">
-      <h1><span>Ashmit Gurey, IPh.D.</span></h1>
+      <h1>Ashmit Gurey, IPh.D.</h1>
       <p class="tagline">Kerala School of Mathematics<br> Kozhikode <br> Kunnamangalam PO <br> Kozhikode, Kerala - 673571</p>
     </div>
     <div class="search-bar">
