@@ -1,190 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horng-Tzer Yau | Harvard University</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Times New Roman", Times, serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.5;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        .name-large {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .title {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        
-        .name-medium {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .position {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        
-        .contact-section {
-            margin-bottom: 30px;
-        }
-        
-        .contact-row {
-            display: flex;
-            margin-bottom: 8px;
-        }
-        
-        .contact-label {
-            font-weight: bold;
-            min-width: 120px;
-        }
-        
-        .contact-content {
-            flex: 1;
-        }
-        
-        .section-title {
-            font-weight: bold;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        
-        .research-area {
-            margin-bottom: 15px;
-        }
-        
-        .paper-title {
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        
-        .paper-authors {
-            margin-bottom: 15px;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
-            font-size: 14px;
-        }
-        
-        .link {
-            color: #0000EE;
-            text-decoration: underline;
-        }
-        
-        a {
-            color: #0000EE;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Horng-Tzer Yau</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="name-large">Horng-Tzer Yau</div>
-        <div class="title">Editor in Chief Communications of Mathematical Physics</div>
-        <div class="name-medium">Horng-Tzer Yau</div>
-        <div class="position">Norton Professor of Mathematics</div>
-    </div>
-    
-    <div class="contact-section">
-        <div class="contact-row">
-            <div class="contact-label">Office:</div>
-            <div class="contact-content">Science Center 240</div>
-        </div>
-        
-        <div class="contact-row">
-            <div class="contact-label">Postal Address:</div>
-            <div class="contact-content">
-                Department of Mathematics<br>
-                Harvard University<br>
-                One Oxford Street<br>
-                Cambridge, MA 02138-2901
-            </div>
-        </div>
-        
-        <div class="contact-row">
-            <div class="contact-label">Tel:</div>
-            <div class="contact-content">(617) 495-8452</div>
-        </div>
-        
-        <div class="contact-row">
-            <div class="contact-label">Fax:</div>
-            <div class="contact-content">(617) 495-5132</div>
-        </div>
-        
-        <div class="contact-row">
-            <div class="contact-label">Email:</div>
-            <div class="contact-content">
-                <a href="mailto:htoyau@math.harvard.edu">htoyau@math.harvard.edu</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section-title">Seminar:</div>
-    <div class="research-area">Random Matrix Seminar</div>
-    
-    <div class="section-title">Research</div>
-    <div class="research-area">
-        Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
-    </div>
-    
-    <div style="margin-top: 20px; margin-bottom: 20px;">
-        <a href="#" class="link">MathSciNet</a> | 
-        <a href="#" class="link">arXiv</a>
-    </div>
-    
-    <div class="paper-title">Dynamical Approach To Random Matrix Theory (a preliminary version)</div>
-    <div class="paper-authors">joint work with László Erdős</div>
-    
-    <div class="footer">
-        Horng-Tzer Yau | Department of Mathematics | Harvard University
+
+<h1 class="name">Horng-Tzer Yau</h1>
+<div class="top-line"></div>
+
+<div class="top-row">
+    <div class="left-info">
+        <strong>Editor in Chief</strong><br>
+        <a href="#">Communications of Mathematical Physics</a><br><br>
+        <strong>Seminars:</strong><br>
+        <a href="#">Random Matrix Seminar</a>
     </div>
 
-    <script>
-        // Add click functionality for the links
-        document.addEventListener('DOMContentLoaded', function() {
-            // Simulate link behavior
-            const links = document.querySelectorAll('.link');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert(`In a real implementation, this would navigate to ${this.textContent}`);
-                });
-            });
-        });
-    </script>
+    <img src="photo.jpg" class="photo">
+</div>
+
+<div class="title-block">
+    <strong>Horng-Tzer Yau</strong><br>
+    Merton Professor of Mathematics
+</div>
+
+<div class="contact-boxes">
+    <div class="box">
+        <strong>Office:</strong> Science Center 240<br>
+        <strong>Tel:</strong> (617) 496-8425<br>
+        <strong>Fax:</strong> (617) 495-5132<br>
+        <strong>Email:</strong> htyau@math.harvard.edu
+    </div>
+
+    <div class="box">
+        <strong>Postal Address:</strong><br>
+        Department of Mathematics<br>
+        Harvard University<br>
+        One Oxford Street<br>
+        Cambridge, MA 02138-2901
+    </div>
+</div>
+
+<h2 class="section-title">Research</h2>
+<div class="section-line"></div>
+
+<p>
+Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
+</p>
+
+<ul>
+    <li><a href="#">Papers MathSciNet</a></li>
+    <li><a href="#">Preprints Arxiv</a></li>
+    <li><a href="#">Dynamical Approach To Random Matrix Theory</a>, with László Erdős</li>
+</ul>
+
+<div class="footer">
+    <a href="#">Horng-Tzer Yau</a> |
+    <a href="#">Department of Mathematics</a> |
+    <a href="#">Harvard University</a>
+</div>
+
 </body>
 </html>
