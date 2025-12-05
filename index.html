@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashmit Gurey - KSoM</title>
+  <title>Ashmit Gurey | Kerala School of Mathematics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #0a2342;
+      --secondary: #2a628f;
+      --accent: #f4b41a;
+      --accent-light: #f9d674;
+      --light: #f8f9fa;
+      --light-gray: #e9ecef;
+      --medium-gray: #adb5bd;
+      --dark-gray: #495057;
+      --text: #212529;
+      --transition: all 0.3s ease;
+      --border-radius: 8px;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,363 +30,700 @@
     }
 
     body {
-      font-family: "Source Sans Pro", Verdana, sans-serif;
-      color: #222;
-      background-color: #f4f4f4;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
       line-height: 1.6;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Header */
-    .main-header {
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 30px 25px 15px;
-      background-color: #15314b; /* Deep academic blue */
-      border-bottom: 4px solid #f6b400; /* Yellow accent line */
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .main-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: rgba(244, 180, 26, 0.1);
+      border-radius: 50%;
+      transform: translate(30%, -30%);
+    }
+
+    .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .name-title h1 {
-      font-size: 28px;
-      font-weight: 600;
-      color: #f6b400;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .name-title h1 span {
+      color: var(--accent);
     }
 
     .tagline {
-      font-size: 14px;
-      color: #e0e0e0;
-      margin-top: 6px;
-      line-height: 1.4;
+      font-size: 1rem;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .search-bar {
+      position: relative;
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 300px;
     }
 
     .search-bar input {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      color: #333;
-      padding: 6px 12px;
-      font-size: 13px;
-      border-radius: 4px;
-      width: 220px;
-      transition: all 0.2s;
+      width: 100%;
+      padding: 0.8rem 1rem 0.8rem 2.5rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 0.95rem;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: white;
+      transition: var(--transition);
     }
 
     .search-bar input:focus {
       outline: none;
-      border-color: #f6b400;
+      background-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 0 2px var(--accent);
     }
 
-    /* Nav Menu */
+    .search-bar input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .search-bar i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Navigation */
+    .nav-container {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
     .nav-menu {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 12px 25px;
-      background-color: #f6b400; /* Warm yellow bar */
       display: flex;
       justify-content: space-between;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
     }
 
     .nav-section {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
+      gap: 1.5rem;
     }
 
     .nav-section a {
-      color: #15314b;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 0.2s;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--dark-gray);
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    .nav-section a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: var(--transition);
     }
 
     .nav-section a:hover {
-      color: #fff;
+      color: var(--primary);
     }
 
-    /* Layout */
-    .container {
-      display: flex;
+    .nav-section a:hover::after {
       width: 100%;
-      max-width: 1200px;
-      margin: 30px auto;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    .main-container {
+      display: flex;
       flex: 1;
-      background-color: #ffffff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border-radius: 10px;
-      overflow: hidden;
+      margin: 2.5rem auto;
+      gap: 2rem;
     }
 
     /* Sidebar */
     .sidebar {
-      width: 260px;
-      background-color: #faf3dc; /* light cream tone */
-      border-right: 2px solid #f6b400;
-      padding: 30px 20px;
-      font-size: 14px;
+      width: 280px;
+      flex-shrink: 0;
     }
 
-    .sidebar h3 {
-      font-size: 12px;
-      font-weight: bold;
-      color: #15314b;
-      text-transform: uppercase;
-      margin-top: 25px;
-      letter-spacing: 0.6px;
+    .sidebar-card {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .sidebar-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .sidebar-card h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent-light);
+      padding-bottom: 0.7rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sidebar-card h3 i {
+      color: var(--accent);
     }
 
     .sidebar ul {
       list-style: none;
-      margin: 10px 0 20px 0;
-      padding: 0;
     }
 
     .sidebar li {
-      margin: 6px 0;
-      padding-left: 15px;
+      margin-bottom: 0.7rem;
       position: relative;
+      padding-left: 1.2rem;
     }
 
-    .sidebar li:before {
-      content: "•";
+    .sidebar li::before {
+      content: '→';
       position: absolute;
       left: 0;
-      color: #f6b400;
-      font-size: 14px;
+      color: var(--accent);
+      font-weight: bold;
     }
 
     .sidebar a {
-      color: #333;
-      text-decoration: none;
-      transition: 0.2s;
+      color: var(--dark-gray);
+      display: block;
+      padding: 0.2rem 0;
     }
 
     .sidebar a:hover {
-      color: #15314b;
-      font-weight: 600;
+      color: var(--primary);
+      transform: translateX(5px);
     }
 
     /* Main Content */
     .main-content {
       flex: 1;
-      padding: 50px 60px;
-      background-color: #fffef8;
     }
 
-    .intro-section h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: #15314b;
+    .intro-card {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
     .profile-image {
       width: 200px;
       height: 200px;
-      border-radius: 8px;
+      border-radius: var(--border-radius);
       overflow: hidden;
-      margin-bottom: 10px;
-      border: 3px solid #f6b400;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
     }
 
     .profile-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .profile-image:hover img {
+      transform: scale(1.05);
     }
 
     .caption {
-      font-size: 13px;
-      color: #777;
-      margin-bottom: 30px;
+      font-size: 0.9rem;
+      color: var(--medium-gray);
+      font-style: italic;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .intro-text-container {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .intro-text-container h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text-container h2 span {
+      color: var(--accent);
     }
 
     .intro-text {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
     }
 
     .intro-text strong {
-      color: #000;
-    }
-
-    .intro-text a {
-      color: #15314b;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .intro-text a:hover {
-      color: #f6b400;
+      color: var(--primary);
     }
 
     /* Icon Section */
     .icon-section {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
     }
 
     .icon-item {
       text-align: center;
+      padding: 1.5rem 1rem;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .icon-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
     }
 
     .icon-circle {
-      width: 120px;
-      height: 120px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background-color: #fff7cf;
-      border: 2px solid #f6b400;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
-      font-weight: 600;
-      color: #15314b;
-      padding: 15px;
-      margin: 0 auto 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin: 0 auto 1rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .icon-item h4 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .icon-item p {
+      font-size: 0.9rem;
+      color: var(--dark-gray);
     }
 
     /* Footer */
     .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #eee;
-      background-color: #15314b;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 4px solid #f6b400;
+      background-color: var(--primary);
+      color: white;
+      padding: 2.5rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer p {
+      opacity: 0.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+      transform: translateY(-3px);
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
-      .container {
+    @media (max-width: 992px) {
+      .main-container {
         flex-direction: column;
       }
-
+      
       .sidebar {
         width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #f6b400;
       }
-
-      .intro-text {
-        grid-template-columns: 1fr;
+      
+      .sidebar-card {
+        width: 100%;
       }
+      
+      .intro-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .profile-image {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .nav-section {
+        gap: 1rem;
+      }
+    }
 
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      
+      .search-bar {
+        max-width: 100%;
+      }
+      
+      .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+      }
+      
+      .nav-section {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+      }
+      
+      .nav-section.active {
+        display: flex;
+      }
+      
       .icon-section {
         grid-template-columns: 1fr 1fr;
       }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
 
-    @media (max-width: 600px) {
-      .nav-section {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: 576px) {
+      .intro-card {
+        padding: 1.5rem;
       }
-
+      
+      .intro-text {
+        grid-template-columns: 1fr;
+      }
+      
       .icon-section {
         grid-template-columns: 1fr;
       }
+      
+      .name-title h1 {
+        font-size: 2rem;
+      }
     }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .intro-card, .sidebar-card, .icon-item {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .icon-item:nth-child(2) { animation-delay: 0.1s; }
+    .icon-item:nth-child(3) { animation-delay: 0.2s; }
+    .icon-item:nth-child(4) { animation-delay: 0.3s; }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="main-header">
-    <div class="name-title">
-      <h1>Ashmit Gurey, IPh.D.</h1>
-      <p class="tagline">Kerala School of Mathematics<br> Kozhikode <br> Kunnamangalam PO <br> Kozhikode, Kerala - 673571</p>
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search..." />
+    <div class="container header-content">
+      <div class="name-title">
+        <h1>Ashmit <span>Gurey</span>, IPh.D.</h1>
+        <p class="tagline">Kerala School of Mathematics • Kozhikode • Kunnamangalam PO • Kozhikode, Kerala - 673571</p>
+      </div>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search this site..." />
+      </div>
     </div>
   </header>
 
   <!-- Navigation -->
-  <nav class="nav-menu">
-    <div class="nav-section">
-      <a href="#">ABOUT ME</a>
-      <a href="#">MATH STUFF</a>
-      <a href="#">WORKSHOPS & PRESENTATIONS</a>
-      <a href="#">THE SOCIAL NONSENSE BOOK</a>
-      <a href="#">OTHER PAGES</a>
-      <a href="#">FUN STUFF</a>
-      <a href="#">THE BLOG</a>
-      <a href="#">CONTACT</a>
+  <nav class="nav-container">
+    <div class="container nav-menu">
+      <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-section" id="navLinks">
+        <a href="#">ABOUT ME</a>
+        <a href="#">MATH STUFF</a>
+        <a href="#">WORKSHOPS & PRESENTATIONS</a>
+        <a href="#">THE SOCIAL NONSENSE BOOK</a>
+        <a href="#">OTHER PAGES</a>
+        <a href="#">FUN STUFF</a>
+        <a href="#">THE BLOG</a>
+        <a href="#">CONTACT</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Content -->
-  <div class="container">
+  <!-- Main Content -->
+  <div class="container main-container">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <h3>About Me</h3>
-      <ul>
-        <li><a href="#">My CV</a></li>
-        <li><a href="#">My Schedule</a></li>
-        <li><a href="#">Past Courses</a></li>
-        <li><a href="#">Expositions</a></li>
-      </ul>
+      <div class="sidebar-card">
+        <h3><i class="fas fa-user"></i> About Me</h3>
+        <ul>
+          <li><a href="#">My CV</a></li>
+          <li><a href="#">My Schedule</a></li>
+          <li><a href="#">Past Courses</a></li>
+          <li><a href="#">Expositions</a></li>
+        </ul>
+      </div>
 
-      <h3>Workshops & Presentations</h3>
-      <ul>
-        <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
-        <li><a href="#">Fast Food Joyce!</a></li>
-        <li><a href="#">Social Nonsense Workshop</a></li>
-      </ul>
+      <div class="sidebar-card">
+        <h3><i class="fas fa-chalkboard-teacher"></i> Workshops & Presentations</h3>
+        <ul>
+          <li><a href="#">OK Chat GPT: Using AI without Applying?</a></li>
+          <li><a href="#">Fast Food Joyce!</a></li>
+          <li><a href="#">Social Nonsense Workshop</a></li>
+        </ul>
+      </div>
 
-      <h3>Fun Stuff</h3>
-      <ul>
-        <li><a href="#">Essays and Reviews</a></li>
-        <li><a href="#">Hard Words to Spell</a></li>
-        <li><a href="#">Cosmic Euches</a></li>
-      </ul>
+      <div class="sidebar-card">
+        <h3><i class="fas fa-smile"></i> Fun Stuff</h3>
+        <ul>
+          <li><a href="#">Essays and Reviews</a></li>
+          <li><a href="#">Hard Words to Spell</a></li>
+          <li><a href="#">Cosmic Euches</a></li>
+        </ul>
+      </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="main-content">
-      <section class="intro-section">
-        <h2>Hi! I'm <span style="color: #f6b400;">Ashmit Gurey</span></h2>
-        <div class="profile-image">
-          <img src="IMG_0334.jpeg" alt="Ashmit Gurey" />
-        </div>
-        <p class="caption">This is me.</p>
-
-        <div class="intro-text">
-          <div>
-            <p>Hey, I'm glad you've arrived. I've gathered years of academic and creative work under one roof. You can also access my earlier pages from here.</p>
-            <p>Here’s my “About Me” paragraph, written in the third person because it looks more professional.</p>
+      <div class="intro-card">
+        <div class="intro-header">
+          <div class="profile-image">
+            <img src="IMG_0334.jpeg" alt="Ashmit Gurey" />
           </div>
-          <div>
-            <p>Ashmit Gurey is a researcher at the Kerala School of Mathematics. His interests include mathematical transforms, pedagogy, and creative exposition. He is also passionate about teaching and bridging abstract theory with intuition.</p>
-            <p>He has facilitated lectures and workshops across India and enjoys connecting mathematics with storytelling, clarity, and humor.</p>
+          <div class="intro-text-container">
+            <h2>Hi! I'm <span>Ashmit Gurey</span></h2>
+            <p class="caption">Researcher at Kerala School of Mathematics</p>
+            
+            <div class="intro-text">
+              <div>
+                <p>Hey, I'm glad you've arrived. I've gathered years of academic and creative work under one roof. You can also access my earlier pages from here.</p>
+                <p>Here's my "About Me" paragraph, written in the third person because it looks more professional.</p>
+              </div>
+              <div>
+                <p><strong>Ashmit Gurey</strong> is a researcher at the Kerala School of Mathematics. His interests include mathematical transforms, pedagogy, and creative exposition. He is also passionate about teaching and bridging abstract theory with intuition.</p>
+                <p>He has facilitated lectures and workshops across India and enjoys connecting mathematics with storytelling, clarity, and humor.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="icon-section">
-          <div class="icon-item"><div class="icon-circle">Mathematical Thinking</div></div>
-          <div class="icon-item"><div class="icon-circle">Creative Writing</div></div>
-          <div class="icon-item"><div class="icon-circle">Workshops & Talks</div></div>
-          <div class="icon-item"><div class="icon-circle">The Social Nonsense Book</div></div>
+          <div class="icon-item">
+            <div class="icon-circle">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h4>Mathematical Thinking</h4>
+            <p>Exploring abstract concepts with clarity and intuition</p>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">
+              <i class="fas fa-pen-fancy"></i>
+            </div>
+            <h4>Creative Writing</h4>
+            <p>Bridging mathematics with storytelling and exposition</p>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h4>Workshops & Talks</h4>
+            <p>Engaging presentations across India</p>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">
+              <i class="fas fa-book"></i>
+            </div>
+            <h4>The Social Nonsense Book</h4>
+            <p>Exploring connections between mathematics and society</p>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
   </div>
 
-  <footer class="footer">© 2025 Ashmit Gurey • Kerala School of Mathematics</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 Ashmit Gurey • Kerala School of Mathematics</p>
+      <div class="social-links">
+        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Search functionality placeholder
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        alert('Search functionality would be implemented here. You searched for: ' + searchInput.value);
+        searchInput.value = '';
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId !== '#') {
+          const targetElement = document.querySelector(targetId);
+          if(targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
