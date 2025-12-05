@@ -1,66 +1,127 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Horng-Tzer Yau</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Horng-Tzer Yau — Replica</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{
+    /* tweak this hex to match your screenshot exactly */
+    --green:#3FAF3F;
+    --page-width:920px;
+    --page-pad:63px;
+    --vline-w:4px;       /* vertical bar thickness */
+    --hline-h:3px;       /* horizontal rule thickness */
+  }
+
+  html,body{height:100%;margin:0;background:#fff;color:#000;font-family:Georgia,"Times New Roman",serif;font-size:16px;}
+  .wrap{max-width:var(--page-width);margin:0 auto;padding:40px var(--page-pad) 80px;}
+
+  /* title + thin horizontal */
+  h1{font-weight:400;text-align:center;font-size:34px;margin:0;}
+  .top-hr{height:var(--hline-h);background:var(--green);width:560px;margin:10px auto 48px;}
+
+  /* top row: left links and right photo */
+  .top-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
+  .left-links{width:52%;}
+  .left-links strong{display:block;margin-bottom:6px;}
+  .left-links a{color:#003399;text-decoration:underline;}
+  .photo{width:260px;height:260px;border:1px solid #cfcfcf;display:flex;align-items:center;justify-content:center;color:#777;}
+  .photo img{width:260px;height:260px;object-fit:cover;display:block;}
+
+  /* centered name/title */
+  .name-wrap{text-align:center;margin:26px 0 22px;}
+  .name-wrap .name{font-weight:700;font-size:18px;}
+  .name-wrap .title{margin-top:6px;font-size:15px;font-weight:400;}
+
+  /* full-width thin rule under name */
+  .name-hr{height:var(--hline-h);background:var(--green);width:100%;margin:18px 0 28px;}
+
+  /* contact boxes row with vertical green bar at left of row */
+  .contact-row{display:flex;justify-content:space-between;gap:22px;position:relative;margin-bottom:28px;padding-left:28px;}
+  .contact-row::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:var(--vline-w);background:var(--green);}
+  .contact-box{width:48%;padding:16px;border:2px solid transparent;background:transparent;}
+  .contact-box strong{font-weight:700;display:inline-block;width:62px;}
+
+  /* research heading block with vertical bar at left and thin horizontal under header */
+  .research{position:relative;padding-left:28px;margin-top:18px;}
+  .research::before{content:"";position:absolute;left:0;top:-6px;bottom:-6px;width:var(--vline-w);background:var(--green);}
+  .research h2{margin:0 0 8px 0;font-size:22px;}
+  .research .rule{height:var(--hline-h);background:var(--green);width:100%;margin-bottom:14px;}
+
+  ul{margin:8px 0 0 22px;}
+
+  .footer{margin-top:36px;text-align:center;font-size:14px;}
+  .footer a{color:#003399;text-decoration:underline;margin:0 10px;}
+  
+  /* small screens */
+  @media (max-width:880px){
+    .top-row,.contact-row{flex-direction:column;padding-left:0}
+    .contact-row::before,.research::before{left:12px}
+    .photo{margin:0 auto}
+  }
+</style>
 </head>
 <body>
+  <div class="wrap">
+    <h1>Horng-Tzer Yau</h1>
+    <div class="top-hr" aria-hidden="true"></div>
 
-<h1 class="name">Horng-Tzer Yau</h1>
-<div class="top-line"></div>
+    <div class="top-row">
+      <div class="left-links">
+        <p><strong>Editor in Chief</strong>
+        <a href="#">Communications of Mathematical Physics</a></p>
 
-<div class="top-row">
-    <div class="left-info">
-        <strong>Editor in Chief</strong><br>
-        <a href="#">Communications of Mathematical Physics</a><br><br>
-        <strong>Seminars:</strong><br>
-        <a href="#">Random Matrix Seminar</a>
+        <p style="margin-top:28px;"><strong>Seminars:</strong>
+        <a href="#">Random Matrix Seminar</a></p>
+      </div>
+
+      <div class="photo">
+        <!-- replace with your photo file -->
+        <img src="your-photo.jpg" alt="photo" onerror="this.style.display='none';this.parentNode.textContent='your-photo.jpg not found'">
+      </div>
     </div>
 
-    <img src="photo.jpg" class="photo">
-</div>
-
-<div class="title-block">
-    <strong>Horng-Tzer Yau</strong><br>
-    Merton Professor of Mathematics
-</div>
-
-<div class="contact-boxes">
-    <div class="box">
-        <strong>Office:</strong> Science Center 240<br>
-        <strong>Tel:</strong> (617) 496-8425<br>
-        <strong>Fax:</strong> (617) 495-5132<br>
-        <strong>Email:</strong> htyau@math.harvard.edu
+    <div class="name-wrap">
+      <div class="name">Horng-Tzer Yau</div>
+      <div class="title">Merton Professor of Mathematics</div>
     </div>
 
-    <div class="box">
-        <strong>Postal Address:</strong><br>
-        Department of Mathematics<br>
-        Harvard University<br>
-        One Oxford Street<br>
-        Cambridge, MA 02138-2901
+    <div class="name-hr" aria-hidden="true"></div>
+
+    <div class="contact-row">
+      <div class="contact-box">
+        <div><strong>Office:</strong> Science Center 240</div>
+        <div><strong>Tel:</strong> (617) 496-8425</div>
+        <div><strong>Fax:</strong> (617) 495-5132</div>
+        <div><strong>Email:</strong> htyau@math.harvard.edu</div>
+      </div>
+
+      <div class="contact-box">
+        <div><strong>Postal Address:</strong></div>
+        <div>Department of Mathematics</div>
+        <div>Harvard University</div>
+        <div>One Oxford Street</div>
+        <div>Cambridge, MA 02138-2901</div>
+      </div>
     </div>
-</div>
 
-<h2 class="section-title">Research</h2>
-<div class="section-line"></div>
+    <section class="research">
+      <h2>Research</h2>
+      <div class="rule" aria-hidden="true"></div>
 
-<p>
-Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
-</p>
+      <p>Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.</p>
 
-<ul>
-    <li><a href="#">Papers MathSciNet</a></li>
-    <li><a href="#">Preprints Arxiv</a></li>
-    <li><a href="#">Dynamical Approach To Random Matrix Theory</a>, with László Erdős</li>
-</ul>
+      <ul>
+        <li><a href="#">Papers MathSciNet</a></li>
+        <li><a href="#">Preprints Arxiv</a></li>
+        <li><a href="#">Dynamical Approach To Random Matrix Theory</a>, with László Erdős</li>
+      </ul>
+    </section>
 
-<div class="footer">
-    <a href="#">Horng-Tzer Yau</a> |
-    <a href="#">Department of Mathematics</a> |
-    <a href="#">Harvard University</a>
-</div>
-
+    <div class="footer">
+      <a href="#">Horng-Tzer Yau</a> | <a href="#">Department of Mathematics</a> | <a href="#">Harvard University</a>
+    </div>
+  </div>
 </body>
 </html>
