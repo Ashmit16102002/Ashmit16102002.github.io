@@ -1,302 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Horng-Tzer Yau — Replica</title>
-
-<!--
-  Notes:
-  - If you want to change the green to the exact sampled color, replace --harvard-green value below.
-  - To insert your real photo: put your image file next to this HTML and name it `your-photo.jpg`
--->
+<meta charset="UTF-8">
+<title>Horng-Tzer Yau</title>
 
 <style>
-  :root{
-    /* Change this to the exact sampled hex if you use an eyedropper (e.g. #2E8B57) */
-    --harvard-green: #2E8B57;
+    :root {
+        --harvard-green: #3a7a57; /* sampled from your screenshot */
+        --vline-width: 3px;      /* correct thin vertical line */
+        --hline-height: 3px;     /* correct thin horizontal line */
+        --page-max-width: 1020px;
+    }
 
-    /* exact layout numbers you requested */
-    --page-left-right-pad: 63px;   /* left & right page padding */
-    --title-top-margin: 40px;
-    --title-font-size: 32px;
-    --name-font-size: 18px;
-    --section-title-size: 24px;
-    --thin-line-h: 3px;
-    --vertical-line-w: 6px;
-  }
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: black;
+        font-family: "Times New Roman", serif;
+        font-size: 17px; /* exactly the same as screenshot */
+        line-height: 1.45;
+    }
 
-  /* --- Page base --- */
-  html,body{
-    height:100%;
-    margin:0;
-    background:#ffffff;
-    color:#000;
-    font-family:"Times New Roman", Times, serif; /* exact serif font */
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
+    /* PAGE CONTAINER */
+    .page {
+        max-width: var(--page-max-width);
+        margin: 0 auto;
+        padding: 40px 60px 0 60px; /* matches screenshot */
+    }
 
-  /* center the main content but with exact left/right padding 63px */
-  .page {
-    box-sizing:border-box;
-    padding-left: var(--page-left-right-pad);
-    padding-right: var(--page-left-right-pad);
-    max-width: 1080px;       /* keeps like screenshot */
-    margin: 0 auto;
-  }
+    /* MAIN TITLE */
+    h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 34px;
+        margin: 0;
+        padding: 0;
+    }
 
-  /* Title */
-  header.site-title {
-    margin-top: var(--title-top-margin);
-    text-align:center;
-  }
-  header.site-title h1{
-    margin:0;
-    font-size: var(--title-font-size);
-    font-weight:normal;
-    letter-spacing:0.2px;
-  }
+    .top-line {
+        width: 600px;
+        height: var(--hline-height);
+        background: var(--harvard-green);
+        margin: 10px auto 50px auto;
+    }
 
-  /* thin horizontal green rule under name (centered, exact width) */
-  .title-underline {
-    height: var(--thin-line-h);
-    background: var(--harvard-green);
-    width: 560px;               /* matches screenshot visual length */
-    margin: 10px auto 36px auto;
-  }
+    /* TOP BLOCK (LEFT TEXT + RIGHT PHOTO) */
+    .top-block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
 
-  /* Top block: left column (links) + right: photo aligned to top */
-  .top-block {
-    display:flex;
-    justify-content:space-between;
-    gap:24px;
-    align-items:flex-start;
-    margin-bottom: 36px;
-  }
+    .left-block {
+        width: 48%;
+    }
 
-  .col-left {
-    width: 54%;
-    font-size:15px;
-    line-height:1.5;
-  }
+    .left-block strong {
+        font-weight: 600;
+    }
 
-  .editor, .seminar {
-    margin-bottom:28px;
-  }
+    .left-block a {
+        color: #003399;
+        text-decoration: underline;
+    }
 
-  .col-left a {
-    color:#003399;
-    text-decoration:underline;
-    font-weight:normal;
-  }
+    /* PHOTO */
+    .photo {
+        width: 260px;
+        height: 260px;
+        border: 1px solid #bbb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        color: #666;
+    }
 
-  /* Photo box — same border, size and position like screenshot */
-  .photo-wrap {
-    width: 260px;
-    min-height: 260px;
-    border: 1px solid #bdbdbd;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:13px;
-    color:#333;
-    text-align:center;
-    padding:6px;
-    box-sizing:border-box;
-  }
-  .photo-wrap img{
-    display:block;
-    width:260px;
-    height:260px;
-    object-fit:cover;
-  }
+    /* NAME BLOCK (CENTERED) */
+    .name-block {
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
 
-  /* Name block centered (with small negative spacing to match screenshot) */
-  .name-block {
-    text-align:center;
-    margin-top: 4px;
-    margin-bottom: 12px;
-  }
-  .name-block .name {
-    font-size: var(--name-font-size);
-    font-weight:700;
-  }
-  .name-block .title {
-    font-size: 15px;
-    margin-top:6px;
-    font-weight:400;
-  }
+    .name-block strong {
+        font-size: 18px;
+    }
 
-  /* thin horizontal "separator" line below name (very subtle) */
-  .sep-line {
-    height: var(--thin-line-h);
-    background: var(--harvard-green);
-    width: 100%;
-    margin: 20px 0 28px 0;
-    box-sizing:border-box;
-  }
+    .name-block div {
+        margin-top: 5px;
+        font-size: 16px;
+    }
 
-  /* Contact block (two columns) with a VERTICAL green bar to the left (thick) */
-  .contact-block {
-    position:relative;
-    display:flex;
-    justify-content:space-between;
-    gap:24px;
-    margin-bottom: 56px;
-  }
+    /* CONTACT SECTION */
+    .contact-section {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 22px;
+        margin-bottom: 60px;
+        position: relative;
+    }
 
-  /* the vertical green bar positioned at exact offset left of the contact info (mimics screenshot) */
-  .contact-block::before{
-    content:"";
-    position:absolute;
-    left:-34px; /* how far the vertical bar sits from the left edge of the contact-block */
-    top:6px;
-    bottom:6px;
-    width: var(--vertical-line-w);
-    background: var(--harvard-green);
-  }
+    .contact-section::before {
+        content: "";
+        position: absolute;
+        width: var(--vline-width);
+        top: -5px;
+        bottom: -5px;
+        left: 0;
+        background: var(--harvard-green);
+    }
 
-  .contact-left, .contact-right{
-    width:48%;
-    font-size:15px;
-    line-height:1.5;
-  }
+    .contact-section strong {
+        font-weight: 700;
+    }
 
-  .contact-left strong, .contact-right strong {
-    font-weight:700;
-  }
+    /* RESEARCH BLOCK */
+    .research-block {
+        padding-left: 22px;
+        position: relative;
+        margin-bottom: 40px;
+    }
 
-  /* Research header with vertical green bar to its left */
-  .research {
-    margin-top: 10px;
-    margin-bottom: 18px;
-    position:relative;
-    padding-left: 28px; /* space so the green bar doesn't overlap text */
-  }
+    .research-block::before {
+        content: "";
+        position: absolute;
+        width: var(--vline-width);
+        top: -6px;
+        bottom: -6px;
+        left: 0;
+        background: var(--harvard-green);
+    }
 
-  .research::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top: -6px;
-    bottom: -6px;
-    width: var(--vertical-line-w);
-    background: var(--harvard-green);
-  }
+    .research-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 
-  .research h2 {
-    margin:0 0 6px 0;
-    font-size: var(--section-title-size);
-    font-weight:700;
-  }
+    .research-line {
+        height: var(--hline-height);
+        background: var(--harvard-green);
+        width: 100%;
+        margin: 8px 0 16px 0;
+    }
 
-  /* short thin horizontal rule under research heading (thin like screenshot) */
-  .research-hr {
-    height: var(--thin-line-h);
-    background: var(--harvard-green);
-    width: 100%;
-    margin: 10px 0 16px 0;
-  }
+    ul {
+        margin-top: 5px;
+        font-size: 17px;
+    }
 
-  .research p, .research ul {
-    margin:0 0 10px 0;
-    font-size:15px;
-  }
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 50px;
+        font-size: 14px;
+    }
 
-  ul {
-    padding-left: 20px;
-  }
+    .footer a {
+        color: #003399;
+        text-decoration: underline;
+        margin: 0 10px;
+    }
 
-  /* Footer links (centered) */
-  .footer {
-    text-align:center;
-    margin-top:36px;
-    margin-bottom:72px;
-    font-size:14px;
-  }
-
-  /* Small screen fallback to keep layout usable */
-  @media (max-width:920px){
-    .top-block, .contact-block { flex-direction:column; }
-    .col-left, .contact-left, .contact-right { width:100%; }
-    .photo-wrap { margin: 0 auto; }
-    .contact-block::before { left:12px; height:80px; top:auto; bottom:auto; }
-    .research::before { left:12px; }
-    .page { padding-left:20px; padding-right:20px; }
-  }
 </style>
 </head>
+
 <body>
-  <div class="page">
-    <header class="site-title">
-      <h1>Horng-Tzer Yau</h1>
-      <div class="title-underline" aria-hidden="true"></div>
-    </header>
 
-    <section class="top-block" aria-label="top content">
-      <div class="col-left">
-        <div class="editor">
-          <strong>Editor in Chief</strong><br />
-          <a href="#">Communications of Mathematical Physics</a>
-        </div>
+<div class="page">
 
-        <div class="seminar">
-          <strong>Seminars:</strong><br />
-          <a href="#">Random Matrix Seminar</a>
-        </div>
-      </div>
+<h1>Horng-Tzer Yau</h1>
+<div class="top-line"></div>
 
-      <!-- PHOTO: replace 'your-photo.jpg' with your actual image file -->
-      <div class="photo-wrap" aria-hidden="true">
-        <!-- Replace this <img> with your own file named `your-photo.jpg` or change src -->
-        <img src="your-photo.jpg" alt="Horng-Tzer Yau Photo" onerror="this.onerror=null; this.style.display='block'; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22><rect width=%22260%22 height=%22260%22 fill=%22%23f7f7f7%22/><text x=%2250%22 y=%22120%22 font-family=%22Times New Roman%22 font-size=%2213%22 fill=%22%23333%22>your-photo.jpg not found</text></svg>';" />
-      </div>
-    </section>
+<div class="top-block">
 
-    <div class="name-block">
-      <div class="name">Horng-Tzer Yau</div>
-      <div class="title">Merton Professor of Mathematics</div>
+    <div class="left-block">
+        <strong>Editor in Chief</strong><br>
+        <a href="#">Communications of Mathematical Physics</a>
+
+        <br><br><br>
+
+        <strong>Seminars:</strong><br>
+        <a href="#">Random Matrix Seminar</a>
     </div>
 
-    <div class="sep-line" aria-hidden="true"></div>
+    <div class="photo">
+        your-photo.jpg not found
+    </div>
 
-    <section class="contact-block" aria-label="contact info">
-      <div class="contact-left">
-        <div><strong>Office:</strong> Science Center 240</div>
-        <div><strong>Tel:</strong> (617) 496-8425</div>
-        <div><strong>Fax:</strong> (617) 495-5132</div>
-        <div><strong>Email:</strong> htyau@math.harvard.edu</div>
-      </div>
+</div>
 
-      <div class="contact-right">
-        <div><strong>Postal Address:</strong></div>
-        <div>Department of Mathematics</div>
-        <div>Harvard University</div>
-        <div>One Oxford Street</div>
-        <div>Cambridge, MA 02138-2901</div>
-      </div>
-    </section>
+<div class="name-block">
+    <strong>Horng-Tzer Yau</strong><br>
+    <div>Merton Professor of Mathematics</div>
+</div>
 
-    <article class="research" aria-label="research">
-      <h2>Research</h2>
-      <div class="research-hr" aria-hidden="true"></div>
+<div class="top-line" style="margin: 0 auto 40px auto; width: 100%;"></div>
 
-      <p>Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.</p>
+<div class="contact-section">
 
-      <ul>
+    <div>
+        <strong>Office:</strong> Science Center 240<br>
+        <strong>Tel:</strong> (617) 496-8425<br>
+        <strong>Fax:</strong> (617) 495-5132<br>
+        <strong>Email:</strong> htyau@math.harvard.edu
+    </div>
+
+    <div>
+        <strong>Postal Address:</strong><br>
+        Department of Mathematics<br>
+        Harvard University<br>
+        One Oxford Street<br>
+        Cambridge, MA 02138-2901
+    </div>
+
+</div>
+
+<div class="research-block">
+
+    <div class="research-title">Research</div>
+    <div class="research-line"></div>
+
+    Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
+
+    <ul>
         <li><a href="#">Papers MathSciNet</a></li>
         <li><a href="#">Preprints Arxiv</a></li>
-      </ul>
-
-      <ul>
         <li><a href="#">Dynamical Approach To Random Matrix Theory</a> (a preliminary version), joint work with László Erdős</li>
-      </ul>
-    </article>
+    </ul>
+</div>
 
-    <footer class="footer" role="contentinfo">
-      <a href="#">Horng-Tzer Yau</a> | <a href="#">Department of Mathematics</a> | <a href="#">Harvard University</a>
-    </footer>
-  </div>
+<div class="footer">
+    <a href="#">Horng-Tzer Yau</a> |
+    <a href="#">Department of Mathematics</a> |
+    <a href="#">Harvard University</a>
+</div>
+
+</div>
+
 </body>
 </html>
