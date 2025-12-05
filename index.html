@@ -6,7 +6,7 @@
 
 <style>
     body {
-        font-family: "Times New Roman", Georgia, serif;
+        font-family: "Times New Roman", serif;
         margin: 0;
         padding: 0;
         background: white;
@@ -14,7 +14,6 @@
         line-height: 1.45;
     }
 
-    /* Centered title */
     h1 {
         text-align: center;
         font-weight: normal;
@@ -23,91 +22,93 @@
         margin-bottom: 10px;
     }
 
-    /* Green horizontal rule under the name */
-    .green-line {
+    /* Thin horizontal green line under title */
+    .top-green {
         width: 70%;
         height: 3px;
         background-color: #3FAF3F;
         margin: 0 auto 40px auto;
     }
 
-    /* Two column layout: left text, right photo */
+    /* Layout for first block: left text + right photo */
     .top-block {
         display: flex;
         justify-content: space-between;
         width: 80%;
-        margin: 0 auto;
-        margin-bottom: 80px;
+        margin: 0 auto 60px auto;
     }
 
     .left-section {
         width: 45%;
-        font-size: 15px;
+        font-size: 16px;
     }
 
-    /* Photo box */
+    /* PHOTO BOX */
     .photo-box {
-        width: 260px;
-        height: 260px;
+        width: 250px;
+        height: 250px;
         border: 1px solid #999;
         text-align: center;
-        font-size: 14px;
         padding-top: 8px;
+        font-size: 14px;
     }
 
-    /* Centered professor title */
+    /* Center title block */
     .center-title {
         text-align: center;
         font-size: 18px;
-        margin-top: -40px;
+        margin-top: -20px;
         margin-bottom: 10px;
     }
 
-    .green-line-small {
+    /* --- VERTICAL GREEN LINE (left of contact block) --- */
+    .contact-wrapper {
         width: 80%;
-        height: 3px;
-        background-color: #3FAF3F;
-        margin: 0 auto 40px auto;
-    }
-
-    .contact-block {
+        margin: 40px auto 80px auto;
         display: flex;
         justify-content: space-between;
+        position: relative;
+    }
+
+    .vertical-green {
+        width: 4px;
+        background-color: #3FAF3F;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        bottom: 0;
+    }
+
+    /* Research section header */
+    .section-container {
         width: 80%;
         margin: 0 auto;
-        margin-bottom: 80px;
-        font-size: 15px;
+        position: relative;
     }
 
-    .contact-block strong {
-        font-weight: bold;
+    /* Vertical green line next to Research title */
+    .section-container .vertical-green {
+        left: -20px;
+        width: 4px;
+        background-color: #3FAF3F;
+        top: 0;
+        bottom: 0;
     }
 
-    /* Research section */
-    .section-header {
+    .section-title {
         font-size: 24px;
         font-weight: bold;
-        margin-left: 10%;
-        margin-bottom: 5px;
-    }
-
-    .research-rule {
-        width: 80%;
-        height: 3px;
-        background-color: #3FAF3F;
-        margin: 0 auto 20px auto;
+        margin-bottom: 8px;
     }
 
     .research-text {
-        width: 80%;
-        margin: 0 auto;
-        font-size: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
     ul {
-        width: 80%;
-        margin: 10px auto 30px auto;
-        font-size: 15px;
+        margin-top: 5px;
+        font-size: 16px;
     }
 
     a {
@@ -128,11 +129,10 @@
 <body>
 
 <h1>Horng-Tzer Yau</h1>
-<div class="green-line"></div>
+<div class="top-green"></div>
 
-<!-- Top block (left text + right photo) -->
+<!-- LEFT TEXT + RIGHT PHOTO -->
 <div class="top-block">
-
     <div class="left-section">
         <p><strong>Editor in Chief</strong><br>
         <a href="#">Communications of Mathematical Physics</a></p>
@@ -145,22 +145,18 @@
 
     <div class="photo-box">
         Horng-Tzer Yau Photo
-        <br><br><br><br><br><br><br>
-        <!-- Replace with actual <img src="photo.jpg"> if you have the picture -->
     </div>
-
 </div>
 
-<!-- Center title -->
+<!-- NAME + TITLE (centered) -->
 <div class="center-title">
     <strong>Horng-Tzer Yau</strong><br>
     Merton Professor of Mathematics
 </div>
 
-<div class="green-line-small"></div>
-
-<!-- Contact Information -->
-<div class="contact-block">
+<!-- CONTACT BLOCK WITH VERTICAL GREEN LINE -->
+<div class="contact-wrapper">
+    <div class="vertical-green"></div>
 
     <div>
         <strong>Office:</strong> Science Center 240<br>
@@ -176,28 +172,31 @@
         One Oxford Street<br>
         Cambridge, MA 02138-2901
     </div>
-
 </div>
 
-<!-- Research Section -->
-<div class="section-header">Research</div>
-<div class="research-rule"></div>
+<!-- RESEARCH BLOCK WITH VERTICAL GREEN LINE -->
+<div class="section-container">
+    <div class="vertical-green"></div>
 
-<div class="research-text">
-    Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
+    <div class="section-title">Research</div>
+
+    <div class="research-text">
+        Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
+    </div>
+
+    <ul>
+        <li><a href="#">Papers MathSciNet</a></li>
+        <li><a href="#">Preprints Arxiv</a></li>
+    </ul>
+
+    <ul>
+        <li>
+            <a href="#">Dynamical Approach To Random Matrix Theory</a> (a preliminary version), joint work with László Erdős
+        </li>
+    </ul>
 </div>
 
-<ul>
-    <li><a href="#">Papers MathSciNet</a></li>
-    <li><a href="#">Preprints Arxiv</a></li>
-</ul>
-
-<ul>
-    <li>
-        <a href="#">Dynamical Approach To Random Matrix Theory</a> (a preliminary version), joint work with László Erdős
-    </li>
-</ul>
-
+<!-- FOOTER -->
 <div class="footer">
     <a href="#">Horng-Tzer Yau</a> |
     <a href="#">Department of Mathematics</a> |
