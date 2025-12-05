@@ -6,138 +6,186 @@
 
 <style>
     body {
-        font-family: Georgia, serif;
-        margin: 40px auto;
-        max-width: 900px;
-        color: #000;
+        font-family: "Times New Roman", Georgia, serif;
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: black;
         line-height: 1.45;
     }
 
+    /* Centered title */
     h1 {
-        font-size: 36px;
-        font-weight: normal;
         text-align: center;
-        margin-bottom: 5px;
+        font-weight: normal;
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
 
-    .underline {
+    /* Green horizontal rule under the name */
+    .green-line {
         width: 70%;
-        height: 4px;
-        background-color: #4CAF50;
-        margin: 0 auto 30px auto;
+        height: 3px;
+        background-color: #3FAF3F;
+        margin: 0 auto 40px auto;
     }
 
-    .top-section {
+    /* Two column layout: left text, right photo */
+    .top-block {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 80px;
     }
 
-    .photo img {
-        width: 260px;
-        height: auto;
-        border: 1px solid #aaa;
-    }
-
-    .left-column, .right-column {
+    .left-section {
         width: 45%;
         font-size: 15px;
     }
 
-    .label {
+    /* Photo box */
+    .photo-box {
+        width: 260px;
+        height: 260px;
+        border: 1px solid #999;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 8px;
+    }
+
+    /* Centered professor title */
+    .center-title {
+        text-align: center;
+        font-size: 18px;
+        margin-top: -40px;
+        margin-bottom: 10px;
+    }
+
+    .green-line-small {
+        width: 80%;
+        height: 3px;
+        background-color: #3FAF3F;
+        margin: 0 auto 40px auto;
+    }
+
+    .contact-block {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        font-size: 15px;
+    }
+
+    .contact-block strong {
         font-weight: bold;
     }
 
-    .research-title {
+    /* Research section */
+    .section-header {
         font-size: 24px;
-        margin-top: 40px;
+        font-weight: bold;
+        margin-left: 10%;
         margin-bottom: 5px;
     }
 
-    .underline-small {
-        width: 100%;
+    .research-rule {
+        width: 80%;
         height: 3px;
-        background-color: #4CAF50;
-        margin-bottom: 15px;
+        background-color: #3FAF3F;
+        margin: 0 auto 20px auto;
+    }
+
+    .research-text {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 15px;
     }
 
     ul {
-        margin-top: 10px;
-    }
-
-    .footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 14px;
+        width: 80%;
+        margin: 10px auto 30px auto;
+        font-size: 15px;
     }
 
     a {
         color: #003399;
         text-decoration: underline;
     }
-</style>
-</head>
 
+    /* Footer */
+    .footer {
+        width: 80%;
+        margin: 40px auto;
+        text-align: center;
+        font-size: 14px;
+    }
+</style>
+
+</head>
 <body>
 
 <h1>Horng-Tzer Yau</h1>
-<div class="underline"></div>
+<div class="green-line"></div>
 
-<div class="top-section">
+<!-- Top block (left text + right photo) -->
+<div class="top-block">
 
-    <div class="left-column">
+    <div class="left-section">
         <p><strong>Editor in Chief</strong><br>
         <a href="#">Communications of Mathematical Physics</a></p>
 
-        <br>
+        <br><br>
 
         <p><strong>Seminars:</strong><br>
         <a href="#">Random Matrix Seminar</a></p>
     </div>
 
-    <div class="photo">
-        <img src="IMG_0334.jpeg" alt="Horng-Tzer Yau Photo">
+    <div class="photo-box">
+        Horng-Tzer Yau Photo
+        <br><br><br><br><br><br><br>
+        <!-- Replace with actual <img src="photo.jpg"> if you have the picture -->
     </div>
 
 </div>
 
-<br><br>
-
-<div style="text-align:center; font-size:18px; margin-bottom:10px;">
+<!-- Center title -->
+<div class="center-title">
     <strong>Horng-Tzer Yau</strong><br>
     Merton Professor of Mathematics
 </div>
 
-<div class="underline-small"></div>
+<div class="green-line-small"></div>
 
-<div class="top-section">
+<!-- Contact Information -->
+<div class="contact-block">
 
-    <div class="left-column">
-        <p><span class="label">Office:</span> Science Center 240<br>
-           <span class="label">Tel:</span> (617) 496-8425<br>
-           <span class="label">Fax:</span> (617) 495-5132<br>
-           <span class="label">Email:</span> htyau@math.harvard.edu
-        </p>
+    <div>
+        <strong>Office:</strong> Science Center 240<br>
+        <strong>Tel:</strong> (617) 496-8425<br>
+        <strong>Fax:</strong> (617) 495-5132<br>
+        <strong>Email:</strong> htyau@math.harvard.edu
     </div>
 
-    <div class="right-column">
-        <p><span class="label">Postal Address:</span><br>
+    <div>
+        <strong>Postal Address:</strong><br>
         Department of Mathematics<br>
         Harvard University<br>
         One Oxford Street<br>
-        Cambridge, MA 02138-2901</p>
+        Cambridge, MA 02138-2901
     </div>
 
 </div>
 
-<br><br>
+<!-- Research Section -->
+<div class="section-header">Research</div>
+<div class="research-rule"></div>
 
-<h2 class="research-title">Research</h2>
-<div class="underline-small"></div>
-
-<p>
-Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
-</p>
+<div class="research-text">
+    Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.
+</div>
 
 <ul>
     <li><a href="#">Papers MathSciNet</a></li>
@@ -146,8 +194,7 @@ Probability theory, quantum dynamics, random matrices, differential equations, a
 
 <ul>
     <li>
-        <a href="#">Dynamical Approach To Random Matrix Theory</a>
-        (a preliminary version), joint work with László Erdős
+        <a href="#">Dynamical Approach To Random Matrix Theory</a> (a preliminary version), joint work with László Erdős
     </li>
 </ul>
 
