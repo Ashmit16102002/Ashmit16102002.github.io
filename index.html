@@ -1,227 +1,139 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Horng-Tzer Yau — Replica</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-/* --- GLOBAL FONT + COLOR --- */
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-    line-height: 1.45;
-    margin: 0;
-    padding: 0;
-    color: #000;
-}
-
-/* Main wrapper */
-.wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 50px 80px 70px;   /* increased left padding */
-}
-
-/* --- TITLE + GREEN LINE --- */
-h1 {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 400;
-    margin: 0 0 8px 0;
-}
-
-.top-hr {
-    height: 3px;
-    width: 620px;
-    background: #7FCF8A;
-    margin: 12px auto 90px;   /* MORE SPACE BELOW LINE */
-}
-
-/* --- TOP ROW SPACING FIXED --- */
-.top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 70px;       /* More vertical spacing */
-}
-
-/* LEFT COLUMN FIXED SPACING */
-.left-links {
-    width: 48%;
-    padding-left: 20px;        /* EXACT left indentation */
-    margin-top: -10px;         /* Lowers column to match original */
-}
-
-.left-links strong {
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 4px;
-}
-
-.left-links a {
-    color: #003A8C;
-    text-decoration: underline;
-}
-
-/* PHOTO */
-.photo {
-    width: 260px;
-    height: 260px;
-    border: 1px solid #ccc;
-}
-
-/* --- NAME + TITLE BLOCK --- */
-.name-wrap {
-    text-align: center;
-    margin: 40px 0 30px;       /* more accurate spacing */
-}
-
-.name-wrap .name {
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.name-wrap .title {
-    margin-top: 6px;
-    font-size: 15px;
-}
-
-/* THIN FULL-WIDTH RULE */
-.name-hr {
-    height: 3px;
-    width: 100%;
-    background: #7FCF8A;
-    margin: 26px 0 50px;
-}
-
-/* --- CONTACT ROW PERFECT ALIGNMENT --- */
-.contact-row {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 26px;
-    position: relative;
-    margin-bottom: 60px;
-}
-
-.contact-row::before {
-    content: "";
-    width: 4px;
-    background: #7FCF8A;
-    position: absolute;
-    left: 0;
-    top: 6px;
-    bottom: 6px;
-}
-
-.contact-box {
-    width: 45%;
-    font-size: 15px;
-}
-
-/* --- RESEARCH BLOCK --- */
-.research {
-    padding-left: 26px;
-    position: relative;
-}
-
-.research::before {
-    content: "";
-    width: 4px;
-    background: #7FCF8A;
-    position: absolute;
-    left: 0;
-    top: -5px;
-    bottom: -5px;
-}
-
-.research h2 {
-    font-size: 22px;
-    margin: 0 0 10px;
-    font-weight: 600;
-}
-
-.research .rule {
-    height: 3px;
-    width: 100%;
-    background: #7FCF8A;
-    margin-bottom: 20px;
-}
-
-.research a {
-    color: #003A8C;
-    text-decoration: underline;
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 14px;
-}
-</style>
+	<title>Kombucha Template</title> <!-- Text that displays in browser tab -->
+	<meta name="description" content="Placeholder"> <!-- Text that displays in search results and when link is shared on social media -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link href="kombucha.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-  <div class="wrap">
-    <h1>Horng-Tzer Yau</h1>
-    <div class="top-hr" aria-hidden="true"></div>
 
-    <div class="top-row">
-      <div class="left-links">
-        <p><strong>Editor in Chief</strong>
-        <a href="#">Communications of Mathematical Physics</a></p>
+	<div class="container">
+	
+		<ul>
+			<li><a href="/">home</a></li>
+			<li><a href="#nav">navigation</a></li>
+		</ul>
+	
+		<main>
 
-        <p style="margin-top:28px;"><strong>Seminars:</strong>
-        <a href="#">Random Matrix Seminar</a></p>
-      </div>
+			<h1>Heading 1</h1>
+			
+			<blockquote>
+				<cite><a href="https://en.wikipedia.org/wiki/Kombucha">From Wikipedia, the free encyclopedia</a></cite>
+				<p><b>Kombucha</b> (also <b>tea mushroom</b>, <b>tea fungus</b>, or <b>Manchurian mushroom</b> when referring to the <a href="https://en.wikipedia.org/wiki/Microbiological_culture">culture</a>; Latin name <i>Medusomyces gisevii</i>)<sup><span>&#91;</span>1<span>&#93;</span></sup> is a <a href="https://en.wikipedia.org/wiki/Fermented_beverage">fermented</a>, lightly <a href="https://en.wikipedia.org/wiki/Effervescent">effervescent</a>, <a href="https://en.wikipedia.org/wiki/Sweetened_beverage">sweetened</a> <a href="https://en.wikipedia.org/wiki/Black_tea">black tea</a> drink. 
+				</p><p>Kombucha is produced by <a href="https://en.wikipedia.org/wiki/Symbiotic_fermentation">symbiotic fermentation</a> of sugared tea using a <a href="https://en.wikipedia.org/wiki/Symbiotic">symbiotic</a> culture of bacteria and yeast (<a href="https://en.wikipedia.org/wiki/SCOBY">SCOBY</a>) commonly called a "mother" or "mushroom". The <a href="https://en.wikipedia.org/wiki/Microbial">microbial</a> populations in a SCOBY vary. The yeast component generally includes <i><a href="https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae">Saccharomyces cerevisiae</a></i>, along with other species; the bacterial component almost always includes <i><a href="https://en.wikipedia.org/wiki/Gluconacetobacter_xylinus">Gluconacetobacter xylinus</a></i> to <a href="https://en.wikipedia.org/wiki/Oxidize">oxidize</a> yeast-produced <a href="https://en.wikipedia.org/wiki/Alcohols">alcohols</a> to <a href="https://en.wikipedia.org/wiki/Acetic_acid">acetic acid</a> (and other acids).<sup><span>&#91;</span>2<span>&#93;</span></sup> Although the SCOBY is commonly called "tea fungus" or "mushroom", it is actually "a symbiotic growth of acetic acid bacteria and <a href="https://en.wikipedia.org/wiki/Osmophilic">osmophilic</a> yeast species in a zoogleal mat &#91;<a href="https://en.wikipedia.org/wiki/Biofilm">biofilm</a>&#93;".<sup><span>&#91;</span>3<span>&#93;</span></sup></p>
+			</blockquote>
+			
+			<p style="text-align: center;">This layout was made for <a href="https://32bit.cafe">The 32-Bit Cafe</a>'s <a href="https://32bit.cafe/spring25/">Spring 2025 Tea Party</a>.</p>
+											
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			
+			<p>
+				<strong>This is strong,</strong>
+				this is normal, and
+				<em>this is emphasized!</em>
+				<a href="#">This is a link.</a>
+				<sup>This is superscript;</sup>
+				<sub>this is subscript.</sub>
+				<code>This is code.</code>
+				<s>This is strikethrough.</s>
+			</p>
+			
+			<ul>
+				<li>Unordered list item 1</li>
+				<li>Unordered list item 2
+					<ul>
+						<li>Nested list</li>
+					</ul>
+				</li>
+				<li>Unordered list item 3</li>
+			</ul>
+			
+			<ol>
+				<li>Unordered list item 1</li>
+				<li>Unordered list item 2
+					<ul>
+						<li>Nested list</li>
+					</ul>
+				</li>
+				<li>Unordered list item 3</li>
+			</ol>
+			
+			<figure>
+				<img src="https://picsum.photos/500/400" alt="placeholder image" style="width:500px;aspect-ratio: 5 / 4;">
+				<figcaption>This is a figure caption.</figcaption>
+			</figure>
+			
+			<table>
+				<thead>
+					<tr> <th>This</th> <th>is</th> <th>a</th> <th>table.</th> </tr>
+				</thead>
+				<tbody>
+					<tr> <td>You</td> <td>can</td> <td>put</td> <td>columns</td> </tr>
+					<tr> <td>and</td> <td>rows</td> <td>in</td> <td>it.</td> </tr>
+				</tbody>
+			</table>
 
-      <div class="photo">
-        <!-- replace with your photo file -->
-        <img src="your-photo.jpg" alt="photo" onerror="this.style.display='none';this.parentNode.textContent='your-photo.jpg not found'">
-      </div>
-    </div>
+			<pre><code>This is a code block! If your screen is too narrow, it will scroll.</code></pre>
+				
+			<details>
+				<summary>This is a details element. Click to reveal more.</summary>
+				<p>You can put whatever you want in here!</p> 
+				<p>
+					<strong>This is strong,</strong>
+					this is normal, and
+					<em>this is emphasized!</em>
+					<a href="#">This is a link.</a>
+					<sup>This is superscript;</sup>
+					<sub>this is subscript.</sub>
+					<code>This is code.</code>
+					<s>This is strikethrough.</s>
+				</p>
+				<ul>
+					<li>Unordered list item 1</li>
+					<li>Unordered list item 2</li>
+				</ul>
+				<table>
+					<thead>
+						<tr> <th>This</th> <th>is</th> <th>a</th> <th>table.</th> </tr>
+					</thead>
+					<tbody>
+						<tr> <td>You</td> <td>can</td> <td>put</td> <td>columns</td> </tr>
+						<tr> <td>and</td> <td>rows</td> <td>in</td> <td>it.</td> </tr>
+					</tbody>
+				</table>
+				<pre><code>This is a code block! If your screen is too narrow, it will scroll.</code></pre>
+			</details>
+			
+		</main>
+		
+		<nav id="nav">
+			<p>Navigation</p>
+			<ul>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a>
+				</li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Longer link</a></li>
+					<ul>
+						<li><a href="">Nested link</a></li>
+					</ul>
+				<li><a href="">Last link</a></li>
+			</ul>
+		</nav>
+			
+		<footer>
+			<p>This is a paragraph inside of a footer.</p>
+			<p>kombucha.css by <a href="https://ribo.zone/free/layouts/">ribo.zone</a></p>
+		</footer>
+		
+	</div>
 
-    <div class="name-wrap">
-      <div class="name">Horng-Tzer Yau</div>
-      <div class="title">Merton Professor of Mathematics</div>
-    </div>
-
-    <div class="name-hr" aria-hidden="true"></div>
-
-    <div class="contact-row">
-      <div class="contact-box">
-        <div><strong>Office:</strong> Science Center 240</div>
-        <div><strong>Tel:</strong> (617) 496-8425</div>
-        <div><strong>Fax:</strong> (617) 495-5132</div>
-        <div><strong>Email:</strong> htyau@math.harvard.edu</div>
-      </div>
-
-      <div class="contact-box">
-        <div><strong>Postal Address:</strong></div>
-        <div>Department of Mathematics</div>
-        <div>Harvard University</div>
-        <div>One Oxford Street</div>
-        <div>Cambridge, MA 02138-2901</div>
-      </div>
-    </div>
-
-    <section class="research">
-      <h2>Research</h2>
-      <div class="rule" aria-hidden="true"></div>
-
-      <p>Probability theory, quantum dynamics, random matrices, differential equations, and nonequilibrium physics.</p>
-
-      <ul>
-        <li><a href="#">Papers MathSciNet</a></li>
-        <li><a href="#">Preprints Arxiv</a></li>
-        <li><a href="#">Dynamical Approach To Random Matrix Theory</a>, with László Erdős</li>
-      </ul>
-    </section>
-
-    <div class="footer">
-      <a href="#">Horng-Tzer Yau</a> | <a href="#">Department of Mathematics</a> | <a href="#">Harvard University</a>
-    </div>
-  </div>
 </body>
 </html>
